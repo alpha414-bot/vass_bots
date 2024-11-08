@@ -5,7 +5,7 @@ import os
 load_dotenv()
 
 
-class Settings:
+class AppSettings:
     USE_PROXY: bool = bool(os.getenv("USE_PROXY", True))
     PROXY_TYPE: str = str(os.getenv("PROXY_TYPE", "socks4"))
 
@@ -26,8 +26,31 @@ class Settings:
     DB_USERNAME: str = os.getenv("DB_USERNAME", "root")
     DB_PASSWORD: str = os.getenv("DB_PASSWORD", "")
 
+    # Allowed Hosts
+    ALLOWED_HOSTS: dict = os.getenv("ALLOWED_HOSTS", ["localhost", "*"])
+
+    # Telegram Bot Setup
+    CHAT_ID: str = os.getenv("CHAT_ID", "1715608783")
+    USE_TG_BOT: bool = bool(os.getenv("USE_TG_BOT", True))
+    BOT_TOKEN: str = os.getenv(
+        "BOT_TOKEN", "7559961212:AAG2hRrH0BSAkGgdTYRpMm1Br2wNlYouNWY"
+    )
+
     class Config:
         env_file = ".env"
 
 
-settings = Settings()
+settings = AppSettings()
+
+emblem = """
+        ____      __       ________  __       __      ____
+       /    \    |  |     |   ___   |  |     |  |    /    \ 
+      /  /\  \   |  |     | ( ___ ) |  |_____|  |   /  /\  \ 
+     /  /__\  \  |  |     |   _____ /   _____   |  /  /__\  \ 
+    /  ______  \ |  |     |  |      |  |     |  | /  ______  \ 
+   /  /      \  \|  |_____|  |      |  |     |  |/  /      \  \ 
+  /__/        \__\________|__|      |__|     |__|__/        \__\ 
+
+  EMAIL   ADDRESS:        [alphasoft2021@gmail.com]
+  GITHUB  REPO:           [https://github.com/alpha414-bot]
+"""

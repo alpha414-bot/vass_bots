@@ -1,16 +1,50 @@
-from utils.settings import Settings
+from fastapi.responses import JSONResponse
+from database import get_db
+from utils.schemas import RawRequestData
+from utils.settings import settings, emblem
+from fastapi import FastAPI
+from fastapi.middleware.trustedhost import TrustedHostMiddleware
+from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy.orm import Session
+from fastapi import Depends, BackgroundTasks, status
+from utils.views import start_prep_data
 
 
-class Vass:
-    def __init__(self):
-        self.start()
+app = FastAPI()
 
-    def start(self):
-        print("hello")
+# Add CORS middleware
+app.add_middleware(TrustedHostMiddleware, allowed_hosts=settings.ALLOWED_HOSTS)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
-        if Settings.USE_PROXY:
-            print("plan on using proxy")
+
+@app.post("/quote/price")
+def get_quote_price(
+    data: RawRequestData,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db),
+):
+    start_prep_data(data=data, background_tasks=background_tasks, db=db)
+    return JSONResponse(
+        status_code=status.HTTP_200_OK,
+        content={"success": True, "message": "Quote Price fetched successfully"},
+    )
 
 
 if __name__ == "__main__":
-    Vass()
+    import uvicorn
+
+    print(emblem)
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=8085,
+        reload=True,
+        access_log=True,
+        reload_includes=["*.py", ".env"],
+    )
