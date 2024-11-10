@@ -148,3 +148,4 @@ class RawRequestData(BaseModel):
     status: Optional[str] = None
     message: Optional[str] = None
     data: RequestData
+    proxy: Optional[str] = None

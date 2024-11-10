@@ -24,18 +24,18 @@ def logging_setup():
 
     logger.add(sys.stdout, colorize=True, format=format_info, level="INFO")
     logger.add(
-        "bot.log",
+        "logs/bot.log",
         rotation="50 MB",
         compression="zip",
         format=format_info,
         level="TRACE",
     )
     if settings.USE_TG_BOT:
-        print("sending to telegram")
         logger.add(
             lambda msg: send_log_to_telegram(msg),
             format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}",
-            level="INFO",
+            level="TRACE",
+            filter=lambda record: record["level"].name not in ["INFO", "WARNING"],
         )
 
 

@@ -1,4 +1,3 @@
-from fastapi.responses import JSONResponse
 from database import get_db
 from utils.schemas import RawRequestData
 from utils.settings import settings, emblem
@@ -6,7 +5,7 @@ from fastapi import FastAPI
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
-from fastapi import Depends, BackgroundTasks, status
+from fastapi import Depends, BackgroundTasks
 from utils.views import start_prep_data
 
 
@@ -29,11 +28,7 @@ def get_quote_price(
     background_tasks: BackgroundTasks,
     db: Session = Depends(get_db),
 ):
-    start_prep_data(data=data, background_tasks=background_tasks, db=db)
-    return JSONResponse(
-        status_code=status.HTTP_200_OK,
-        content={"success": True, "message": "Quote Price fetched successfully"},
-    )
+    return start_prep_data(data=data, background_tasks=background_tasks, db=db)
 
 
 if __name__ == "__main__":

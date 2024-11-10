@@ -36,6 +36,55 @@ class AppSettings:
         "BOT_TOKEN", "7559961212:AAG2hRrH0BSAkGgdTYRpMm1Br2wNlYouNWY"
     )
 
+    # Captcha
+    APIKEY_2CAPTCHA = os.getenv("APIKEY_2CAPTCHA", "d8521da8e2461799140efb0f94013233")
+    FIND_RECAPTCHA_SCRIPT = """
+        function findRecaptchaClients() {
+            // Check if reCAPTCHA config is available
+            console.log("called upon")
+            if (typeof ___grecaptcha_cfg === 'undefined') return [];
+            
+            return Object.entries(___grecaptcha_cfg.clients).map(([cid, client]) => {
+                const data = { id: cid, version: cid >= 10000 ? 'V3' : 'V2' };
+                const objects = Object.entries(client).filter(([_, value]) => value && typeof value === 'object');
+
+                objects.forEach(([toplevelKey, toplevel]) => {
+                    const found = Object.entries(toplevel).find(([_, value]) => (
+                        value && typeof value === 'object' && 'sitekey' in value && 'size' in value
+                    ));
+
+                    // Base URI if we find a top-level element
+                    if (typeof toplevel === 'object' && toplevel instanceof HTMLElement && toplevel.tagName === 'DIV') {
+                        data.pageurl = toplevel.baseURI;
+                    }
+
+                    if (found) {
+                        const [sublevelKey, sublevel] = found;
+
+                        data.sitekey = sublevel.sitekey;
+                        const callbackKey = data.version === 'V2' ? 'callback' : 'promise-callback';
+                        const callback = sublevel[callbackKey];
+
+                        // Handle callback extraction
+                        if (!callback) {
+                            data.callback = null;
+                            data.function = null;
+                        } else {
+                            data.function = callback;
+                            const keys = [cid, toplevelKey, sublevelKey, callbackKey].map((key) => `['${key}']`).join('');
+                            data.callback = `___grecaptcha_cfg.clients${keys}`;
+                        }
+                    }
+                });
+                console.log("Sending data", data)
+                return data;
+            });
+        }
+        // Expose function globally
+        window.findRecaptchaClients = findRecaptchaClients;
+        findRecaptchaClients();
+    """
+
     class Config:
         env_file = ".env"
 
