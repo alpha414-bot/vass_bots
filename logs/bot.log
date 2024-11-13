@@ -1,0 +1,3191 @@
+09:36:35.99 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+09:36:35.99 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+09:36:35.99 | SUCCESS | 1.0 Process | Starting Driver
+09:40:30.47 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+09:40:30.47 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+09:40:30.47 | SUCCESS | 1.0 Process | Starting Driver
+09:45:23.74 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+09:45:23.74 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+09:45:23.75 | SUCCESS | 1.0 Process | Starting Driver
+09:45:32.94 | SUCCESS | 1.1 Attempt 1 to load the page.
+09:45:34.64 | SUCCESS | 1.2 Page loaded successfully.
+09:46:34.65 | ERROR | Element Activity | Description: Consent/Acconsento [Button] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF730FEF815]
+	(No symbol) [0x00007FF730FEFA6C]
+	(No symbol) [0x00007FF73103B917]
+	(No symbol) [0x00007FF73101733F]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:46:34.69 | ERROR | Button Activity | Description: Consent/Acconsento [Button] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 122, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF730FA22BE]
+	(No symbol) [0x00007FF730FA4974]
+	(No symbol) [0x00007FF731039990]
+	(No symbol) [0x00007FF7310172FA]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:46:54.89 | ERROR | Element Activity | Description: Select Vehicle Icon/Autovettura [IconButton] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF730FEF815]
+	(No symbol) [0x00007FF730FEFA6C]
+	(No symbol) [0x00007FF73103B917]
+	(No symbol) [0x00007FF73101733F]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:46:54.91 | ERROR | Button Activity | Description: Select Vehicle Icon/Autovettura [IconButton] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 122, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF730FA22BE]
+	(No symbol) [0x00007FF730FA4974]
+	(No symbol) [0x00007FF731039990]
+	(No symbol) [0x00007FF7310172FA]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:46:55.46 | ERROR | Element Activity | Description: Renew Policy/Rinnovo Polizza [BUTTON]  | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF730FEF815]
+	(No symbol) [0x00007FF730FEFA6C]
+	(No symbol) [0x00007FF73103B917]
+	(No symbol) [0x00007FF73101733F]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:46:55.49 | ERROR | Button Activity | Description: Renew Policy/Rinnovo Polizza [BUTTON]  | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 122, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF730FA22BE]
+	(No symbol) [0x00007FF730FA4974]
+	(No symbol) [0x00007FF731039990]
+	(No symbol) [0x00007FF7310172FA]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:46:56.01 | ERROR | Element Activity | Description: Tax ID Code/Codice Fiscale [INPUT] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF730FEF815]
+	(No symbol) [0x00007FF730FEFA6C]
+	(No symbol) [0x00007FF73103B917]
+	(No symbol) [0x00007FF73101733F]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:46:56.04 | ERROR | Input Activity | Description: Tax ID Code/Codice Fiscale [INPUT] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 143, in _enter_input_text
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: element.scrollIntoView is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF730FA22BE]
+	(No symbol) [0x00007FF730FA4974]
+	(No symbol) [0x00007FF731039990]
+	(No symbol) [0x00007FF7310172FA]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:46:56.59 | ERROR | Element Activity | Description: Plate/Targa [INPUT] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF730FEF815]
+	(No symbol) [0x00007FF730FEFA6C]
+	(No symbol) [0x00007FF73103B917]
+	(No symbol) [0x00007FF73101733F]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:46:56.60 | ERROR | Input Activity | Description: Plate/Targa [INPUT] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 143, in _enter_input_text
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: element.scrollIntoView is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF730FA22BE]
+	(No symbol) [0x00007FF730FA4974]
+	(No symbol) [0x00007FF731039990]
+	(No symbol) [0x00007FF7310172FA]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:47:11.64 | ERROR | Element Activity | Description: iFrame of Captcha | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF730FEF815]
+	(No symbol) [0x00007FF730FEFA6C]
+	(No symbol) [0x00007FF73103B917]
+	(No symbol) [0x00007FF73101733F]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:47:11.66 | ERROR | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 383, in solve_captcha
+    self.driver.switch_to.frame(recaptcha_frame)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\switch_to.py", line 95, in frame
+    self._driver.execute(Command.SWITCH_TO_FRAME, {"id": frame_reference})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid 'id'
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF73103AB7E]
+	(No symbol) [0x00007FF7310172FA]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+09:47:11.67 | INFO | Reloading captcha frame... (Attempt 1/5)
+09:47:11.67 | ERROR | Error occurred >>> Scrapper.solve_captcha() got an unexpected keyword argument 'restart_count' ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 383, in solve_captcha
+    self.driver.switch_to.frame(recaptcha_frame)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\switch_to.py", line 95, in frame
+    self._driver.execute(Command.SWITCH_TO_FRAME, {"id": frame_reference})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid 'id'
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73116B125+29573]
+	(No symbol) [0x00007FF7310DFF50]
+	(No symbol) [0x00007FF730F9B6EA]
+	(No symbol) [0x00007FF73103AB7E]
+	(No symbol) [0x00007FF7310172FA]
+	(No symbol) [0x00007FF7310386BC]
+	(No symbol) [0x00007FF7310170A3]
+	(No symbol) [0x00007FF730FE12DF]
+	(No symbol) [0x00007FF730FE2441]
+	GetHandleVerifier [0x00007FF73149C76D+3377613]
+	GetHandleVerifier [0x00007FF7314E7B67+3685831]
+	GetHandleVerifier [0x00007FF7314DCF8B+3641835]
+	GetHandleVerifier [0x00007FF73122B2A6+816390]
+	(No symbol) [0x00007FF7310EB25F]
+	(No symbol) [0x00007FF7310E7084]
+	(No symbol) [0x00007FF7310E7220]
+	(No symbol) [0x00007FF7310D607F]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 43, in start_prep_data
+    return BotScrapper(data, db).start()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 587, in start
+    self.solve_captcha(
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 465, in solve_captcha
+    restart_captcha_frame()
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 346, in restart_captcha_frame
+    self.solve_captcha(
+TypeError: Scrapper.solve_captcha() got an unexpected keyword argument 'restart_count'
+ <<<
+10:03:27.60 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:03:27.60 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+10:03:27.60 | SUCCESS | 1.0 Process | Starting Driver
+10:03:31.66 | SUCCESS | 1.1 Attempt 1 to load the page.
+10:03:46.74 | SUCCESS | 1.2 Page loaded successfully.
+10:03:49.01 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+10:04:23.29 | SUCCESS | Solved captcha: 03AFcWeA7An6Yg9TOrDpM8G2k3XN-x3eKUBns6DuPoleRUBPRZRo9R1kPGySN6O1ly8J0IN1OhDITRY8-8RFjDjvJC9eDTeDRIaeR3u4KidmJkoZ2qg_gWfSiwF58nV53AWHE1bztFb2iycgAIvrcwkzDdvgZJKgpNpodGPrmV0uxJeFDtuScz13y2L3e2Htj08RcvbI3EVvU80Z0q9ujovPQLdesEzeKuc5IQgcyqjT104y8nzV6n5IhBw6GbOYgDoTP1UDtMtT6J7fwHzvkLn5AY22ZjHpGqAyNs4vwC-cYyLd9JQEkPGy4xXZBRPyitAm1UaphVHtgvCkem5cYqCf_h2hFrgGbwxMK3Tpp3B4LQJRyskT8xTaw5lRy9-orQQo5MdknhraGSS3Nsw8FoZMuEowc_4LBiWlObytm0Bw0cS0VUW8tihXbvLLQDcn9dxTQgaLMDt87V7vyttc9wsssnZlUZKgNmWZa1K_D8SM_W9e4FXqirvx6XJSKQNfX-PHKD80_mitUF2-G2meKHrIAzqbxcFefQmSFDyjX-b2FxNPkAjx19Rl5ThV-MVTFB-uJZrdiaXSfgGq3sBpAEnBLq24s_N19gjIW6SiE6dUV2LXwF3OA7SC6x0-AeNcyNWVyAcz2R9WKTvFpI4N0C1AXGld2rItue9CNTrdpouO-n1eH2zsAt_lWLx0YDzibjXbFIsH0j_vWVAn44xNjDd6Wt2tEMJTKuLdS6dIST0hPJ0e6dDUO_DNIMwySs7GziEpSkCyPBsI2ShG4HLJ5WKerTWpetx64FaazXsBWBlCyUQ4b0tp2xZvdpizhOPF0AQbQCM-iLiUjIOAm1t_BACIQyheMreIlEU-oqp0F5kZMepbHpUeBMAo7iq0wXxFPQmmiRzLHBx7fzDSSfJL0GnVGM65dEsjU1vg
+10:04:47.53 | ERROR | Element Activity | Description: Service Error Page | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF781175B8E]
+	(No symbol) [0x00007FF781175E7C]
+	(No symbol) [0x00007FF7811BEC27]
+	(No symbol) [0x00007FF78119BC1F]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:05:04.85 | ERROR | Element Activity | Description: Expert Guide/Guida Esperta [CLICK] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF781175B8E]
+	(No symbol) [0x00007FF781175E7C]
+	(No symbol) [0x00007FF7811BEC27]
+	(No symbol) [0x00007FF78119BC1F]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:05:04.87 | ERROR | Button Activity | Description: Expert Guide/Guida Esperta [CLICK] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 122, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF78112C2E2]
+	(No symbol) [0x00007FF78112E94F]
+	(No symbol) [0x00007FF7811BCD20]
+	(No symbol) [0x00007FF78119BBDA]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:05:06.93 | ERROR | Element Activity | Description: Checkbox switcher | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF781175B8E]
+	(No symbol) [0x00007FF781175E7C]
+	(No symbol) [0x00007FF7811BEC27]
+	(No symbol) [0x00007FF78119BC1F]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:05:09.02 | ERROR | Element Activity | Description: Checkbox Ivass switcher | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF781175B8E]
+	(No symbol) [0x00007FF781175E7C]
+	(No symbol) [0x00007FF7811BEC27]
+	(No symbol) [0x00007FF78119BC1F]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:05:09.04 | ERROR | Select & CheckBox | Description: Guide Expert | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 299, in _select_guide_expert_checkbox
+    return self.driver.execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: select.click is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF78112C2E2]
+	(No symbol) [0x00007FF78112E94F]
+	(No symbol) [0x00007FF7811BCD20]
+	(No symbol) [0x00007FF78119BBDA]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:05:25.45 | ERROR | Element Activity | Description: Dialog of Summary | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF781175B8E]
+	(No symbol) [0x00007FF781175E7C]
+	(No symbol) [0x00007FF7811BEC27]
+	(No symbol) [0x00007FF78119BC1F]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:05:25.55 | ERROR | There was a problem inserting [] to database
+10:05:25.55 | SUCCESS | Terminating Session
+10:12:04.56 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:12:04.57 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+10:12:04.57 | SUCCESS | 1.0 Process | Starting Driver
+10:12:14.19 | ERROR | Error occurred >>> Message: session not created: Chrome failed to start: exited normally.
+  (chrome not reachable)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF78115CDA7]
+	(No symbol) [0x00007FF781158DBE]
+	(No symbol) [0x00007FF7811A6E01]
+	(No symbol) [0x00007FF7811A6480]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+ ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 43, in start_prep_data
+    return BotScrapper(data, db).start()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 550, in start
+    self.driver = webdriver.Chrome(options=self.chrome_options())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 238, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 325, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: exited normally.
+  (chrome not reachable)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF78115CDA7]
+	(No symbol) [0x00007FF781158DBE]
+	(No symbol) [0x00007FF7811A6E01]
+	(No symbol) [0x00007FF7811A6480]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+ <<<
+10:13:07.03 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:13:07.03 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+10:13:07.03 | SUCCESS | 1.0 Process | Starting Driver
+10:13:10.54 | SUCCESS | 1.1 Attempt 1 to load the page.
+10:13:26.62 | SUCCESS | 1.2 Page loaded successfully.
+10:13:28.92 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+10:14:02.06 | SUCCESS | Solved captcha: 03AFcWeA6RRZdDZTi1W0sSgQuYPDf5YVGsQHNOQwHw7K8dGpsEQxAYEp5CK3lDNdrl2iUefKPnB7PbI4GGXBW06Y0QXfcC7mgF8bAQCUWN53mS2WX0roZFMtypqGtlw4mlRe4nxTCVcCezsyPTV0O6-ysztO2-Fz3KlJMbxwARMxklnuCQms6w5gSAxUzcj-RmiWTnUQmD9MkhUiopZ2vcbqKDyCPxEAr4IU1tPBviOgUKnkVIPdSs58XK5YSfey73ooaxoUIrE0gTaNeMtTsQoCtrvFKEYjj6voEN97x-fJ59m_uBTJc3_E4b46RzaT9HJOEy0w1WF1qbadHn6V-9UaSOyEbM4YfjVT6TE-weY22DgTXoXNPM6Ip68xG9XGrZS_i7e-bB4f2nXNjoyrrLNMKVOQO0KT4FhkpI_-mnvwkBZXyQadiJZP7K7x_YyQYpo370Z_gO0NsYl0vcuVf_IWVaTUy4D9nBeDFyIs14kywnazSBc3PuOPPWlYvGg8X7Gjd74QBE88JXwJZPZKvSE2oXphimTmmdHkv7uOoEkJqhTQMZG8_UAp3A_2PnbsLf6oV0Aa85PQzvUyEk-XjmMHfH94Ke39KXmncBtcwya0URDUgQs4q5pSJdbRgfOzoQOxMt8S3z2knjdg7zywd6B5Qg9WYDtx3mpJ8YR2vLgieHuvzYPaqbxXA9QGFTPxQGsZ50e4NT0tUbpS7yOjOiJ_jTq43qhqU-_sBmOmmlzFTVMn1Peq4HJ-ZqJv3wCLKUE5OLni-1AHObsYkyoY0wnEiMnVb09lcGFzCQEXC9v3oFekG9hfBQ4Pg9qnPA89J7FFJD5w7KPBQryXeVVduiHUNFUM1XDwGjSigP92G4mdMySskwE9iGestOE36vtIBoOqsomc-WDEC2dBEmMiqCxlE2fATyDJ0VVA
+10:14:32.30 | ERROR | Element Activity | Description: Service Error Page | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF781175B8E]
+	(No symbol) [0x00007FF781175E7C]
+	(No symbol) [0x00007FF7811BEC27]
+	(No symbol) [0x00007FF78119BC1F]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:14:49.64 | ERROR | Element Activity | Description: Expert Guide/Guida Esperta [CLICK] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF781175B8E]
+	(No symbol) [0x00007FF781175E7C]
+	(No symbol) [0x00007FF7811BEC27]
+	(No symbol) [0x00007FF78119BC1F]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:14:49.65 | ERROR | Button Activity | Description: Expert Guide/Guida Esperta [CLICK] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 122, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF78112C2E2]
+	(No symbol) [0x00007FF78112E94F]
+	(No symbol) [0x00007FF7811BCD20]
+	(No symbol) [0x00007FF78119BBDA]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:14:51.68 | ERROR | Element Activity | Description: Checkbox switcher | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF781175B8E]
+	(No symbol) [0x00007FF781175E7C]
+	(No symbol) [0x00007FF7811BEC27]
+	(No symbol) [0x00007FF78119BC1F]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:14:53.77 | ERROR | Element Activity | Description: Checkbox Ivass switcher | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF781175B8E]
+	(No symbol) [0x00007FF781175E7C]
+	(No symbol) [0x00007FF7811BEC27]
+	(No symbol) [0x00007FF78119BC1F]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:14:53.79 | ERROR | Select & CheckBox | Description: Guide Expert | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 300, in _select_guide_expert_checkbox
+    return self.driver.execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: select.click is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF78112C2E2]
+	(No symbol) [0x00007FF78112E94F]
+	(No symbol) [0x00007FF7811BCD20]
+	(No symbol) [0x00007FF78119BBDA]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:15:10.34 | ERROR | Element Activity | Description: Dialog of Summary | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7815E38A5+3004357]
+	(No symbol) [0x00007FF781279970]
+	(No symbol) [0x00007FF78112582A]
+	(No symbol) [0x00007FF781175B8E]
+	(No symbol) [0x00007FF781175E7C]
+	(No symbol) [0x00007FF7811BEC27]
+	(No symbol) [0x00007FF78119BC1F]
+	(No symbol) [0x00007FF7811BBA4C]
+	(No symbol) [0x00007FF78119B983]
+	(No symbol) [0x00007FF781167628]
+	(No symbol) [0x00007FF781168791]
+	GetHandleVerifier [0x00007FF78160A00D+3161901]
+	GetHandleVerifier [0x00007FF78165E060+3506048]
+	GetHandleVerifier [0x00007FF78165400D+3465005]
+	GetHandleVerifier [0x00007FF7813D0EEB+830987]
+	(No symbol) [0x00007FF78128467F]
+	(No symbol) [0x00007FF7812809D4]
+	(No symbol) [0x00007FF781280B6D]
+	(No symbol) [0x00007FF781270149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:15:10.35 | ERROR | There was a problem inserting [] to database | Error is (pymysql.err.IntegrityError) (1062, "Duplicate entry '0' for key 'quote_data.PRIMARY'")
+[SQL: INSERT INTO quote_data (request_data, response_data, created_at, updated_at) VALUES (%(request_data)s, %(response_data)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'request_data': '{"anag": {"cf": "BNDCML75M61F839P", "nascitaGiorno": "21", "nascitaMese": "08", "nascitaAnno": 1975, "patenteAnno": "1993", "residenzaProvincia": "NA ... (242 characters truncated) ... o": "Panda 1.2 Dynamic", "immatricolazioneGiorno": "30", "immatricolazioneMese": "06", "immatricolazioneAnno": 2005, "dataDecorrenza": "23/11/2025"}}', 'response_data': '"[]"', 'created_at': datetime.datetime(2024, 11, 13, 9, 15, 10, 357803), 'updated_at': datetime.datetime(2024, 11, 13, 9, 15, 10, 357803)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+10:15:10.36 | SUCCESS | Terminating Session
+10:27:12.16 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:27:12.16 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+10:27:12.16 | SUCCESS | 1.0 Process | Starting Driver
+10:27:16.64 | SUCCESS | 1.1 Attempt 1 to load the page.
+10:27:31.58 | SUCCESS | 1.2 Page loaded successfully.
+10:27:33.85 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+10:28:14.45 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:28:14.45 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+10:28:14.45 | SUCCESS | 1.0 Process | Starting Driver
+10:28:16.26 | SUCCESS | Solved captcha: 03AFcWeA4t1jAATtCkcJLM9jxrIcoZi95MH4IP2mCwXRAD-5zmTJpug3VW-gLv8fQsKD4dLNYAHbG-NgyO59JsjyQ7Kwpv4YdMCeuPW1sfTHRrHterdHBVASr6__6i1YNNmHox5udksgMlT9XPfzCEX551_B4EJYP2dZ1seRlCd3w4JAOuIwlq5f2dJwr0ef6Z7ja_16FtVNQjlvJTxHi5x_TMm_A6d1ITfBAEj1BfgSDpcV6jE5jnEv7cxGWdDF81S-OF_hQUKIQNJFubIkHLFFcuJTP0dL51JIxEvw4fC86QapE5BOqr69VdfN7HNTL11yNQEsI7UObRxCRek8kwE4nEWV0d3gotyHkHq1luwF7oX8iDSAfLcUJcsrawhiYmmYeJ8RDhMm-eYy8zQ96NYvc51Uja68r7nZbiQcHWkqI-AdL4bDGq5zSMwvyGAwzSUzxWcWlWgJ5hSQgPN3u4w22nf9BSeoE0u7jEYCyy2iDNVKs5r4fdZztFV80e5zPJSDNLo2Y4TE4pM18kouj3ww-Q-YcpEqgM0yJcoqHJ9Ul02JRtYuHA3ETnn1ZQZKbgdPWgyLCL_kggq71o3gd9WBJ_Ndvfod2Ps8IzaTTMoiPQEJv_aFfRdzNKe4lx7ILImx4WjGbtA3IUvngMzm8Uzo-F41y9VIZ056C3CuBz1x9KbIvnVQf2wokcQaIe9QzvAdrwb34QrDrN3uQRHzOCVmGh7CLM008A0gZJGZHSkxsiZwC1qKBB2HBJQagalrl_rTh-pi2TaSDdaScGKcZ8vHCDYKAHCAyWZRvv6tuZLyB1fm5zFKZQ7Jsl_Fu7ZseooyH1PILfckMmktpf474zL6kx60EvBV42Ok7B7p-wds_5MhTnRUkbue11XWU4z7Y3LBzI-6D592nhueLSB9gkJ8Vj3yHfHVyvvyDPj0iSk5JrAiTFT_3bQZo
+10:28:18.54 | SUCCESS | 1.1 Attempt 1 to load the page.
+10:28:34.87 | SUCCESS | 1.2 Page loaded successfully.
+10:28:37.12 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+10:28:37.90 | SUCCESS | Solved captcha: 03AFcWeA6LjuXOLG6-LRf_sBSrTAWCSTXG_TMiK_TLQTMA_RlWSPzAWVumhpObejzLVqUUM6D14qS0tju86vjh2i8DtFQNn0cuPwdXslCl--NOI9bW9awyLXYkwH0kUH2I1kkmILd9Uyd3X_rLgoQDNFWkjGjy3IxT2HmQiuwKwICtOCLMZSRP52ztil-tFgECAYhZWBLWS_V45oJczcjAV4YfZUpfaJyCvL40QhnvRTTCFwDJog3PGnlKOEh5pr9kZg1vfp6_4SxlLKHAgwdjNflGiZBYMN7nFoX0omRTFFHvHfKiDxz9Ql-3Nv-4Xj4zE66xq-f5RirR9IX-rlxs62nfuWc9g0YmYMEPUJrAkJ7bC2ENUjKvhLghAthVvdBYLd3dXO2dZ_B6vVyzm2dBfT06LsV6CS880EAWLHtWblnGiPUCICvPKzpAuRhFWGzI9aCrvr60Y0Et-Ar5Gd9QDGunCNbsNqCx8xAzPOGGTJQ3Ju6cNrrfz084rVU-G-8wOWslW_MfOnjsY9_r3X830U4jhLjAX3M0E8bpKbbEn4y6ifEX9ZqkZ_syisbJKuwYrYy15R-vFdGjGB8eT-9J75INpEKpJPOWvjaWRp_7lBmKGWjHNINC7TyM8dnjOlFYBwYlfkE0s-ng1Zv0NIGArewEgr2FjQc-6c9xZkL6WSFl3Spa54L5pjKavuMpWdlqunYylLnk1Cb2AWB8UPwAMUUuxfOuh4oTKh30BePKZTS7BxMizw5IQXgTTsahkttuZjNzyLZvAinZUrK3ujLOvtJITZYmZvUHeOCPSreP2PxBz_f1PVd9QActziSSDV6AGVJJdCd8_1e6n2-GkyAqnfhhtJhBhbclLLfgGXbIcbxhCrmzCEqlhDB5aCswMD3I9p4Ty6LDF2E9h7_csujwMBX4zDOIWKDt3wQoz3NN7sTJwfI4djfo7d5a-0EJ5H10YzRcwDLOZK3u
+10:28:44.52 | ERROR | Element Activity | Description: Service Error Page | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:29:07.36 | ERROR | Element Activity | Description: Service Error Page | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:30:00.63 | ERROR | There was a problem inserting [{'title': 'BCC ASSICURAZIONI S.P.A.', 'price': '961,19 €'}, {'title': 'VERA ASSICURAZIONI S.P.A.', 'price': '978,58 €'}, {'title': 'ASSICURATRICE MILANESE SPA - COMPAGNIA DI ASSICURAZIONI', 'price': '1.207,50 €'}, {'title': 'UniCredit Allianz Assicurazioni S.p.A.', 'price': '1.417,00 €'}, {'title': 'ZURICH INSURANCE EUROPE AG', 'price': '1.459,00 €'}, {'title': 'UnipolSai Assicurazioni S.p.A.', 'price': '1.471,87 €'}, {'title': "SARA ASSICURAZIONI S.P.A. ASSICURATRICE UFFICIALE DELL'AUTOMOBILE CLUB D'ITALIA", 'price': '1.489,59 €'}, {'title': 'GENERALI ITALIA S.P.A.', 'price': '1.527,50 €'}, {'title': 'NOBIS COMPAGNIA DI ASSICURAZIONI', 'price': '1.604,50 €'}, {'title': 'ALLIANZ VIVA S.P.A.', 'price': '1.750,09 €'}, {'title': "ALLIANZ SOCIETA' PER AZIONI", 'price': '1.844,68 €'}, {'title': 'LE ASSICURAZIONI DI ROMA - MUTUA ASSICURATRICE ROMANA', 'price': '2.043,24 €'}, {'title': 'EUROHERC OSIGURANJE D.D.', 'price': '2.562,43 €'}, {'title': 'ADRIATIC OSIGURANJE D.D.', 'price': '2.562,43 €'}, {'title': 'AIOI NISSAY DOWA INSURANCE COMPANY OF EUROPE SE', 'price': '850,00 €'}, {'title': 'HDI ASSICURAZIONI S.P.A.', 'price': '939,18 €'}, {'title': 'CREDIT AGRICOLE ASSICURAZIONI S.P.A.', 'price': '940,59 €'}, {'title': 'ARCA ASSICURAZIONI S.P.A.', 'price': '1.037,00 €'}, {'title': 'Great Lakes Insurance SE', 'price': '1.096,86 €'}, {'title': 'IPTIQ EMEA P&C SA', 'price': '1.096,86 €'}, {'title': 'Italiana Assicurazioni S.p.A', 'price': '1.154,00 €'}, {'title': 'DallBogg: Life and Health Insurance Company', 'price': '1.194,48 €'}, {'title': 'VITTORIA ASSICURAZIONI', 'price': '1.359,56 €'}, {'title': 'Genertel S.p.A.', 'price': '1.368,17 €'}, {'title': 'ITAS Mutua - ITAS-IST.TRENTINO-ALTO ADIGE ASS.NI', 'price': '1.405,00 €'}, {'title': 'VHV Italia Assicurazioni S.p.A', 'price': '1.436,00 €'}, {'title': 'SOGESSUR S.A.', 'price': '1.537,11 €'}, {'title': 'INTESA SANPAOLO ASSICURA S.p.A.', 'price': '1.726,00 €'}, {'title': 'HELVETIA ITALIA ASSICURAZIONI S.p.A.', 'price': '1.771,05 €'}, {'title': 'Verti Assicurazioni S.p.A.', 'price': '1.830,53 €'}, {'title': 'Assimoco S.P.A.', 'price': '1.852,48 €'}, {'title': "AXA MPS ASSICURAZIONI DANNI SOCIETA' PER AZIONI", 'price': '1.950,44 €'}, {'title': 'BENE ASSICURAZIONI S.P.A.', 'price': '1.958,60 €'}, {'title': 'AXA ASSICURAZIONI S.P.A.', 'price': '1.959,00 €'}, {'title': 'Allianz Direct spa', 'price': '2.009,01 €'}, {'title': "GROUPAMA ASSICURAZIONI SOCIETA' PER AZIONI", 'price': '2.046,58 €'}, {'title': 'COMPAGNIA ASSICURATRICE LINEAR S.P.A.', 'price': '2.141,01 €'}, {'title': "HELVETIA COMPAGNIA SVIZZERA D'ASSICURAZIONI S.A.", 'price': '2.148,40 €'}, {'title': 'QUIXA ASSICURAZIONI S.P.A.', 'price': '2.740,00 €'}, {'title': 'ADMIRAL EUROPE COMPAÑÍA DE SEGUROS S.A. (AECS)', 'price': '3.390,72 €'}, {'title': 'WAKAM', 'price': '3.795,00 €'}] to database | Error is Instance <QuoteData at 0x20f5d011cd0> has a NULL identity key.  If this is an auto-generated value, check that the database table allows generation of new primary key values, and that the mapped Column object is configured to expect these generated values.  Ensure also that this flush() is not occurring at an inappropriate time, such as within a load() event.
+10:30:00.65 | SUCCESS | Terminating Session
+10:30:23.47 | ERROR | There was a problem inserting [{'title': 'BCC ASSICURAZIONI S.P.A.', 'price': '961,19 €'}, {'title': 'VERA ASSICURAZIONI S.P.A.', 'price': '978,58 €'}, {'title': 'ASSICURATRICE MILANESE SPA - COMPAGNIA DI ASSICURAZIONI', 'price': '1.207,50 €'}, {'title': 'UniCredit Allianz Assicurazioni S.p.A.', 'price': '1.417,00 €'}, {'title': 'ZURICH INSURANCE EUROPE AG', 'price': '1.459,00 €'}, {'title': 'UnipolSai Assicurazioni S.p.A.', 'price': '1.471,87 €'}, {'title': "SARA ASSICURAZIONI S.P.A. ASSICURATRICE UFFICIALE DELL'AUTOMOBILE CLUB D'ITALIA", 'price': '1.489,59 €'}, {'title': 'GENERALI ITALIA S.P.A.', 'price': '1.527,50 €'}, {'title': 'NOBIS COMPAGNIA DI ASSICURAZIONI', 'price': '1.604,50 €'}, {'title': 'ALLIANZ VIVA S.P.A.', 'price': '1.750,09 €'}, {'title': "ALLIANZ SOCIETA' PER AZIONI", 'price': '1.844,68 €'}, {'title': 'LE ASSICURAZIONI DI ROMA - MUTUA ASSICURATRICE ROMANA', 'price': '2.043,24 €'}, {'title': 'EUROHERC OSIGURANJE D.D.', 'price': '2.562,43 €'}, {'title': 'ADRIATIC OSIGURANJE D.D.', 'price': '2.562,43 €'}, {'title': 'AIOI NISSAY DOWA INSURANCE COMPANY OF EUROPE SE', 'price': '850,00 €'}, {'title': 'HDI ASSICURAZIONI S.P.A.', 'price': '939,18 €'}, {'title': 'CREDIT AGRICOLE ASSICURAZIONI S.P.A.', 'price': '940,59 €'}, {'title': 'ARCA ASSICURAZIONI S.P.A.', 'price': '1.037,00 €'}, {'title': 'Great Lakes Insurance SE', 'price': '1.096,86 €'}, {'title': 'IPTIQ EMEA P&C SA', 'price': '1.096,86 €'}, {'title': 'Italiana Assicurazioni S.p.A', 'price': '1.154,00 €'}, {'title': 'DallBogg: Life and Health Insurance Company', 'price': '1.194,48 €'}, {'title': 'VITTORIA ASSICURAZIONI', 'price': '1.359,56 €'}, {'title': 'Genertel S.p.A.', 'price': '1.368,17 €'}, {'title': 'ITAS Mutua - ITAS-IST.TRENTINO-ALTO ADIGE ASS.NI', 'price': '1.405,00 €'}, {'title': 'VHV Italia Assicurazioni S.p.A', 'price': '1.436,00 €'}, {'title': 'SOGESSUR S.A.', 'price': '1.537,11 €'}, {'title': 'INTESA SANPAOLO ASSICURA S.p.A.', 'price': '1.726,00 €'}, {'title': 'HELVETIA ITALIA ASSICURAZIONI S.p.A.', 'price': '1.771,05 €'}, {'title': 'Verti Assicurazioni S.p.A.', 'price': '1.830,53 €'}, {'title': 'Assimoco S.P.A.', 'price': '1.852,48 €'}, {'title': "AXA MPS ASSICURAZIONI DANNI SOCIETA' PER AZIONI", 'price': '1.950,44 €'}, {'title': 'BENE ASSICURAZIONI S.P.A.', 'price': '1.958,60 €'}, {'title': 'AXA ASSICURAZIONI S.P.A.', 'price': '1.959,00 €'}, {'title': 'Allianz Direct spa', 'price': '2.009,01 €'}, {'title': "GROUPAMA ASSICURAZIONI SOCIETA' PER AZIONI", 'price': '2.046,58 €'}, {'title': 'COMPAGNIA ASSICURATRICE LINEAR S.P.A.', 'price': '2.141,01 €'}, {'title': "HELVETIA COMPAGNIA SVIZZERA D'ASSICURAZIONI S.A.", 'price': '2.148,40 €'}, {'title': 'QUIXA ASSICURAZIONI S.P.A.', 'price': '2.740,00 €'}, {'title': 'ADMIRAL EUROPE COMPAÑÍA DE SEGUROS S.A. (AECS)', 'price': '3.390,72 €'}, {'title': 'WAKAM', 'price': '3.795,00 €'}] to database | Error is (pymysql.err.IntegrityError) (1062, "Duplicate entry '0' for key 'quote_data.PRIMARY'")
+[SQL: INSERT INTO quote_data (request_data, response_data, created_at, updated_at) VALUES (%(request_data)s, %(response_data)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'request_data': '{"anag": {"cf": "BNDCML75M61F839P", "nascitaGiorno": "21", "nascitaMese": "08", "nascitaAnno": 1975, "patenteAnno": "1993", "residenzaProvincia": "NA ... (242 characters truncated) ... o": "Panda 1.2 Dynamic", "immatricolazioneGiorno": "30", "immatricolazioneMese": "06", "immatricolazioneAnno": 2005, "dataDecorrenza": "13/11/2025"}}', 'response_data': '"[{\\"title\\": \\"BCC ASSICURAZIONI S.P.A.\\", \\"price\\": \\"961,19 \\\\u20ac\\"}, {\\"title\\": \\"VERA ASSICURAZIONI S.P.A.\\", \\"price\\": \\" ... (3534 characters truncated) ... 00d1\\\\u00cdA DE SEGUROS S.A. (AECS)\\", \\"price\\": \\"3.390,72 \\\\u20ac\\"}, {\\"title\\": \\"WAKAM\\", \\"price\\": \\"3.795,00 \\\\u20ac\\"}]"', 'created_at': datetime.datetime(2024, 11, 13, 9, 30, 23, 458435), 'updated_at': datetime.datetime(2024, 11, 13, 9, 30, 23, 458435)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+10:30:23.49 | SUCCESS | Terminating Session
+10:34:56.32 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:34:56.32 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+10:34:56.32 | SUCCESS | 1.0 Process | Starting Driver
+10:35:00.18 | SUCCESS | 1.1 Attempt 1 to load the page.
+10:35:15.18 | SUCCESS | 1.2 Page loaded successfully.
+10:35:17.49 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+10:35:28.36 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:35:28.36 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+10:35:28.36 | SUCCESS | 1.0 Process | Starting Driver
+10:35:31.81 | SUCCESS | 1.1 Attempt 1 to load the page.
+10:35:48.44 | SUCCESS | 1.2 Page loaded successfully.
+10:35:50.79 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+10:36:01.20 | SUCCESS | Solved captcha: 03AFcWeA5NpZC22aoK5xqOkdyEPISe5DCppe2BXpvo-GLo8hVI6SOn07_PbM3C8ATwSCILgN-ZW3zaHAjkDQTCw_oLWBhh9bIR8QsSFCbod_BpuV2F-SghYPCsuql_4sV1we9locs1Yn5kRWxX2k7qLfHbrHel1Bc_jrfg9sh2EAw9SgBffAIJ7JEeitXb8cdw6qZWAgs3gjWewEkGLnVNDbcunYQJ9z0jMSojqUAUqy73-YRJb7QOH8pXqxCz7W8xYv0p7fhmWDL5KgsnIr7b08a7cZgNuxmXNw5iQcKqoCS2qt6qk22mSOxfdVut3Lm-wFInx7WDMDyIaUWMxTLehO1FTINYLl79iY7McspoPhu8X2kQ-MIxLU2MeFjgbcsiTm5PN6shRkXQd2r_uPOXn66o-PITo05N75PZpma2HkCVDHlybIWiv5ifBYPDHtkZFcBZjP0tMU-Tk4W2tioM4PWxC0o8W3eLwM4gsjPXSG-y2NscJhQvDrg5qpymETobCx6ihXoGF6vRB6LAouJ2cQenNs3UscifLObGpORDbXPGG9MABzmoIeFHfPjWm4OEN7_GylP3NO8prVK5jLYBAilT61Z8_2-SooH-sZZQCRdBtcvviWGp4VTfk01KZIzsO3S9GOVhuqW9TmM6677ybqzeTRJd7vZ4pSWMmC0uQw14hrnqydBnOABY_Ko_-_A25G5cEucUMLSSPnUcWJ9yAoVRKCoStWun6QuSAx-kJR3fI7La2-6CRSPbx7QK-4FXN4hMMfdqw-2xcFgo75fVSvSKbCBgI0-U58V18TYcPRaRvJhgNuF1fSaD2mGhAggpEtDvhEPQMGIWpZ261vzMrYNxwtreh1KFdfWslvSzCVnMA4JzAAqhBlQDXD2Q6N460SwX0Y_vib8oxp5PE93uk7YnOD9o_yzORA
+10:36:25.23 | ERROR | Element Activity | Description: Service Error Page | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:36:32.95 | SUCCESS | Solved captcha: 03AFcWeA4b5XSe9Gub-Or4vY0eOTsmIofDr0TVEYXyAJIWsAeJXX_viK6kV0_bGxjGBl3vhBKhXbbH4hCbscuiCc_JOxWFdqcDrgPhtZmDtFsm-nCQfwmg1L5hPl928TqZ1UjBc3GtGC0LON8zNz5UTA5ZfWoIOE86TQLkEYbqG6rhmPvB11Ik1d8C3F2umaxBmb_WZJrbz4yCS89stAHErR6vEKYYU1ndZ0QoevTvykpxkH5Jti9Sh8KNANNa0Ec-PykS6yY2z4yADV3E9EFInLkyCrpqdOnkrRPXKfjmbgWwTIT7vDspLgjcnqRa8U5L_czImCKcOUJVdTH0owQafiu27moLn1iG5aXLPWrznnA9QZfabUroQ5lggb7rkVQALIizjwoapIkpwegRYImtdu0e0wODKXM4M-qvF2EfLAAyKLrKA2HqmO67Vr9Zp2XqgnR6W8FC8tUI13aSxgQGRQrZ4fFLMTqL-1Ecl_Nb0KWBLmacysiomEXwz4Nk4mVLzGGvIqTQdA6Ut-4xIgcfVFMpAoAa-v0LPvPHzl5WV2T0S1v7aDuObZGot4-REY9w0Z-6bhHQWZfHS_1hr9ntezAjVsmLpTD5cNbxp8KF5gvM6MyaWll99kk26qsgdjBWijTFw8_NXcz75UFKdiNsg6Qb4ptf2-1fhXgS8mKh4NcW6m8ICEYNS8T_w-gu7cEZ7rSn9C9FpgVOrl9ftIVQPUMCwHTWSmke-IGzl3ejLUJj3zIMCsEV45IFw_SfNRv75YTUYUzatBZ9aVwNl2oLI1myodqUDC3A2QnSxxGHmhjCpcxHTkMPzmVwN7V8fK2hZiUg6RR46zWGfQ-tiB2tD3CSdBfdoIJpp-dSIvcxmiefqXDIfyuLfY96auB789mKJfWgC9UjRjhd4_T89bJp6vjt3TuP2jRx4v2JdMzbyPE_y03ZnjTcf4uY10dk7qkfxblljedNJYEU
+10:37:00.48 | ERROR | Element Activity | Description: Service Error Page | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:37:41.30 | SUCCESS | Terminating Session
+10:38:17.54 | SUCCESS | Terminating Session
+10:41:02.08 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:41:02.09 | ERROR | Error occurred >>> 'RawRequestData' object has no attribute 'refresh' ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 17, in start_prep_data
+    if data.request_id and not data.refresh:
+                               ^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\pydantic\main.py", line 856, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'RawRequestData' object has no attribute 'refresh'
+ <<<
+10:41:41.00 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:41:41.02 | ERROR | Error occurred >>> 'str' object is not a mapping ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 29, in start_prep_data
+    quote_response_data = {
+                          ^
+TypeError: 'str' object is not a mapping
+ <<<
+10:43:28.32 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:43:28.33 | ERROR | Error occurred >>> 'list' object is not a mapping ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 36, in start_prep_data
+    quote_response_data = {
+                          ^
+TypeError: 'list' object is not a mapping
+ <<<
+10:44:36.21 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:44:36.23 | ERROR | Error occurred >>> 'list' object is not a mapping ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 43, in start_prep_data
+    quote_response_data = {
+                          ^
+TypeError: 'list' object is not a mapping
+ <<<
+10:45:47.69 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:47:05.60 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:47:05.62 | ERROR | Error occurred >>> unhashable type: 'RawRequestData' ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 45, in start_prep_data
+    quote_response_data = {data: (quote.response_data)}
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'RawRequestData'
+ <<<
+10:47:29.80 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:47:29.82 | ERROR | Error occurred >>> unhashable type: 'RawRequestData' ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 46, in start_prep_data
+    quote_response_data = {data: jsonable_encoder(quote.response_data)}
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'RawRequestData'
+ <<<
+10:48:56.04 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:50:17.11 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:50:21.97 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:51:57.74 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:52:05.71 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:52:23.65 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:52:23.65 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+10:52:23.65 | SUCCESS | 1.0 Process | Starting Driver
+10:55:11.27 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+10:55:11.27 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+10:55:11.27 | SUCCESS | 1.0 Process | Starting Driver
+10:55:32.61 | SUCCESS | 1.1 Attempt 1 to load the page.
+10:55:38.38 | SUCCESS | 1.2 Page loaded successfully.
+10:55:45.17 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+10:56:12.68 | SUCCESS | Solved captcha: 03AFcWeA7rrmMY6U_45S8vjZMRws1CPJCbN9pbVy7hhp7OfkHqHe154S8d1YP9RbXP7DNtEnnzwZ3zRCy4buXtc1mKd1py0-NGGaSpMYOwwhaKWuOCD7gopttmPpbbfqchCiWID5jel700_dPDqQm0MPDlUM3ZWcg6PuTdW8vzK_gxihv-Qbm4F-pj0PUMbqepb9a6CPCxWkfIdJSnVAqSot8pR8Fy_gY-AH0V41m02Ib4ZeKRkFa1LB29JX-mTjtqW3TMsloADLSKXofgnZ7mtKFMmL8h4FURHWRLici44y0A9rpDq31fJPl5NOvR_cvwMpWhsC9A_L9dEutvJAyAVJDSw9_uZmg9Zqz7pI0J4aP3IfH3jnJzwSwMLTUz9d354nFXb4FJHT2CgAfz-6aBy6xahzfeX3pioLOr73t0PJh5fRn2rG9UqAqc6MqFE47w0NUx26AsAHwjN-2ZcTID6m6tLbYZLs90tPWXXngE7iyM3MfTpDzf33doe0SCr_tL98MaTukuXJuH-UFNDv2n5T6W0VYwP_a6aCQ9vyTiVb_cCw8J47ASiPtPTyeJQFG7PxfzqAFGRSckruJZgNMG0X1Hw-8G-uamCPJdLfyXTaheUMwBug_qNhObyZbGbtftf7SZojFkhokRl0zMuNgFjibI43PcsPulpA7E7iGmdLGDJ4stnP9HDZBceEG2Eys3hh9i861yn8v8pEcdvwlqZlE7GyAQ-2P152FOEKBzbQjYUi-4RwA3qfrX2npnCkC3saRbL3Tsbh0-Fz6nlhXwqaW87Vg9Y2Oc8XFw1Tkk3hIqob0m4Jru6H_J5ByjXS97-1o5iZaz6SWSeDzBXW0szepHnczJro2DSBEpsJdcOuhvDyzvBgPxq0Llhu6f43Z2ObNuCoUOdkZf_5-PofZIm-Cvv6TA_H9zGk0-tLim194tJK9Tx6o_zdahTmwtr3IDQtaNyPvXumXQNpZeR612pphdr69_lTU5DQ
+10:56:36.05 | ERROR | Element Activity | Description: Service Error Page | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+10:57:27.48 | SUCCESS | 1.1 Attempt 1 to load the page.
+10:57:42.65 | SUCCESS | 1.2 Page loaded successfully.
+10:57:45.00 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+10:57:52.82 | SUCCESS | Terminating Session
+10:58:30.94 | SUCCESS | Solved captcha: 03AFcWeA6lDgxODKdtKoWcqpsW0BHLiYqQOs9DwYjL9we6nrf8vC4UvYLxgWtIPzZbV5SY5_jK9o6rl7_2FbTBiTWMdhq-4OHH2Yr86f8DxjsC_ucr86_Eg4PHycCXTOOj4AYrGE4_KRcjxXIe2OV8bTyj56U4DjSAxqHFGaJE_3ju5OvY85wlBFcwvGgUFiXz-61a1u0njJ3Mp1DJUQ2WKvvoytSkoOPN8p1oVFn7ezAiSE58EYm-LlE6m3CdALCIIcAHCs64PDzRpJNXQAk6vezbdlLbhEdw5AinxIJJxPBDsOfHHocH2ND9yZWcYcjejRW-AxG0TbOAAHutGkfScuaJpKV9Fi3YMuzaXvpJ9o7Nl26RcMyesfugu7Aw0vzE9k1_sBtl-u8IxCeflTuEE-UhxlyiSbiIod9LiN5WpV8_RIueEmu5k40_YeG8HZ1s2aQZZvL5_5MLyTrPx1mjyrJkDm1cvF4HSh4P1mPlFg74NA3a_SvTUPdN-E_myV-OI1ywm1wqTaSUrn1iE6bQ4QDAZQExYrhjxDI3Nw9glYhcJ80ia_SCm1A8lQ7RjhVRTxr0_bI0BoxvZmj5D_YP_B1ieZKQOwVbNU72ofp0YMpfXFigZquaH5nrfJmNK8L35IpXlciOa7MJ5itF8D7d_s1x8ya_oXxizPj1qY6IxmH9dxcAfqH5loPT2sao9NAX4BoZhiqaceMMZomLbZ1SKxIfhxyfP2t-XD4oZV9dThLG4Ejq12WmrbKlvcA2rOrW4QtcKVaEKptKgP-XDybOg8RVPdWfBfeeFvmuttAJupGLiA5vPCWH16JbYoHZMbZkMwH1jxqZBj9YWtQo_7cPOwsVZTUvpUzigyOln5H7iYjWS0soOhXs1MYcSGaj5ogrUE59etFUoZhQHptffEb7zrFdyjTTiT7hrpH2kCAA9hbAku4GowTJHKbk_tcQ_fwwTEf7GgJcYXSI
+10:58:54.46 | ERROR | Element Activity | Description: Service Error Page | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 106, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:00:10.33 | SUCCESS | Terminating Session
+11:11:47.86 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+11:11:47.86 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+11:11:47.86 | ERROR | Error occurred >>> 'RawRequestData' object has no attribute 'captcha_token' ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 42, in start_prep_data
+    return BotScrapper(data, db).start()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 32, in __init__
+    captcha_token = data.captcha_token
+                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\pydantic\main.py", line 856, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'RawRequestData' object has no attribute 'captcha_token'
+ <<<
+11:13:08.41 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+11:13:08.41 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+11:13:08.41 | SUCCESS | 1.0 Process | Starting Driver
+11:13:11.27 | SUCCESS | 1.1 Attempt 1 to load the page.
+11:13:25.17 | SUCCESS | 1.2 Page loaded successfully.
+11:13:32.92 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+11:14:07.98 | SUCCESS | Solved captcha: 03AFcWeA7yV0RLqqT-EDLOBuQyADJxJdfSoZ8g27OwArJmnqyPIXe81ZbA6fAWB1HgElOu95ciDEQ1QY5CXs0rXGqXCF0sb1dFTLkwvjl9XAAp-93bDZeFmQlrL4YFLHQ06cxyQffIbRgq8EjDD5kDNWAmpO-maNOimULHfEiuzkQ2iXtINIchXxsIrrMljx_Aom_DhRDVfU8Lcd8ksQBDQOWBNfWxdSGst4c7p4o4iSxY0-CxQJPCcR9eAXJiENLNf6_bPc3G1_eqTBDRltAzIX9SMDTlCDaTvBxkpXbmeiyMF-xpV5bV9Vnpc_ctZ5uV_3EwJ3mvldk0j31obIzrAY4K4GsbcHbx9srtnAtJ_fUExcZLbUPjspFv8HnvCYxcgFx6BOlU8sMPS-LF-ghVTuJ0pF_5ZPoFmhAwvtWcRJylo7aIZUiG9DF7Kx6lJvzG21l9qv7c1k0UFeCs4ENNfDdug2sBGvtdF1Verc3SPa-YDhEqsmBPwFK5MJ9XZPq4xpyLgcvX2iQZ3XK0uaYU8T7i3BipGQkTeTLGqBCIwoe7OmKOQbiY58SUqDz_X2b4pHwlkOIrLWq6oWdjke7Bf2nGQrONoIcIWiMQRjAi6MPS_MOvL1svI_pN4_WZFr5q9bji2kuw1M-aSpXfSTtA_oS13JD4FxS8pD65A52YKCeK68kw4g0rqmgR-12E1ZnwjZRWtBdOFoGGLpPXW4OKc-EsJh1zPIy0qHREoiIB1ah9rigiApaXLiwcAszO2uCnrr0RWTssgCt_PTI2PWnWU6-imx6NR5s6yplhpIgH_2UhZdS73oaqvRpA4xMB4Me5IDD_fZR6d2rPFocgPmK_54tzZCjLuEv7KOKCDKYv_X5Hf48WeMhJCau-h-peaZksdVJWvpDuqwESHmM2l8lb9Wg_L73vYP_gZg
+11:14:22.65 | ERROR | Element Activity | Description:  [OPTION] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:14:22.67 | ERROR | Button Activity | Description:  [OPTION] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 119, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EBFC2E2]
+	(No symbol) [0x00007FF69EBFE94F]
+	(No symbol) [0x00007FF69EC8CD20]
+	(No symbol) [0x00007FF69EC6BBDA]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:14:51.38 | ERROR | Element Activity | Description: Street/Square/Avenue/etc-Via/Piazza/Viale/etc [SELECT&INPUT&CLICK] Dropdown Items of via v. mazzola | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:14:51.39 | ERROR | Button Activity | Description: Street/Square/Avenue/etc-Via/Piazza/Viale/etc [SELECT&INPUT&CLICK] Dropdown Items of via v. mazzola | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 119, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EBFC2E2]
+	(No symbol) [0x00007FF69EBFE94F]
+	(No symbol) [0x00007FF69EC8CD20]
+	(No symbol) [0x00007FF69EC6BBDA]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:15:11.86 | ERROR | Element Activity | Description: Expert Guide/Guida Esperta [CLICK] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:15:11.88 | ERROR | Button Activity | Description: Expert Guide/Guida Esperta [CLICK] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 119, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EBFC2E2]
+	(No symbol) [0x00007FF69EBFE94F]
+	(No symbol) [0x00007FF69EC8CD20]
+	(No symbol) [0x00007FF69EC6BBDA]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:15:13.94 | ERROR | Element Activity | Description: Checkbox switcher | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:15:15.97 | ERROR | Element Activity | Description: Checkbox Ivass switcher | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:15:15.99 | ERROR | Select & CheckBox | Description: Guide Expert | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 297, in _select_guide_expert_checkbox
+    return self.driver.execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: select.click is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EBFC2E2]
+	(No symbol) [0x00007FF69EBFE94F]
+	(No symbol) [0x00007FF69EC8CD20]
+	(No symbol) [0x00007FF69EC6BBDA]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:15:32.48 | ERROR | Element Activity | Description: Dialog of Summary | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:15:32.51 | SUCCESS | Terminating Session
+11:16:13.77 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+11:16:13.77 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+11:16:13.78 | SUCCESS | 1.0 Process | Starting Driver
+11:16:16.66 | SUCCESS | 1.1 Attempt 1 to load the page.
+11:16:32.84 | SUCCESS | 1.2 Page loaded successfully.
+11:16:35.17 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+11:17:10.00 | SUCCESS | Solved captcha: 03AFcWeA6YFYsujqh5e4eehgIgUxwbMZ4qu7kQfYD6GBKOQ7MdhhwWeh-aYZqdYj-vGwwbPK4Y20uDfla_h4hJeye6lKukoSqS-EoUjcQtw6AnBBZ2SzqZrIfziYTWAFVWV8HHDJ7MyMP1oVD_KUGffFLOqhTZyPEyZ-FSCX6Pwz4Pf519n7-2SFYEyC9Y5cFVubsjpuxiINUa9vmSUOzTb34yuQpS9uf2jFIPCPP9YCvyYkH2MPwSvO_qbejzJXgOmhTDLqmFgYFw3IN5gpcRLr8l13xPwtDXa1aQ3rc0x4RE_gwX61UHSt0n79FA76gxpqeMTs3zGmvURm-8PzHPYxOAPjPLjegf3haZDBZ0JwzPpdL1qznKIxVA7sbvpTnAl23UQTk7LKlZzNQLAvRPZX_Me4cz7_8QrU4TmX5BC9NSvI8gK0jk0HRM7dFMFIybwpL5o013-Hso4lQCZtb9ZUJLXIniilxWLZBqHeIZuMLCbrQcss2tIQcYrtKQgqNUNeMIOCgQ5WbH2pWtCYmyLLKFjNl8AKJ7nle1_EOQKJ7IJH8JhEh40PUzDqdkYGU3-rb6iEEdewVAyK3C1eztNB4AY1rY6gYRsTtJBTCXrVnwHdlJFDAKMD_ZxAzgig9_mylIRIuxTcqd37Fk40DhAsmH3k24MmqJ4Rxvv-smuSFJqFCRjxungm8tX8iuSTU7yJwVpN4FjiZdCtdtQPT8cngdY1XTsMjyLlyCG9TRapBKbCMSlnPfWlhuKWBkU7iTWicrmTzUDweqbA2CTzwozC5retZ6zpIBG0-m-XyjW4LSQC2uddH9WW99Uu6yerQMhYQF4xIXHFBWJXKSRfgVF1PEKh6pdenxxVTJcxLBQQPGnxE3tLWdYTzC82N6NoJI4P_VAAKWJYyzIE8RytrFEaHQAAoTUhmJssSwY0K6ACw7PZpWZ_McEus
+11:17:24.61 | ERROR | Element Activity | Description:  [OPTION] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:17:24.63 | ERROR | Button Activity | Description:  [OPTION] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 119, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EBFC2E2]
+	(No symbol) [0x00007FF69EBFE94F]
+	(No symbol) [0x00007FF69EC8CD20]
+	(No symbol) [0x00007FF69EC6BBDA]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:17:52.72 | ERROR | Element Activity | Description: Street/Square/Avenue/etc-Via/Piazza/Viale/etc [SELECT&INPUT&CLICK] Dropdown Items of via v. mazzola | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:17:52.74 | ERROR | Button Activity | Description: Street/Square/Avenue/etc-Via/Piazza/Viale/etc [SELECT&INPUT&CLICK] Dropdown Items of via v. mazzola | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 119, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EBFC2E2]
+	(No symbol) [0x00007FF69EBFE94F]
+	(No symbol) [0x00007FF69EC8CD20]
+	(No symbol) [0x00007FF69EC6BBDA]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:18:13.20 | ERROR | Element Activity | Description: Expert Guide/Guida Esperta [CLICK] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:18:13.21 | ERROR | Button Activity | Description: Expert Guide/Guida Esperta [CLICK] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 119, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EBFC2E2]
+	(No symbol) [0x00007FF69EBFE94F]
+	(No symbol) [0x00007FF69EC8CD20]
+	(No symbol) [0x00007FF69EC6BBDA]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:18:15.25 | ERROR | Element Activity | Description: Checkbox switcher | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:18:17.28 | ERROR | Element Activity | Description: Checkbox Ivass switcher | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:18:17.30 | ERROR | Select & CheckBox | Description: Guide Expert | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 297, in _select_guide_expert_checkbox
+    return self.driver.execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: select.click is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EBFC2E2]
+	(No symbol) [0x00007FF69EBFE94F]
+	(No symbol) [0x00007FF69EC8CD20]
+	(No symbol) [0x00007FF69EC6BBDA]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:18:33.84 | ERROR | Element Activity | Description: Dialog of Summary | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:18:33.89 | SUCCESS | Terminating Session
+11:20:55.69 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+11:20:55.70 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+11:20:55.70 | SUCCESS | 1.0 Process | Starting Driver
+11:20:58.63 | SUCCESS | 1.1 Attempt 1 to load the page.
+11:21:12.42 | WARNING | Load attempt 1 failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 507, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 286, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 79, in _reload_page_with_retry
+    self.driver.get("https://www.preventivass.it/dati-principali")
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 391, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 415, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 507, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 286, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+11:21:12.47 | SUCCESS | 1.1 Attempt 2 to load the page.
+11:21:28.74 | WARNING | Load attempt 2 failed: HTTPConnectionPool(host='localhost', port=56442): Max retries exceeded with url: /session/81c8ba565f4cf6b5a7eab030d66b1d8f/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F517E01610>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')) traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001F517E01610>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 79, in _reload_page_with_retry
+    self.driver.get("https://www.preventivass.it/dati-principali")
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 391, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 415, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=56442): Max retries exceeded with url: /session/81c8ba565f4cf6b5a7eab030d66b1d8f/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F517E01610>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+11:21:28.74 | SUCCESS | 1.1 Attempt 3 to load the page.
+11:21:44.96 | WARNING | Load attempt 3 failed: HTTPConnectionPool(host='localhost', port=56442): Max retries exceeded with url: /session/81c8ba565f4cf6b5a7eab030d66b1d8f/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F517E03890>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')) traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001F517E03890>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 79, in _reload_page_with_retry
+    self.driver.get("https://www.preventivass.it/dati-principali")
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 391, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 415, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=56442): Max retries exceeded with url: /session/81c8ba565f4cf6b5a7eab030d66b1d8f/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F517E03890>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+11:21:44.99 | WARNING | Failed to load the page after multiple attempts.
+11:21:44.99 | ERROR | Page Activity | Unable to load page, closing driver.
+11:21:44.99 | SUCCESS | Terminating Session
+11:22:31.45 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+11:22:31.45 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+11:22:31.47 | SUCCESS | 1.0 Process | Starting Driver
+11:22:34.23 | SUCCESS | 1.1 Attempt 1 to load the page.
+11:22:46.50 | SUCCESS | 1.2 Page loaded successfully.
+11:22:48.78 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+11:23:40.26 | SUCCESS | Solved captcha: 03AFcWeA7LZXsL5umLrK2LyWvfmEr9GjURX32L6h9ibOYq6ltuWqvOsCA_4U6Yko0-ChLE_Ugh5oRwAQF6onK6MjmMooVudqtUAxZEofZI7vj1bO_ZzMFLa3FwUYGgCpVtYiLr7slDYe8bagVnhZ54DaFFYMd8Keuadcu-vPxtOG3eOdbFwDq0NJ8T1R-PbcZrOU_t7AesLArW0AesdEWcSvRBpiJy8sHCm-QXPRlSeumP_nNr5DYQV0DNwpB5qL8OA97Q-p6f_Q1UwZ4fmcRv28VepoZUYqlQld1N-PlXu-a2_KrZefsqEN0frRCNiUapz37-JaCJyvlofQF7ySUlATrNdiehOGg29YZB-bh2IJSAH--tn7_Z22LvJsF5fiKTM8wdPivFeRw2e4i1ofq_F85nW3x9vyx_BXTbcinp93UnppFpZXLfFCNSACf3az2XZKpaZgBdpnfCUfp_GyvhvWvGh-gN3R-AispCd6gWmBgu66kKRfRtXoubqRbpUNQLVU7gpikg9dcH2jTItbZBGQAF3JTxrt5ubceHJZSvVtTNb_TE033dsUibJ5wdf_HEE3p3TNj9eJbxfOypu52go3AX1i78t4vsv_DWVPaLx6HySZkRo6keX8_q2Q68GuY-dI213jxq-CypvXy8rpo7csRKle_nwy--pVcglbf3M6UHqg_yPCvqlNF8NR4YkwkRm4gmIgBeyAsWw7koftHUzZxDg-Z07dHbQufDI7MKSuxojmbSfqyEbCWXibMqMTkyUB7CjqDP08jynMPSiQEs4DF6QrTnmH0txshrr-hXKYoIIKRx79n29YvSoAe64afx2x3sDobkVhM9oYvX_NzxUEPAba8Di0robghUK2kN798SHEotkUB1WCUJ4AMKcjhqufvVJP5g5dVWyzXzi3xx6APEy7DI5coCJssuDWWZNgUDIpXn8DTDFC4
+11:25:21.05 | SUCCESS | Terminating Session
+11:26:19.16 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+11:26:19.16 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+11:26:19.16 | SUCCESS | 1.0 Process | Starting Driver
+11:26:22.30 | SUCCESS | 1.1 Attempt 1 to load the page.
+11:26:35.18 | SUCCESS | 1.2 Page loaded successfully.
+11:26:37.45 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+11:27:33.07 | SUCCESS | Solved captcha: 03AFcWeA4DF7vov2hfW4lLD6Vavf9oi296vavqILP84O4eRNdVulIlHn5DHYaZoLSOjcEsFfuOD3jI5qR-K8LPrjU7diDZBJYdc6JsJkBmXEnZiOQtfaGnw9yv3KAGY3Ycl3yi8izMNZNntI1SS-0TLy_KlaNeT2lSjn79d8PEi0aKogZv55jXGGaQ5N6oEaazx0nH0ZLjOZ2k2qWQjXofcIIyoR9FTde0FseWwDWI2SPpd3xc9F01Vt90X53a_D-ohHVVF3v74OmyAcx8ZKzDLAfKxTHTJ4SYadATgO8esixKJMIJ_GrvhkCHSQqOrn9I2wsYiWI9tcQa2Pc5Fk7zyVZ74q0Ll2UgRKxr2bHhDeYa-fIv0V_2T1d0WrWboAFbTLCbtWIN2iJnLzCYMKzPn9_1Z-B53Zb1RhNO_7QMkFd-gjRc4J6P3mahrMsLdt_cuh6fuqJ9oV0aux9-ym5FYdvHZrX930NG4gFdfrnp0jPlZ9MvJ5dwjaiPXEM4yLwJBflZjO_G9dNu9Ly0664cqolh9BeTK4ya1w6IerCiWZuEH4wPcb7monIxcUjJQBojjyZV32nJTfUMG9LWlbMgJEq5KPAhCttor3Yz1LuBi8p6NTeMD6B7MFme-vQ9ftbt1sdIkLCK_-koebL1ScHXqhIEQXadALzGpTjR-MVAShFkVQzVHFnxXJfcpY3EplYO-Lb6-0QRYDqOwdGuBpRtlYsSkp8JcQbmuncd4IDBnVj04KsGqgyjsF4DzHQU6hC6TLBXePvuidvbh9v940pjd2BRaoVQui7Md_tT92PjXgC2ea4GgjQJoJm9fzRPZ0gtRtc7LOnoyXYglhWfKdpFby1cSG14Tel1I8_TzPNGMjIBdvQ1GzeDHoiIKWQU-LVo0g-IaZvH6XwQCoBDwywMSZP6YIuZuMyknAhuQRWVnc_WT7MViC4XcaQwU0Pxsiat-T_sXmAgkhjQ
+11:27:48.30 | ERROR | Element Activity | Description:  [OPTION] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:27:48.31 | ERROR | Button Activity | Description:  [OPTION] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 119, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EBFC2E2]
+	(No symbol) [0x00007FF69EBFE94F]
+	(No symbol) [0x00007FF69EC8CD20]
+	(No symbol) [0x00007FF69EC6BBDA]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:28:21.39 | ERROR | Element Activity | Description: Expert Guide/Guida Esperta [CLICK] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:28:21.41 | ERROR | Button Activity | Description: Expert Guide/Guida Esperta [CLICK] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 119, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EBFC2E2]
+	(No symbol) [0x00007FF69EBFE94F]
+	(No symbol) [0x00007FF69EC8CD20]
+	(No symbol) [0x00007FF69EC6BBDA]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:28:23.47 | ERROR | Element Activity | Description: Checkbox switcher | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:28:25.55 | ERROR | Element Activity | Description: Checkbox Ivass switcher | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:28:25.58 | ERROR | Select & CheckBox | Description: Guide Expert | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 297, in _select_guide_expert_checkbox
+    return self.driver.execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: select.click is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EBFC2E2]
+	(No symbol) [0x00007FF69EBFE94F]
+	(No symbol) [0x00007FF69EC8CD20]
+	(No symbol) [0x00007FF69EC6BBDA]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:28:42.00 | ERROR | Element Activity | Description: Dialog of Summary | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69F0B38A5+3004357]
+	(No symbol) [0x00007FF69ED49970]
+	(No symbol) [0x00007FF69EBF582A]
+	(No symbol) [0x00007FF69EC45B8E]
+	(No symbol) [0x00007FF69EC45E7C]
+	(No symbol) [0x00007FF69EC8EC27]
+	(No symbol) [0x00007FF69EC6BC1F]
+	(No symbol) [0x00007FF69EC8BA4C]
+	(No symbol) [0x00007FF69EC6B983]
+	(No symbol) [0x00007FF69EC37628]
+	(No symbol) [0x00007FF69EC38791]
+	GetHandleVerifier [0x00007FF69F0DA00D+3161901]
+	GetHandleVerifier [0x00007FF69F12E060+3506048]
+	GetHandleVerifier [0x00007FF69F12400D+3465005]
+	GetHandleVerifier [0x00007FF69EEA0EEB+830987]
+	(No symbol) [0x00007FF69ED5467F]
+	(No symbol) [0x00007FF69ED509D4]
+	(No symbol) [0x00007FF69ED50B6D]
+	(No symbol) [0x00007FF69ED40149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+11:28:42.02 | SUCCESS | Terminating Session
+11:28:44.22 | ERROR | Error occurred >>> Object of type QuoteData is not JSON serializable ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 41, in start_prep_data
+    return BotScrapper(data, db).start()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 837, in start
+    return error_response_model(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\response.py", line 16, in error_response_model
+    return JSONResponse(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\starlette\responses.py", line 180, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\starlette\responses.py", line 43, in __init__
+    self.body = self.render(content)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\starlette\responses.py", line 183, in render
+    return json.dumps(
+           ^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuoteData is not JSON serializable
+ <<<
+12:44:38.50 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+12:44:38.52 | ERROR | Error occurred >>> signal only works in main thread of the main interpreter ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 41, in start_prep_data
+    return BotScrapper(data, db).start()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 31, in __init__
+    signal.signal(signal.SIGINT, self.teardown)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\signal.py", line 58, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: signal only works in main thread of the main interpreter
+ <<<
+12:46:05.91 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+12:46:05.91 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+12:46:05.91 | SUCCESS | 1.0 Process | Starting Driver
+12:46:14.11 | SUCCESS | 1.1 Attempt 1 to load the page.
+12:46:33.15 | SUCCESS | 1.2 Page loaded successfully.
+12:46:35.50 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+12:47:41.14 | SUCCESS | Solved captcha: 03AFcWeA7ofXDtqYDDgqzRqfIFRAISSKVFLML8qXiMNO_K3Zjq8HYJuX0RYLsUVtNBu9db6f62XVK13s4OMdA_KSNqAH36cgDG9ByxzZpytnI4eMnYU9EkgPY-KXL2O1jW2tISCxtIRiCLDs_1n281Wj4q-4MW71CQn1Aej1GMnVjjugbkFEy_qh5_CDXGB30FfggatxUQOUuuoKghs9CgijzDHstT1PEQKr3vUtybcY3tzDeQ87j3TMH-w6xCEgHccuybJVqB3lyRqFzRLCqz65q-V4w9Yfi5JZm6h-ZSZqyo2R1fLOcjA66mO2w6T3lhH9luzx01Y0yBFVDj-K-vDwdchQ7x5ACMqrnDEmXNtdnh-boJm2-cNEHj3vHos6z2l8tuEFYtKZYk2N_DVH7D26Q12Yj6GPGsaavNdZn7YdeTAkk9vhGEpLf-6e1yc2hB7yMGUifqbFaJhtXDjRdkQD1h-50H5O4yI3JJgrxblChA2tMHOQXrAj1OyHVYuPC5waOP9JuLIn3hfS8NJ_u2qOc28Xfp-NwzXZu9Q5G1V1dVNitkJ0Is_ygiZDEg8-oFXB8kXABJvIdTkaaP4XJ3zS1yA32rknaT0Pn_501cvvkC32UTZM4mFjrcpYx3tY6jHPK7QWfsTbSXvhC1WARk0L8-KShzqYKqLF-bZfKIW6UuHByT0GE-DYMGaB1SmrBuPkopi8vet-JmVVisUpJST9bhhFS6satAifsGT8vCEosoAZ0Ztx0UWrVwYkUgNovb2PiFgwZOJBotUeeAlo_x6-k9GPvGSDJT1Te96duYaCLSiOEzqa3xwpA7y63LHU9polRlHLDzEsmtLAwK_TGDKLW6kQw6Hnrm17KqsBVGoWoTxue21IqxvfFBjKWnM3X30gF5anJHkiyP_spjeH16uAjE-UvwAWCL41AhZ5UHD19bFBABW-Nts9UJp3QFCMFvnJQHL1LFWBPG
+12:47:56.71 | ERROR | Element Activity | Description:  [OPTION] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 105, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0F15B8E]
+	(No symbol) [0x00007FF6E0F15E7C]
+	(No symbol) [0x00007FF6E0F5EC27]
+	(No symbol) [0x00007FF6E0F3BC1F]
+	(No symbol) [0x00007FF6E0F5BA4C]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+12:47:56.74 | ERROR | Button Activity | Description:  [OPTION] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 121, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0ECC2E2]
+	(No symbol) [0x00007FF6E0ECE94F]
+	(No symbol) [0x00007FF6E0F5CD20]
+	(No symbol) [0x00007FF6E0F3BBDA]
+	(No symbol) [0x00007FF6E0F5BA4C]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+12:48:38.43 | ERROR | Element Activity | Description: List of quotes that satisfy the user's choice | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 507, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 286, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 105, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 766, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 391, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 415, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 507, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 286, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+12:48:38.51 | SUCCESS | Terminating Session
+12:54:20.39 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+12:54:20.39 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+12:54:20.39 | SUCCESS | 1.0 Process | Starting Driver
+12:54:23.35 | SUCCESS | 1.1 Attempt 1 to load the page.
+12:54:24.71 | WARNING | Load attempt 1 failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+ traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 83, in _reload_page_with_retry
+    if self._is_page_loaded():
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 69, in _is_page_loaded
+    WebDriverWait(self.driver, 10).until(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 70, in <lambda>
+    lambda d: d.execute_script("return document.readyState") == "complete"
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+12:54:24.73 | SUCCESS | 1.1 Attempt 2 to load the page.
+12:54:24.76 | WARNING | Load attempt 2 failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+ traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 81, in _reload_page_with_retry
+    self.driver.get("https://www.preventivass.it/dati-principali")
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+12:54:24.77 | SUCCESS | 1.1 Attempt 3 to load the page.
+12:54:24.77 | WARNING | Load attempt 3 failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+ traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 81, in _reload_page_with_retry
+    self.driver.get("https://www.preventivass.it/dati-principali")
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+12:54:24.78 | WARNING | Failed to load the page after multiple attempts.
+12:54:24.79 | ERROR | Page Activity | Unable to load page, closing driver.
+12:54:24.79 | SUCCESS | Terminating Session
+12:56:50.29 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: string
+12:56:50.29 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+12:56:50.29 | SUCCESS | 1.0 Process | Starting Driver
+12:56:53.00 | ERROR | Proxy check failed SOCKSHTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json (Caused by NewConnectionError('<urllib3.contrib.socks.SOCKSConnection object at 0x000001EB046CE1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')) | Traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\contrib\socks.py", line 110, in _new_conn
+    conn = socks.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\socks.py", line 180, in create_connection
+    for r in socket.getaddrinfo(proxy_addr, proxy_port, 0, socket.SOCK_STREAM):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\contrib\socks.py", line 150, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.contrib.socks.SOCKSConnection object at 0x000001EB046CE1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: SOCKSHTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json (Caused by NewConnectionError('<urllib3.contrib.socks.SOCKSConnection object at 0x000001EB046CE1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 487, in check_proxy
+    response = requests.get(
+               ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: SOCKSHTTPConnectionPool(host='ip-api.com', port=80): Max retries exceeded with url: /json (Caused by NewConnectionError('<urllib3.contrib.socks.SOCKSConnection object at 0x000001EB046CE1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+12:57:12.67 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+12:57:12.67 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+12:57:12.67 | SUCCESS | 1.0 Process | Starting Driver
+12:57:15.58 | SUCCESS | 1.1 Attempt 1 to load the page.
+12:57:17.16 | WARNING | Load attempt 1 failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+ traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 83, in _reload_page_with_retry
+    if self._is_page_loaded():
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 69, in _is_page_loaded
+    WebDriverWait(self.driver, 10).until(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 70, in <lambda>
+    lambda d: d.execute_script("return document.readyState") == "complete"
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+12:57:17.19 | SUCCESS | 1.1 Attempt 2 to load the page.
+12:57:17.20 | WARNING | Load attempt 2 failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+ traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 81, in _reload_page_with_retry
+    self.driver.get("https://www.preventivass.it/dati-principali")
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+12:57:17.21 | SUCCESS | 1.1 Attempt 3 to load the page.
+12:57:17.23 | WARNING | Load attempt 3 failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+ traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 81, in _reload_page_with_retry
+    self.driver.get("https://www.preventivass.it/dati-principali")
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E13838A5+3004357]
+	(No symbol) [0x00007FF6E1019970]
+	(No symbol) [0x00007FF6E0EC582A]
+	(No symbol) [0x00007FF6E0E9FA75]
+	(No symbol) [0x00007FF6E0F42C77]
+	(No symbol) [0x00007FF6E0F5B351]
+	(No symbol) [0x00007FF6E0F3B983]
+	(No symbol) [0x00007FF6E0F07628]
+	(No symbol) [0x00007FF6E0F08791]
+	GetHandleVerifier [0x00007FF6E13AA00D+3161901]
+	GetHandleVerifier [0x00007FF6E13FE060+3506048]
+	GetHandleVerifier [0x00007FF6E13F400D+3465005]
+	GetHandleVerifier [0x00007FF6E1170EEB+830987]
+	(No symbol) [0x00007FF6E102467F]
+	(No symbol) [0x00007FF6E10209D4]
+	(No symbol) [0x00007FF6E1020B6D]
+	(No symbol) [0x00007FF6E1010149]
+	BaseThreadInitThunk [0x00007FFDD166259D+29]
+	RtlUserThreadStart [0x00007FFDD1D0AF38+40]
+
+
+12:57:17.24 | WARNING | Failed to load the page after multiple attempts.
+12:57:17.24 | ERROR | Page Activity | Unable to load page, closing driver.
+12:57:17.24 | SUCCESS | Terminating Session
+13:21:22.31 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+13:21:22.31 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+13:21:22.31 | SUCCESS | 1.0 Process | Starting Driver
+13:21:25.50 | SUCCESS | 1.1 Attempt 1 to load the page.
+13:21:33.52 | SUCCESS | 1.2 Page loaded successfully.
+13:21:42.79 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+13:23:18.58 | SUCCESS | Solved captcha: 03AFcWeA47--0091dNbmhjY1ojPlHq9yXl0Sf1iflZfjUaiZBK_OUhGCoD4zVsVDSgicGd9H8Ommn7JneV8BixothLL5uAzT6j2PP6J3lv4ht_L9LyNBb9VBCpah15oJBjVAxgY34XZreFEJ6UY3yMC9o83u7BRDWBoZnsZAAgcBCkfUztACda5QvctwP4bdukN1OSnHHK07-IwC1t6Tpi0llqOTcGsowU4OoSVO77Aii8nb2QBOdLlBo1pR3qCaJIL_PSiY_soMZnU7HKzXDq5gQun1RamhUYFNXYRLt7sM1pWv3SUWGnSBMM8mAIDr7fkizc_8qCPfKF9sx8CvyXL17eFeErV1CuGhlOAL62AcmsZaCQrmb2DzvtuRC04O48D6bEo0ElBb4xZZ05lO_NreCOkoOO-2MGkTJYZ3Vj6T91paCI8FXTSCfreDnqt4YVcvwAMVKZ4MlBKidT3KMhqx_iDkCzKQydcq8ULAXIdYUm3kamzUf6KPcEpn-UXok-SCkPUV6fQKqiZpsghw8vtUKbJPVWaSYyBvDcpnhrVwSZc9gqr9TN-5x4Jhu63zcnxuY8Jw0X_t34et5WFBlk6y_adhcq8vmOgHZvvrk2fIu571fWVtG89WN7jR2j0f7g6lGyktd8MRzNRAo-wusA34LV_gYqygk7XNGNOnop7RnprJiaELIh4vNN_xkbxRFiMDKiCeZw0_DXicjkkgWL4Uh23maWNmCHhYRnoOEGAVy7T_zq0hjv6RWa4wbKpnntLbTRmCPy0MtUvTeyVcW7NjttxvowdtuSOkPjNpBGfwX3PKdkNE-HuNwnNbUhd8cXS9RAfp7Aw1KqyAgMd1qEP05VGcFgpcqzGKaN71qM_OdE17tIbcM2lV8XoOF_y0f2vyL20kX2SHVxo0U-x73rmlKjbZU_A6Ma-960QqQ0D4P-U0P2nMmpGkhbHA2Anggz4QsJWLedDS1v
+13:25:14.80 | SUCCESS | Terminating Session
+13:26:47.73 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+13:26:47.73 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+13:26:47.73 | SUCCESS | 1.0 Process | Starting Driver
+13:26:52.24 | SUCCESS | 1.1 Attempt 1 to load the page.
+13:27:24.72 | SUCCESS | 1.2 Page loaded successfully.
+13:27:35.79 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+13:28:26.47 | SUCCESS | Solved captcha: 03AFcWeA4UKZXaKZgNekckg9cUqsxs3rJJB6snb3jMhj3YXrSGHplGoKFVIJ-9ZIvxqWy5RNT5kb0CBktwtdhrtN8VaogA6NMg_APnWDIadUoFGME_-tHNdREcCRC-vldsSNfwYWPQihNjLdTZC1NWma7chOLMm--7Y007uBE8j4jyFF2FvcZ_-Z9NR43k4v50sx1274ccIEK8trOMqoL_3za1YedysFLoMSmgol6g-GR3-tVV-EBeyxzULu_Oj0jNi1LFZP4eFp7TRJ1eGswOZr8fKOflxITP7IFgkDBlPYhHRa30O_mSHgiLb0QxOQYJBkddxmRB0Af4uVkFcblmmodSddxGmKTR36trIhnZGVR5DGj2A0HtFpxW_MFlZ14pBJc57db81AM-dvb6zPTYuCoSS_JecMV_4YAqCwaB4ntCL_1JK1das4T1VEkyeU7cmWjkEMQ5D_Sldcshi2v4BDWuOgjYsy8pw_7uwXuMCpzsLikkOhMr6CeS_C3m4qAB0Obe4SOSbWtTByI4jJavXWf3Hjv0nhLeT66k4dnI0ibQGN9t_58UW1sGwXSXPkBgXNjmpIlH2dsdUFL5pThh0vdJ1sIiGJGCZHGc6w8CGio8Gy8SfC48BLHYIzbljv11hlewYXr83OvD-PI8WY6xrTFOiV4yQjSUDJDbSUz8aprkRh7nyV_SPktpEzpN__04vvSyf05AAmqdZBKDH1nnTXu0FvFMgAhosNuKox-Iyl_XNXvJhwfAyCwy0s6jIR_pG4yc7kydUAsVtWo7GShdOs1hB8WZnr0j23YSRMtOwLBpFhbwlbfk0oF9qUnMhxu8CO4ra5yZVaY7V2gaigjnZfzklkpYIdzZ7XLkZeLD3v08dy_hsZh6Vj43WLl6h50CqE02LxD9gGcUnigucwHCSJtWtgrfJ4MuPGwD31jbz9BRXq2jD4GDRD40_WOS08nLg0OSeXxAW8gJ
+13:30:19.89 | SUCCESS | Terminating Session
+13:31:40.71 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+13:31:43.86 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+13:33:39.76 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+13:33:44.25 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+13:34:26.48 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.4:62712
+13:34:26.48 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+13:34:26.49 | SUCCESS | 1.0 Process | Starting Driver
+13:34:31.24 | SUCCESS | 1.1 Attempt 1 to load the page.
+13:34:40.42 | SUCCESS | 1.2 Page loaded successfully.
+13:34:49.85 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+13:35:53.33 | SUCCESS | Solved captcha: 03AFcWeA7i508AcC6jwoI7K-M36WBzvlDIB_3z6z7AVD4MHh_MFM0tzxW5MnIHNHwmwLf-n3_X2VWRJ-P4z8Y2Erx2mtF-58IU6zWwwZB3L2yPUUCdZlM266xHbFHZBpexrtqt4w2fo3A9zdBUcbJ2bX9_GKGu2Mf20qVD3e0VERgCNbA-bH2Qi9Gbn0Gs6gc1vrR2nX1OKwnKgjOk8MQEVXsSDKlWlRMIFxXyElWR4PR0RFozn018lDMJMkt15cnT0R-NeTq2ACsAkmSiDsVN8t5feaDaVvEH0KzdMerwIEcjV5srd6l9SMlHvCMLBZPFXQ3IsYTo56z9cnn0vhbhCw8ltxDPnapziuDZmy4TN3JV1amf244Ng8EcOpSkJkQH6_gPRMXvXrcnBDRI9Lgn3ClhQ9XsBbAkaOqD98rZ7nMyYVKGC7wxY39ui7w3CoKMD14IFl519hkW8p55xoHZK0NauNqkpQUKrnXrbFWQFrdR5uzqx7Hxuhm7rw8Ixh0hbrlWIyQ3FMdyXbgrR3sNET1xaem9qdU16lb4a7ObMkr8IHrk9iwegMYEVDKkd8pCklgr339ONtrxQ12o5EEjig6UhtAKQrXEMqFJ8BH8FvXUXKCjlB6sg6xmi74Bnq4ZrUfuK2QGMjBkDh4xts1NBVtSRcToDg4zjaNSpiW4bqV-PKE6eKZU4xQM4IK-LU0fB9ysHDD7HAmMGcWH8jlsV4f7-FgEDQOMPl2mvYTbFHuttiP9iwcKZNW8SqcR2_lhjzrX4EHO7ZvV5OvM51AHvkuI-Pk1FAPI3I7189AULC5ANCjnJrErt0eUDQZsMNnFH2cCm3LXjXa5hkFPGrGApfGjEyhiwUFK6RB2_H3xV0faEv_L9VYrdHt6bYl-p3GTXXcuIH5ln2LDmYj_blMoTaUmQzmXhXuP8RBg-3c2PTSXm2jg0wpNbweb0Id2aDxYtrdUVhq8n1ts
+13:37:39.63 | SUCCESS | Terminating Session

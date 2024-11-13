@@ -1,5 +1,5 @@
+import json
 import traceback
-from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
 from logger import logger
 from response import error_response_model, success_response_model
@@ -14,7 +14,7 @@ def start_prep_data(data: RawRequestData, db: Session):
         logger.success(
             f"0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: {data.proxy}"
         )
-        if data.request_id and not data.refresh:
+        if data.request_id and not data.request_refresh:
             # accessing already store data and data.refresh is none
             quote = (
                 db.query(QuoteData)
@@ -26,18 +26,22 @@ def start_prep_data(data: RawRequestData, db: Session):
                 .first()
             )
             if quote:
-                quote_response_data = {
-                    **jsonable_encoder(quote.response_data),
-                    "request_id": quote.id,
-                }
+                # Try parsing the response_data string into a dictionary
+                # Check if the response data is a list
                 return success_response_model(
                     {
                         "code": status.HTTP_200_OK,
                         "request_id": quote.id,
-                        "data": quote_response_data,
+                        "data": json.loads(quote.response_data),
                     }
                 )
-
+            else:
+                return error_response_model(
+                    {
+                        "code": status.HTTP_404_NOT_FOUND,
+                        "message": "Quote request not found",
+                    }
+                )
         else:
             # create a new processing quote data
             return BotScrapper(data, db).start()

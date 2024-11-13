@@ -1,29 +1,58 @@
-//div[text()='Alimentazione aggiuntiva']/ancestor::ng-select//ng-dropdown-panel//div[contains(@class, 'ng-option')][.//span[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'nessuna')]]
-
-//ng-dropdown-panel//div[contains(@class, 'ng-option') and contains(text(), 'BERGAMO')]
-
-//div[text()='Comune']/ancestor::ng-select//ng-dropdown-panel [..//div[contains(text(), 'Nessun risultato trovato')]]
-
-//div[text()='Comune']/ancestor::ng-select//ng-dropdown-panel//div[contains(@class, 'ng-option')][.//span[text()='Nessun risultato trovato' or text()='nessun risultato trovato']]
-//div[text()='Comune']/ancestor::ng-select//ng-dropdown-panel//div[text()='Nessun risultato trovato' or text()='nessun risultato trovato']
-
-//div[text()='Età guidatore più giovane' or text()='età guidatore più giovane']/ancestor::ng-select//ng-dropdown-panel//div[contains(@class, 'ng-option')][.//span[text()='25+' or text()='25+']]
-
-//mat-label[text()='Anno e mese di acquisto']/ancestor::mat-form-field//input
-//mat-label[text()='Inserisci anno di conseguimento della patente']/ancestor::mat-form-field//input
-
-function getElementByXPath(xpath) {
-    return document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+{
+  "proxy": "51.83.116.4:62712",
+  "data": {
+    "anag": {
+      "cf": "BNDCML75M61F839P",
+      "nascitaGiorno": "21",
+      "nascitaMese": "08",
+      "nascitaAnno": 1975,
+      "patenteAnno": "1993",
+      "residenzaProvincia": "NA",
+      "residenzaComune": "SANT'ANASTASIA",
+      "residenzaIndirizzoVia": "VIA",
+      "residenzaIndirizzo": "SOMMA",
+      "residenzaCivico": "57"
+    },
+    "veicolo": {
+      "targa": "CL962LD",
+      "acquistoGiorno": "04",
+      "acquistoMese": "10",
+      "acquistoAnno": 2019,
+      "allestimento": "Panda 1.2 Dynamic",
+      "immatricolazioneGiorno": "30",
+      "immatricolazioneMese": "06",
+      "immatricolazioneAnno": 2005,
+      "dataDecorrenza": "23/11/2025"
+    }
+  }
 }
 
-const event = new KeyboardEvent("keydown", {
-    key: 'Enter',      // Key you want to simulate
-    code: 'Enter',     // Code corresponding to the key
-    keyCode: 13,       // Key code for 'Enter' (13)
-    charCode: 13,
-    which: 13,
-    bubbles: true      // Allows the event to bubble up the DOM
-});
-element.dispatchEvent(new Event('checkedChange'));  // Trigger 'input' event
-                
-//ivass-card-simple//h1[text()="L'attesa prevista è di circa 22 secondi."]
+
+{
+	"proxy": "51.83.116.4:62712",
+	"data": {
+		"anag": {
+			"cf": "FSLSVN67T55F839W",
+			"nascitaGiorno": "15",
+			"nascitaMese": "12",
+			"nascitaAnno": 1967,
+			"patenteAnno": "1985",
+			"residenzaProvincia": "NA",
+			"residenzaComune": "CASORIA",
+			"residenzaIndirizzoVia": "VIA",
+			"residenzaIndirizzo": "V. MAZZOLA",
+			"residenzaCivico": "1"
+		},
+		"veicolo": {
+			"targa": "CS691FF",
+			"acquistoGiorno": "16",
+			"acquistoMese": "02",
+			"acquistoAnno": 2011,
+			"allestimento": "",
+			"immatricolazioneGiorno": "03",
+			"immatricolazioneMese": "02",
+			"immatricolazioneAnno": 2005,
+			"dataDecorrenza": "24/11/2024"
+		}
+	}
+}

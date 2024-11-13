@@ -3,7 +3,7 @@ import json
 import re
 import time
 import traceback
-import datetime
+from datetime import datetime
 from fastapi import status
 from fastapi.encoders import jsonable_encoder
 from logger import logger
@@ -29,14 +29,11 @@ class Scrapper:
         logger.success("0.0 Process | Initiating Scrapper Class On Selenium")
         self.db = db
         proxy = data.proxy
-        captcha_token = data.captcha_token
         self.req = data
         self.proxy = None
         self.captcha_token = None
         if proxy:
             self.proxy = f"socks4://{proxy}"
-        if captcha_token:
-            self.captcha_token = captcha_token
         self.running = True
         self.captcha_retry_attempts = 3
         self.retry_attempts = 3  # Max retry Attempts
@@ -49,7 +46,7 @@ class Scrapper:
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument(f"--user-agent={UserAgent(os='windows').random}")
         # options.add_argument("--disable-gpu")  # Applicable on Windows
-        if self.proxy:
+        if self.proxy and settings.USE_PROXY:
             options.add_argument(f"--proxy-server={self.proxy}")
         return options
 
@@ -156,6 +153,7 @@ class Scrapper:
                 value,
             )
             time.sleep(1)
+            print(f"Enter INput: {xlocator}, value is: {value}")
             return True
         except:
             logger.error(
@@ -270,11 +268,24 @@ class Scrapper:
                 ):
                     # If there is no element labelled not found, then continue
                     self.driver.implicitly_wait(2)
-                    return self._click_button(
-                        descriptor=f"{parent_descriptor} Dropdown Items of {input_value}",
-                        xlocator=f"""{parent_xlocator}//ng-dropdown-panel//div[contains(@class, 'ng-option')][.//span[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), "{input_value}")]]""",
-                        timeout=15,
-                    )
+                    main_button_xlocator = f"""{parent_xlocator}//ng-dropdown-panel//div[contains(@class, 'ng-option')][.//span[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), "{input_value}")]]"""
+                    if self._check_element(
+                        descriptor=f"Button {input_value}",
+                        xlocator=main_button_xlocator,
+                        timeout=2,
+                        no_error=True,
+                    ):
+                        return self._click_button(
+                            descriptor=f"{parent_descriptor} Dropdown Items of {input_value}",
+                            xlocator=main_button_xlocator,
+                            timeout=15,
+                        )
+                    else:
+                        return self._click_button(
+                            descriptor=f"Any first option of {parent_xlocator}",
+                            xlocator=f"""{parent_xlocator}//ng-dropdown-panel//div[contains(@class, 'ng-option')][1]""",
+                            timeout=15,
+                        )
 
             self.driver.implicitly_wait(2)
             return True
@@ -466,36 +477,40 @@ class Scrapper:
 
     # Check proxy validity with requests
     def check_proxy(self):
-        if self.proxy:
-            # only continue code, if proxy is et
-            try:
-                # Set up the proxy and timeout
-                proxies = {"http": self.proxy, "https": self.proxy}
-                response = requests.get(
-                    "http://ip-api.com/json", proxies=proxies, timeout=5
-                )
+        if settings.USE_PROXY:
+            if self.proxy:
+                # only continue code, if proxy is et
+                try:
+                    # Set up the proxy and timeout
+                    proxies = {"http": self.proxy, "https": self.proxy}
+                    response = requests.get(
+                        "http://ip-api.com/json", proxies=proxies, timeout=5
+                    )
 
-                # Check if proxy worked
-                if response.status_code == 200:
-                    data = response.json()
-                    if data.get("countryCode", "").lower() == "it":
-                        # Check if proxy country is pointed to "Italy"
-                        return True
+                    # Check if proxy worked
+                    if response.status_code == 200:
+                        data = response.json()
+                        if data.get("countryCode", "").lower() == "it":
+                            # Check if proxy country is pointed to "Italy"
+                            return True
+                        else:
+                            # Proxy country is not italy
+                            logger.error("Proxy is in the wrong country")
+                            return False
                     else:
-                        # Proxy country is not italy
+                        logger.error(
+                            f"Proxy check failed: status code is not status.HTTP_200_OK"
+                        )
                         return False
-                else:
+                except (RequestException, Timeout, Exception) as e:
                     logger.error(
-                        f"Proxy check failed: status code is not status.HTTP_200_OK"
+                        f"Proxy check failed {e} | Traceback: {traceback.format_exc()}"
                     )
                     return False
-            except (RequestException, Timeout, Exception) as e:
-                logger.error(
-                    f"Proxy check failed {e} | Traceback: {traceback.format_exc()}"
-                )
-                return False
+            else:
+                # return True, if there is no proxy with request
+                return True
         else:
-            # return True, if there is no proxy with request
             return True
 
     def insert_into_db(self, response):
@@ -534,8 +549,10 @@ class Scrapper:
             self.db.commit()
             self.db.refresh(new_quote_data)
             return new_quote_data
-        except:
-            logger.error(f"There was a problem inserting {response} to database")
+        except Exception as e:
+            logger.error(
+                f"There was a problem inserting {response} to database | Error is {e}"
+            )
             return False
 
     def start(self):
@@ -593,7 +610,7 @@ class Scrapper:
                 xlocator="//button[.//span[text()='Prosegui']]",
             )
             self.driver.implicitly_wait(2)
-            # Service Page Issue
+            # Service Page Issue [Error]
             if self._check_element(
                 descriptor="Service Error Page",
                 xlocator="//app-service-error-page//div[contains(text(), 'Pagina di Errore')]",
@@ -626,7 +643,11 @@ class Scrapper:
             self._enter_input_text(
                 descriptor="Year and Month of Purchase/Annose e mese d acquisto [INPUT]",
                 xlocator="//mat-label[text()='Anno e mese di acquisto']/ancestor::mat-form-field//input",
-                value=f"{data.veicolo.acquistoGiorno}/{data.veicolo.acquistoMese}/{data.veicolo.acquistoAnno}",  # d-m-y
+                value=datetime(
+                    int(data.veicolo.acquistoAnno),
+                    int(data.veicolo.acquistoMese),
+                    int(data.veicolo.acquistoGiorno),
+                ).strftime("%a %b %d %Y"),
             )
             # SELECT [Setup]
             self._select(
@@ -639,11 +660,11 @@ class Scrapper:
             self._enter_input_text(
                 descriptor="Date of first registration/Data di prima immatricolazione [INPUT]",
                 xlocator="//mat-label[text()='Data di prima immatricolazione']/ancestor::mat-form-field//input",
-                value=datetime.date(
+                value=datetime(
                     int(data.veicolo.immatricolazioneAnno),
                     int(data.veicolo.immatricolazioneMese),
                     int(data.veicolo.immatricolazioneGiorno),
-                ).strftime("%m/%d/%Y"),
+                ).strftime("%a %b %d %Y"),
             )
 
             # MAJOR CONSTANTS VALUES
@@ -665,11 +686,11 @@ class Scrapper:
             self._enter_input_text(
                 descriptor="Date of birth/Data di nascita [INPUT]",
                 xlocator="//mat-label[text()='Data di nascita']/ancestor::mat-form-field//input",
-                value=datetime.date(
+                value=datetime(
                     int(data.anag.nascitaAnno),  # Year
                     int(data.anag.nascitaMese),  # Month
                     int(data.anag.nascitaGiorno),  # Day
-                ).strftime("%m/%d/%Y"),
+                ).strftime("%a %b %d %Y"),
             )
             # SELECT [Educational Qualification] _constant_
             self._select(
@@ -735,13 +756,13 @@ class Scrapper:
                 value=f"{data.anag.residenzaCivico}",
             )
             # INPUT [New policy effective date]
-            self._enter_input_text(
-                descriptor=f"New policy effective date/Data decorrenza nuova polizza [INPUT]",
-                xlocator="//mat-label[text()='Data decorrenza nuova polizza']/ancestor::mat-form-field//input",
-                value=datetime.datetime.strptime(
-                    data.veicolo.dataDecorrenza, "%d/%m/%Y"
-                ).strftime("%m/%d/%Y"),
-            )
+            # self._enter_input_text(
+            #     descriptor=f"New policy effective date/Data decorrenza nuova polizza [INPUT]",
+            #     xlocator="//mat-label[text()='Data decorrenza nuova polizza']/ancestor::mat-form-field//input",
+            #     value=datetime.strptime(
+            #         data.veicolo.dataDecorrenza, "%d/%m/%Y"
+            #     ).strftime("%m/%d/%Y"),
+            # )
             self.driver.implicitly_wait(2)
             # Next Section
             self._click_button(
@@ -754,7 +775,7 @@ class Scrapper:
             if self._check_element(
                 descriptor="Service Error Page",
                 xlocator="//app-service-error-page//div[contains(text(), 'Pagina di Errore')]",
-                no_error=False,
+                no_error=True,
             ):
                 return self.teardown()
             # Grant Clause
@@ -825,20 +846,21 @@ class Scrapper:
             db_quote_data = self.insert_into_db(response=quote_object)
             self.teardown()
             if db_quote_data:
-                return success_response_model(
-                    {
-                        "code": status.HTTP_200_OK,
-                        "request_id": db_quote_data.id,
-                        "data": jsonable_encoder(quote_object),
-                    }
-                )
-            else:
-                return error_response_model(
-                    {
-                        "code": status.HTTP_400_BAD_REQUEST,
-                        "message": "Issue with processing request. Please try again.",
-                    }
-                )
+                if len(quote_object) > 0:
+                    return success_response_model(
+                        {
+                            "code": status.HTTP_200_OK,
+                            "request_id": db_quote_data.id,
+                            "data": jsonable_encoder(quote_object),
+                        }
+                    )
+            return error_response_model(
+                {
+                    "code": status.HTTP_400_BAD_REQUEST,
+                    "message": "Issue with processing request, there was empty data. Please try again.",
+                    "data": db_quote_data,
+                }
+            )
         else:
             return error_response_model(
                 {
