@@ -145,7 +145,10 @@ class RequestData(BaseModel):
 
 
 class RawRequestData(BaseModel):
+    request_id: Optional[str] = None
+    refresh: Optional[bool] = None
     status: Optional[str] = None
     message: Optional[str] = None
     data: RequestData
     proxy: Optional[str] = None
+    captcha_token: Optional[str] = None

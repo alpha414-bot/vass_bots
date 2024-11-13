@@ -31,13 +31,17 @@ class AppSettings:
 
     # Telegram Bot Setup
     CHAT_ID: str = os.getenv("CHAT_ID", "1715608783")
-    USE_TG_BOT: bool = bool(os.getenv("USE_TG_BOT", True))
+    USE_TG_BOT: bool = bool(os.getenv("USE_TG_BOT", False))
     BOT_TOKEN: str = os.getenv(
         "BOT_TOKEN", "7559961212:AAG2hRrH0BSAkGgdTYRpMm1Br2wNlYouNWY"
     )
+    MAX_TELEGRAM_MESSAGE_LENGTH: int = int(
+        os.getenv("MAX_TELEGRAM_MESSAGE_LENGTH", 1200)
+    )
 
     # Captcha
-    APIKEY_2CAPTCHA = os.getenv("APIKEY_2CAPTCHA", "d8521da8e2461799140efb0f94013233")
+    APIKEY_2CAPTCHA = os.getenv("APIKEY_2CAPTCHA", "1f900baf6f486e66db38ba2a8efe5f0d")
+    # APIKEY_2CAPTCHA = os.getenv("APIKEY_2CAPTCHA", "d8521da8e2461799140efb0f94013233")
     FIND_RECAPTCHA_SCRIPT = """
         function findRecaptchaClients() {
             // Check if reCAPTCHA config is available

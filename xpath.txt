@@ -1,0 +1,29 @@
+//div[text()='Alimentazione aggiuntiva']/ancestor::ng-select//ng-dropdown-panel//div[contains(@class, 'ng-option')][.//span[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'nessuna')]]
+
+//ng-dropdown-panel//div[contains(@class, 'ng-option') and contains(text(), 'BERGAMO')]
+
+//div[text()='Comune']/ancestor::ng-select//ng-dropdown-panel [..//div[contains(text(), 'Nessun risultato trovato')]]
+
+//div[text()='Comune']/ancestor::ng-select//ng-dropdown-panel//div[contains(@class, 'ng-option')][.//span[text()='Nessun risultato trovato' or text()='nessun risultato trovato']]
+//div[text()='Comune']/ancestor::ng-select//ng-dropdown-panel//div[text()='Nessun risultato trovato' or text()='nessun risultato trovato']
+
+//div[text()='Età guidatore più giovane' or text()='età guidatore più giovane']/ancestor::ng-select//ng-dropdown-panel//div[contains(@class, 'ng-option')][.//span[text()='25+' or text()='25+']]
+
+//mat-label[text()='Anno e mese di acquisto']/ancestor::mat-form-field//input
+//mat-label[text()='Inserisci anno di conseguimento della patente']/ancestor::mat-form-field//input
+
+function getElementByXPath(xpath) {
+    return document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+}
+
+const event = new KeyboardEvent("keydown", {
+    key: 'Enter',      // Key you want to simulate
+    code: 'Enter',     // Code corresponding to the key
+    keyCode: 13,       // Key code for 'Enter' (13)
+    charCode: 13,
+    which: 13,
+    bubbles: true      // Allows the event to bubble up the DOM
+});
+element.dispatchEvent(new Event('checkedChange'));  // Trigger 'input' event
+                
+//ivass-card-simple//h1[text()="L'attesa prevista è di circa 22 secondi."]

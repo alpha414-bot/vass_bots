@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
-from fastapi import Depends, BackgroundTasks
+from fastapi import Depends
 from utils.views import start_prep_data
 
 
@@ -25,10 +25,9 @@ app.add_middleware(
 @app.post("/quote/price")
 def get_quote_price(
     data: RawRequestData,
-    background_tasks: BackgroundTasks,
     db: Session = Depends(get_db),
 ):
-    return start_prep_data(data=data, background_tasks=background_tasks, db=db)
+    return start_prep_data(data=data, db=db)
 
 
 if __name__ == "__main__":
@@ -42,4 +41,5 @@ if __name__ == "__main__":
         reload=True,
         access_log=True,
         reload_includes=["*.py", ".env"],
+        reload_excludes=["call.py"],
     )

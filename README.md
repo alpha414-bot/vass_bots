@@ -11,6 +11,13 @@ python -m venv venv
 vass\Scripts\activate.bat
 ```
 
+[Importing Models]()
+```
+from database import Base, engine
+from utils.models import QuoteData
+Base.metadata.create_all(bind=engine)
+```
+
 [Exporting Python Packages to Requirements]()
 ```
 pip freeze > requirements.txt
@@ -29,4 +36,5 @@ curl --connect-timeout 5 --max-time 10 --retry 1 --retry-connrefused --location 
 
 
 # Important Documentations and References
-[Working Html iframe in selenium in relation to captcha](https://www.selenium.dev/documentation/webdriver/interactions/frames/)
+[Working with html iframe in selenium](https://www.selenium.dev/documentation/webdriver/interactions/frames/)
+[Working with xPath locator in selenium](https://www.browserstack.com/guide/xpath-in-selenium)
