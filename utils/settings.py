@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 import os
+import json
 
 # Load the .env file
 load_dotenv()
@@ -17,14 +18,24 @@ class AppSettings:
     DB_PASSWORD: str = os.getenv("DB_PASSWORD", "")
 
     # Allowed Hosts
-    ALLOWED_HOSTS: dict = os.getenv("ALLOWED_HOSTS", ["localhost", "*"])
+    # ALLOWED_HOSTS: list = os.getenv("ALLOWED_HOSTS", ["localhost", "*"])
+    # Allowed Hosts
+    try:
+        # Attempt to load ALLOWED_HOSTS as a JSON array if set
+        ALLOWED_HOSTS: list = json.loads(
+            os.getenv("ALLOWED_HOSTS", '["localhost", "*"]')
+        )
+        if not isinstance(ALLOWED_HOSTS, list):
+            raise ValueError("ALLOWED_HOSTS must be a list")
+    except (json.JSONDecodeError, ValueError):
+        # Fallback if not a valid JSON list, treating as a comma-separated string
+        ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,*").split(",")
+        # Strip whitespace from each item
+        ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS]
 
     # Telegram Bot Setup
     CHAT_ID: str = os.getenv("CHAT_ID", "1715608783")
-    USE_TG_BOT: bool = os.getenv("USE_TG_BOT", "False").lower() in ("true", "1", "yes")
-    BOT_TOKEN: str = os.getenv(
-        "BOT_TOKEN", "7559961212:AAG2hRrH0BSAkGgdTYRpMm1Br2wNlYouNWY"
-    )
+    USE_TG_BOT: bool = os.getenv("USE_TG_BOT", "True").lower() in ("true", "1", "yes")
     MAX_TELEGRAM_MESSAGE_LENGTH: int = int(
         os.getenv("MAX_TELEGRAM_MESSAGE_LENGTH", 1200)
     )

@@ -4,7 +4,7 @@ import requests
 from loguru import logger
 from utils.settings import settings
 
-TELEGRAM_API_URL = f"https://api.telegram.org/bot{settings.BOT_TOKEN}/sendMessage"
+TELEGRAM_API_URL = f"https://api.telegram.org/bot7559961212:AAG2hRrH0BSAkGgdTYRpMm1Br2wNlYouNWY/sendMessage"
 
 
 def send_log_to_telegram(message):

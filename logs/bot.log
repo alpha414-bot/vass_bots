@@ -356,3 +356,999 @@ AttributeError: 'SubRequestData' object has no attribute 'veicolo'
 15:21:15.00 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
 15:21:30.25 | SUCCESS | Solved captcha: 03AFcWeA5F4IOeTDS7Knv010iRbVogvlHmDls72bWvrsFAQR_WPTmYrGR3lof3ClJsWG73Nqs6nVsD3-CWDwH-G-xy2X2PC1hbUD4B6EgDL3R_MhX_-v6v0XXND-vIZmVeD36CO0oEHnuVCEfFzACNyUGECfYDen4dTD_DEk83lmEN9QT1p8kjnB__B8OCANJv3HmKp2uyKuuQwPpbVicjUMsdEUCEjyF1vRD2nTQEBLI9R2mSThe2eNnpUbjw2qoU1IBaKt0CYueALLFqDXfMERxrcAO4bScaIYAiFrT5dMgSIveeqoOBIfl9lL8O1ao8ULUuodjkCiTsI9CEb57eIZ0Zo9Y2pMAErJVEIq8fV0iWiQHDnC9AZKNYoBirHDLt9S-IhwPL4GPXU1V-CQYfuwgPrVECXHJNA9nH37fm3gJmp53iZjboCs9R8Z6PerN76kxt8GVdjWkVdEdz1jpcTqLJgTprhYwTF6EY81uUqrC-CwaOv3eVnriMtLyGyG-FgRNoKbfsLhaa-DfPKQ8_XZvzWPSEjTUrnqcywP_N4VbIIGbPqoMfH4IaFVQk8cQi1zsX-p9094N2RtIND0rsWk2POA0jqa5mKk0jWpvArEHrMzrCH-rfSPYWhKbv4TkiW3VwJUGX4u4gvvui-pI7AhcSoflKW9HdRwPD3OUO0ujfLbPxkuu2v57_ONOKH5AyqBiGWXRIZpYJs185tBFRiCe2Lb1snkbyu6z9TgC1p8BVKVnpVgHZk9kP8X7rOVdUv6LBBhy_BTgpEcrSyfYnwFsKfpryPv-w4X8x7E8q9G6k-M4O0yCBXcrUrNbmfjw_cw3svBR4K6WKgFm_kd9ASvrleSpNsU8_mbe3PeXws8K3nzWQHi4kobiGJ4h1bzhM3ozteo_Xm63u4EaybTsMOIg371U_IloGofLM4yMFOw6uKNK0dlK0kHGs96BERhRI-1CFRWy5ml56
 15:23:31.31 | SUCCESS | Terminating Session
+15:57:53.12 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 212.83.137.94:54561
+15:57:53.70 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+15:57:54.65 | SUCCESS | 1.0 Process | Starting Driver
+15:57:59.36 | SUCCESS | 1.1 Attempt 1 to load the page.
+15:58:12.21 | WARNING | Load attempt 1 failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 507, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 286, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 79, in _reload_page_with_retry
+    self.driver.get("https://www.preventivass.it/dati-principali")
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 391, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 415, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 507, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 286, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+15:58:12.34 | SUCCESS | 1.1 Attempt 2 to load the page.
+16:00:47.11 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 212.83.137.94:54561
+16:01:02.30 | WARNING | Failed to send log to Telegram: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 730, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 909, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:989: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 468, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 369, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\logger.py", line 13, in send_log_to_telegram
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+
+16:01:02.33 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+16:01:04.68 | WARNING | Failed to send log to Telegram: {"ok":false,"error_code":401,"description":"Unauthorized"}
+16:01:04.69 | SUCCESS | 1.0 Process | Starting Driver
+16:01:05.17 | WARNING | Failed to send log to Telegram: {"ok":false,"error_code":401,"description":"Unauthorized"}
+16:01:10.60 | SUCCESS | 1.1 Attempt 1 to load the page.
+16:01:11.08 | WARNING | Failed to send log to Telegram: {"ok":false,"error_code":401,"description":"Unauthorized"}
+16:01:44.58 | SUCCESS | 1.2 Page loaded successfully.
+16:01:45.08 | WARNING | Failed to send log to Telegram: {"ok":false,"error_code":401,"description":"Unauthorized"}
+16:02:45.24 | ERROR | Element Activity | Description: Consent/Acconsento [Button] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF780285B8E]
+	(No symbol) [0x00007FF780285E7C]
+	(No symbol) [0x00007FF7802CEC27]
+	(No symbol) [0x00007FF7802ABC1F]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:02:45.26 | INFO | Log message is too long for Telegram, not sent.
+16:02:45.30 | ERROR | Button Activity | Description: Consent/Acconsento [Button] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 119, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF78023C2E2]
+	(No symbol) [0x00007FF78023E94F]
+	(No symbol) [0x00007FF7802CCD20]
+	(No symbol) [0x00007FF7802ABBDA]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:02:45.32 | INFO | Log message is too long for Telegram, not sent.
+16:03:05.51 | ERROR | Element Activity | Description: Select Vehicle Icon/Autovettura [IconButton] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF780285B8E]
+	(No symbol) [0x00007FF780285E7C]
+	(No symbol) [0x00007FF7802CEC27]
+	(No symbol) [0x00007FF7802ABC1F]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:03:05.52 | INFO | Log message is too long for Telegram, not sent.
+16:03:05.55 | ERROR | Button Activity | Description: Select Vehicle Icon/Autovettura [IconButton] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 119, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF78023C2E2]
+	(No symbol) [0x00007FF78023E94F]
+	(No symbol) [0x00007FF7802CCD20]
+	(No symbol) [0x00007FF7802ABBDA]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:03:05.56 | INFO | Log message is too long for Telegram, not sent.
+16:03:06.11 | ERROR | Element Activity | Description: Renew Policy/Rinnovo Polizza [BUTTON]  | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF780285B8E]
+	(No symbol) [0x00007FF780285E7C]
+	(No symbol) [0x00007FF7802CEC27]
+	(No symbol) [0x00007FF7802ABC1F]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:03:06.12 | INFO | Log message is too long for Telegram, not sent.
+16:03:06.16 | ERROR | Button Activity | Description: Renew Policy/Rinnovo Polizza [BUTTON]  | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 119, in _click_button
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: button.scrollIntoViewIfNeeded is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF78023C2E2]
+	(No symbol) [0x00007FF78023E94F]
+	(No symbol) [0x00007FF7802CCD20]
+	(No symbol) [0x00007FF7802ABBDA]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:03:06.17 | INFO | Log message is too long for Telegram, not sent.
+16:03:06.73 | ERROR | Element Activity | Description: Tax ID Code/Codice Fiscale [INPUT] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF780285B8E]
+	(No symbol) [0x00007FF780285E7C]
+	(No symbol) [0x00007FF7802CEC27]
+	(No symbol) [0x00007FF7802ABC1F]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:03:06.74 | INFO | Log message is too long for Telegram, not sent.
+16:03:06.76 | ERROR | Input Activity | Description: Tax ID Code/Codice Fiscale [INPUT] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 140, in _enter_input_text
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: element.scrollIntoView is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF78023C2E2]
+	(No symbol) [0x00007FF78023E94F]
+	(No symbol) [0x00007FF7802CCD20]
+	(No symbol) [0x00007FF7802ABBDA]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:03:06.77 | INFO | Log message is too long for Telegram, not sent.
+16:03:07.33 | ERROR | Element Activity | Description: Plate/Targa [INPUT] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF780285B8E]
+	(No symbol) [0x00007FF780285E7C]
+	(No symbol) [0x00007FF7802CEC27]
+	(No symbol) [0x00007FF7802ABC1F]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:03:07.35 | INFO | Log message is too long for Telegram, not sent.
+16:03:07.38 | ERROR | Input Activity | Description: Plate/Targa [INPUT] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 140, in _enter_input_text
+    self.driver.execute_script(
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: element.scrollIntoView is not a function
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF78023C2E2]
+	(No symbol) [0x00007FF78023E94F]
+	(No symbol) [0x00007FF7802CCD20]
+	(No symbol) [0x00007FF7802ABBDA]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:03:07.39 | INFO | Log message is too long for Telegram, not sent.
+16:03:22.65 | ERROR | Element Activity | Description: iFrame of Captcha | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 103, in _check_element
+    return custom_wait.until(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF780285B8E]
+	(No symbol) [0x00007FF780285E7C]
+	(No symbol) [0x00007FF7802CEC27]
+	(No symbol) [0x00007FF7802ABC1F]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:03:22.67 | INFO | Log message is too long for Telegram, not sent.
+16:03:22.69 | ERROR | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 409, in solve_captcha
+    self.driver.switch_to.frame(recaptcha_frame)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\switch_to.py", line 95, in frame
+    self._driver.execute(Command.SWITCH_TO_FRAME, {"id": frame_reference})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid 'id'
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF7802CDEDA]
+	(No symbol) [0x00007FF7802ABBDA]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+16:03:22.71 | INFO | Log message is too long for Telegram, not sent.
+16:03:22.72 | INFO | Reloading captcha frame... (Attempt 1/5)
+16:03:22.81 | ERROR | Error occurred >>> Scrapper.solve_captcha() got an unexpected keyword argument 'restart_count' ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 409, in solve_captcha
+    self.driver.switch_to.frame(recaptcha_frame)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\switch_to.py", line 95, in frame
+    self._driver.execute(Command.SWITCH_TO_FRAME, {"id": frame_reference})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 380, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid 'id'
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7806F38A5+3004357]
+	(No symbol) [0x00007FF780389970]
+	(No symbol) [0x00007FF78023582A]
+	(No symbol) [0x00007FF7802CDEDA]
+	(No symbol) [0x00007FF7802ABBDA]
+	(No symbol) [0x00007FF7802CBA4C]
+	(No symbol) [0x00007FF7802AB983]
+	(No symbol) [0x00007FF780277628]
+	(No symbol) [0x00007FF780278791]
+	GetHandleVerifier [0x00007FF78071A00D+3161901]
+	GetHandleVerifier [0x00007FF78076E060+3506048]
+	GetHandleVerifier [0x00007FF78076400D+3465005]
+	GetHandleVerifier [0x00007FF7804E0EEB+830987]
+	(No symbol) [0x00007FF78039467F]
+	(No symbol) [0x00007FF7803909D4]
+	(No symbol) [0x00007FF780390B6D]
+	(No symbol) [0x00007FF780380149]
+	BaseThreadInitThunk [0x00007FFE6270259D+29]
+	RtlUserThreadStart [0x00007FFE64A2AF38+40]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 47, in start_prep_data
+    return BotScrapper(data, db).start()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 633, in start
+    self.solve_captcha(
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 491, in solve_captcha
+    restart_captcha_frame()
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 372, in restart_captcha_frame
+    self.solve_captcha(
+TypeError: Scrapper.solve_captcha() got an unexpected keyword argument 'restart_count'
+ <<<
+16:03:22.83 | INFO | Log message is too long for Telegram, not sent.
+16:04:22.80 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 212.83.137.94:54561
+16:04:38.01 | WARNING | Failed to send log to Telegram: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 730, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 909, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:989: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 468, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 369, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\logger.py", line 13, in send_log_to_telegram
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+
+16:04:38.03 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+16:04:53.22 | WARNING | Failed to send log to Telegram: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 730, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 909, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:989: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 468, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 369, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\logger.py", line 13, in send_log_to_telegram
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+
+16:04:53.26 | SUCCESS | 1.0 Process | Starting Driver
+16:05:08.74 | WARNING | Failed to send log to Telegram: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 730, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 909, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:989: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 468, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 369, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\logger.py", line 13, in send_log_to_telegram
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+
+16:05:13.23 | SUCCESS | 1.1 Attempt 1 to load the page.
+16:05:28.38 | WARNING | Failed to send log to Telegram: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 730, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 909, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:989: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 468, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 369, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\logger.py", line 13, in send_log_to_telegram
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15)
+
+16:07:28.44 | WARNING | Load attempt 1 failed: HTTPConnectionPool(host='localhost', port=54159): Read timed out. (read timeout=120) traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 507, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 286, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 79, in _reload_page_with_retry
+    self.driver.get("https://www.preventivass.it/dati-principali")
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 391, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 415, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 538, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 369, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=54159): Read timed out. (read timeout=120)
+
+16:07:28.49 | SUCCESS | 1.1 Attempt 2 to load the page.
+16:07:29.01 | WARNING | Failed to send log to Telegram: {"ok":false,"error_code":401,"description":"Unauthorized"}
+16:07:40.03 | SUCCESS | 1.2 Page loaded successfully.
+16:07:40.46 | WARNING | Failed to send log to Telegram: {"ok":false,"error_code":401,"description":"Unauthorized"}
+16:07:43.09 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+16:18:41.03 | SUCCESS | 0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: 212.83.137.94:54561
+16:18:42.30 | SUCCESS | 0.0 Process | Initiating Scrapper Class On Selenium
+16:18:43.07 | SUCCESS | 1.0 Process | Starting Driver
+16:18:50.20 | SUCCESS | 1.1 Attempt 1 to load the page.
+16:19:13.11 | SUCCESS | 1.2 Page loaded successfully.
+16:19:16.45 | INFO | reCAPTCHA info found: {'callback': "___grecaptcha_cfg.clients['0']['A']['A']['callback']", 'function': {}, 'id': '0', 'sitekey': '6LcTvwsaAAAAACrX9g0kYHzox2v3VG8E4E9omeYm', 'version': 'V2'}
+16:20:16.87 | SUCCESS | Solved captcha: 03AFcWeA64ZrMdd7Rc2t1KXxUiLS1slNlOD6bhkVjzEZqWE9DvaHNbZPUWosJDn4tuD2dIWIiVsGasBFXqAqX8cUjtfuSKus9LRyHcV2-Zw9eQV3Fz0INZPdhAjDmTZQbZ5KCo3DLnLOErpDtX-MGiMBeTYge4PYlqO0M9BixfYqVmEO4IaZtovc0XVpNBS21De_UX3H_Ri_w_Dke8qXLh_VLt9Q89uq4Nj8HxO2g9rVTEMoKj7C65WPBT8RpTofu2OrZpSIqpOS-dpPX3LDeh3hTZKEA9uM0qGwR2lw1kjwiec3mYsCMSwmMFEKU2ahAdfz6GtMr0Sk-o-dhxVNu5sfiELkuurftuuSd1pI0f8m8j6y-W5iKYBjiiYsNDNh16gslgQKsHvlBFgAjw0oRQa40gx5PuLs6G4l9NfZUYmQiOkllSf7CRQKlxrDwhl1HM_CsxjaJlH8MEqsb-2WIedQN12ndMqHWb9ircvbwHZU4NKFYAD82S0W-4rGUfe8wYBQvIui8f1VwDAFY-RJdqPe1wxb-szaUE4IU--Stv0BE-SKjpTqd8v3aViRBy33M43hZATExNP4Ghh0XACZGk8QkZQrOVx-OhD7N57sjyNnfXUDmZSN3cwp4N-iOTkZ8qd8x52e8d23K7AgaNk6DUIZv4xuA1UvgS0eYzeaKgkPmjRqhF154NAEdhI6SC3h6bFSockV30Za-L35Evxg7HJSFjZSVhEX01PXISSFDnsSL9RkbmXp48-42ks-VRG7J7zFVHVKgPW0y-SiMqz4QtKcbcsXLsVBBO9wH259E2Cay5ZGoH9yy_3YcnOGG0RI3BaF-uN04nliTmk7XvehtbntWAJf8-2Os52Ynib1jtrRMLh5DKlTrV0AIKrnI5PJmPfbthNRVxNzXzUpjlQ221xj0OvDNx_zuFm2VH3oxtlnp0Resby0L9H14nyi__QB65FHs61gPaRNmR
+16:22:28.51 | SUCCESS | Terminating Session

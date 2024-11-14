@@ -1,56 +1,61 @@
-#### Reference:
+## Reference
 these are setup to setups of how the bots is up and working
 
-#### Creating virtual environment for bot
+## Creating virtual environment
 ```
 python -m venv venv
 ```
 
-#### Activating the Virtual Environment
+## Activating the Virtual Environment
 ```
 vass\Scripts\activate.bat
 ```
 
-#### Setup Environment Variable
+## Setup Environment Variable
 Inside your .env file
-| Variable                 | Type   | Default      | Description                                                                            |
-| -------------------- | ------ | -------- | ------------ | -------------------------------------------------------------------------------------- |
-| USE_PROXY         | bool | False            | Default Value that can be set based on OTP / Pin received from parent container.       |
-| handleTextChange     | func   | No       | n/a          | callback with concated string of all cells as argument.                                |
-| handleCellTextChange | func   | Yes      | n/a          | callback for text change in individual cell with cell text and cell index as arguments |
-| inputCount           | number | Yes      | 4            | Number of Text Input Cells to be present.                                              |
-| tintColor            | string | Yes      | #3CB371      | Color for Cell Border on being focused.                                                |
-| offTintColor         | string | Yes      | #DCDCDC      | Color for Cell Border Border not focused.                                              |
-| inputCellLength      | number | Yes      | 1            | Number of character that can be entered inside a single cell.                          |
-| containerStyle       | object | Yes      | {}           | style for overall container.                                                           |
-| textInputStyle       | object | Yes      | {}           | style for text input.                                                                  |
-| testIDPrefix         | string | Yes      | 'otp*input*' | testID prefix, the result will be `otp_input_0` until inputCount                       |
-| autoFocus            | bool   | Yes      | false        | Input should automatically get focus when the components loads                         |
+
+|   Variable    |     Type      |      Default       | Description                                                                                                                                                     |
+|:-------------:|:-------------:|:------------------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   USE_PROXY   |     bool      |       False        | Makes selenium browser to map location to **Italy** as that is the default country for *preventivass.it* to work                                                |
+|  PROXY_TYPE   |    string     |      "socks4"      | The socks protocol can be http, https, socks4, socks5, tor and others                                                                                           |
+|    DB_HOST    |    string     |    "localhost"     | The database hostname or ip                                                                                                                                     |
+|    DB_PORT    | string or int |        3306        | The database port                                                                                                                                               |
+|  DB_DATABASE  |    string     |     "vass_db"      | The database name                                                                                                                                               |
+|  DB_USERNAME  |    string     |      "rooot"       | The database username                                                                                                                                           |
+|  DB_PASSWORD  |    string     |         ""         | The database password                                                                                                                                           |
+| ALLOWED_HOSTS |     list      | ["localhost", "*"] | The controls which hosts can access the API and its resources                                                                                                   |
+|  USE_TG_BOT   |     bool      |       False        | Use telegram bots to receive bot logs. To start using, start the "@PreventivassBot" on Telegram and /start command, then contact developer to give you CHAT_ID. |
+|    CHAT_ID    |    string     |         ""         | Telegram Chat ID for bots to send logs to                                                                                                                       |
+|     APIKEY_2CAPTCHA          |        string       |    "1f900baf6f486e66db38ba2a8efe5f0d"                |     2Captcha Api Key                                                                                                                                                            |
 
 
-#### Importing Models
+
+## Importing Models
 ```
 from database import Base, engine
 from utils.models import QuoteData
 Base.metadata.create_all(bind=engine)
 ```
 
-#### Exporting Python Packages to Requirements
+## Exporting Python Packages to Requirements
 ```
 pip freeze > requirements.txt
 ```
 
-#### Package Python pkg in requirements.txt
+## Package Python pkg in requirements.txt
 ```
 pip install -r requirements.txt
 ```
 
-#### Curl Command To Check Proxy Status
+## RUN APP
+```
+python main.py
+```
+
+## Curl Command To Check Proxy Status
 ```
 curl --connect-timeout 5 --max-time 10 --retry 1 --retry-connrefused --location --request GET "http://ip-api.com/json" --proxy socks4://proxy_ip
 ```
-
-
 
 # Important Documentations and References
 [Working with html iframe in selenium](https://www.selenium.dev/documentation/webdriver/interactions/frames/)

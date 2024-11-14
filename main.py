@@ -1,7 +1,6 @@
 import json
 import traceback
 from fastapi.encoders import jsonable_encoder
-from pydantic import BaseModel
 from logger import logger
 import requests
 from database import get_db
@@ -22,7 +21,7 @@ app = FastAPI()
 app.add_middleware(TrustedHostMiddleware, allowed_hosts=settings.ALLOWED_HOSTS)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=settings.ALLOWED_HOSTS,  # Allows all origins
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers

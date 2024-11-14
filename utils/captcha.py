@@ -17,12 +17,8 @@ class TwoCaptcha(object):
         }
         endpoint = "http://2captcha.com/in.php"
         response = requests.post(endpoint, params=params)
-        print("please work text", response.text)
-        print("please work json", response.json)
-        print("please work json 2", response.json())
         response = response.json()
         if not response.get("status"):
-            print("There was an error")
             return None
         captcha_id = response.get("request", "")
         return captcha_id
@@ -31,7 +27,6 @@ class TwoCaptcha(object):
         params = {"ids": captcha_id, "action": "get", "key": self.api_key}
         endpoint = "http://2captcha.com/res.php"
         response = requests.get(endpoint, params=params)
-        print("response text please remember to remove this line", response.text)
         while "CAPCHA_NOT_READY" in response.text:
             time.sleep(self.sleep_time)
             response = requests.get(endpoint, params=params)
