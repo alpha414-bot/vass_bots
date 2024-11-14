@@ -6,18 +6,8 @@ load_dotenv()
 
 
 class AppSettings:
-    USE_PROXY: bool = bool(os.getenv("USE_PROXY", True))
+    USE_PROXY: bool = os.getenv("USE_PROXY", "False").lower() in ("true", "1", "yes")
     PROXY_TYPE: str = str(os.getenv("PROXY_TYPE", "socks4"))
-
-    WORKDIR = os.getenv("WORKDIR", "sessions/")
-
-    # Email Configuration
-    MAIL_HOST: str = os.getenv("MAIL_HOST", "smtp.gmail.com")
-    MAIL_PORT: int = int(os.getenv("MAIL_PORT", 465))
-    MAIL_USERNAME: str = os.getenv("MAIL_USERNAME", "gmail@gmail.com")
-    MAIL_PASSWORD: str = os.getenv("MAIL_PASSWORD", "password")
-    MAIL_FROM_ADDRESS: str = os.getenv("MAIL_FROM_ADDRESS", "gmail@gmail.com")
-    MAIL_FROM_NAME: str = os.getenv("MAIL_FROM_NAME", "APP_NAME")
 
     # Database Configuration
     DB_HOST: str = os.getenv("DB_HOST", "localhost")
@@ -31,7 +21,7 @@ class AppSettings:
 
     # Telegram Bot Setup
     CHAT_ID: str = os.getenv("CHAT_ID", "1715608783")
-    USE_TG_BOT: bool = bool(os.getenv("USE_TG_BOT", False))
+    USE_TG_BOT: bool = os.getenv("USE_TG_BOT", "False").lower() in ("true", "1", "yes")
     BOT_TOKEN: str = os.getenv(
         "BOT_TOKEN", "7559961212:AAG2hRrH0BSAkGgdTYRpMm1Br2wNlYouNWY"
     )

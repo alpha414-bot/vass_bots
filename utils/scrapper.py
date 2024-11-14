@@ -38,16 +38,16 @@ class Scrapper:
         self.captcha_retry_attempts = 3
         self.retry_attempts = 3  # Max retry Attempts
 
-    def chrome_options(self):
+    def chrome_options(self, proxy=None):
         options = Options()
         options.add_experimental_option("detach", True)
-        # chrome_options.add_argument("--headless")
+        # options.add_argument("--headless")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument(f"--user-agent={UserAgent(os='windows').random}")
         # options.add_argument("--disable-gpu")  # Applicable on Windows
-        if self.proxy and settings.USE_PROXY:
-            options.add_argument(f"--proxy-server={self.proxy}")
+        if proxy:
+            options.add_argument(f"--proxy-server={proxy}")
         return options
 
     def teardown(self):
@@ -153,7 +153,6 @@ class Scrapper:
                 value,
             )
             time.sleep(1)
-            print(f"Enter INput: {xlocator}, value is: {value}")
             return True
         except:
             logger.error(
@@ -193,14 +192,28 @@ class Scrapper:
             )
             if self._check_element(
                 descriptor=f"{parent_descriptor} Dropdown Panel",
-                xlocator=f"{parent_xlocator}//ng-dropdown-panel",
-                timeout=15,
+                xlocator=f"{parent_xlocator}//ng-dropdown-panel//div[contains(@class, 'ng-option')]",
+                timeout=60,
             ):
-                return self._click_button(
+                self.driver.implicitly_wait(2)
+                button_xlocator = f"{parent_xlocator}//ng-dropdown-panel//div[contains(@class, 'ng-option')][.//span[text()='{option_label.lower()}' or text()='{option_label}']]"
+                if self._check_element(
                     descriptor=option_descriptor,
-                    xlocator=f"{parent_xlocator}//ng-dropdown-panel//div[contains(@class, 'ng-option')][.//span[text()='{option_label.lower()}' or text()='{option_label}']]",
-                    timeout=10,
-                )
+                    xlocator=button_xlocator,
+                    timeout=5,
+                    no_error=True,
+                ):
+                    return self._click_button(
+                        descriptor=option_descriptor,
+                        xlocator=button_xlocator,
+                        timeout=40,
+                    )
+                else:
+                    return self._click_button(
+                        descriptor=option_descriptor,
+                        xlocator=f"{parent_xlocator}//ng-dropdown-panel//div[contains(@class, 'ng-option')][1]",
+                        timeout=40,
+                    )
             return False
         except:
             logger.error(
@@ -212,7 +225,7 @@ class Scrapper:
         try:
             parent_xlocator = f"//div[text()='{parent_label.lower()}' or text()='{parent_label}']/ancestor::ng-select"
             select_parent_element = self._check_element(
-                descriptor=parent_descriptor, xlocator=parent_xlocator, timeout=8
+                descriptor=parent_descriptor, xlocator=parent_xlocator, timeout=9
             )
             # Trigger Keydown event
             self.driver.execute_script(
@@ -236,7 +249,9 @@ class Scrapper:
             # Input Element
             input_xlocator = f"{parent_xlocator}//input"
             input_element = self._check_element(
-                descriptor=f"{parent_descriptor} Input Element", xlocator=input_xlocator
+                descriptor=f"{parent_descriptor} Input Element",
+                xlocator=input_xlocator,
+                timeout="10",
             )
             if input_element:
                 # Simulate typing each character in value with JavaScript `dispatchEvent`
@@ -258,13 +273,13 @@ class Scrapper:
                         char,
                     )
                     # Wait briefly between each character to simulate natural typing
-                    time.sleep(0.2)
-                self.driver.implicitly_wait(2)
+                    time.sleep(0.3)
+                time.sleep(1)
                 # Optionally Selecting Suggestion
                 if self._check_element(
                     descriptor=f"{parent_descriptor} Dropdown Panel",
-                    xlocator=f"{parent_xlocator}//ng-dropdown-panel",
-                    timeout=40,
+                    xlocator=f"{parent_xlocator}//ng-dropdown-panel//div[contains(@class, 'ng-option')]",
+                    timeout=60,
                 ):
                     # If there is no element labelled not found, then continue
                     self.driver.implicitly_wait(2)
@@ -272,23 +287,23 @@ class Scrapper:
                     if self._check_element(
                         descriptor=f"Button {input_value}",
                         xlocator=main_button_xlocator,
-                        timeout=2,
+                        timeout=5,
                         no_error=True,
                     ):
                         return self._click_button(
                             descriptor=f"{parent_descriptor} Dropdown Items of {input_value}",
                             xlocator=main_button_xlocator,
-                            timeout=15,
+                            timeout=40,
                         )
                     else:
                         return self._click_button(
                             descriptor=f"Any first option of {parent_xlocator}",
                             xlocator=f"""{parent_xlocator}//ng-dropdown-panel//div[contains(@class, 'ng-option')][1]""",
-                            timeout=15,
+                            timeout=40,
                         )
 
             self.driver.implicitly_wait(2)
-            return True
+            return False
         except:
             logger.error(
                 f"Select & Input & Click Activity | Description: {parent_descriptor} and Value {input_value} | Error: {traceback.format_exc()}"
@@ -477,41 +492,50 @@ class Scrapper:
 
     # Check proxy validity with requests
     def check_proxy(self):
-        if settings.USE_PROXY:
-            if self.proxy:
-                # only continue code, if proxy is et
-                try:
-                    # Set up the proxy and timeout
-                    proxies = {"http": self.proxy, "https": self.proxy}
-                    response = requests.get(
-                        "http://ip-api.com/json", proxies=proxies, timeout=5
-                    )
-
-                    # Check if proxy worked
-                    if response.status_code == 200:
-                        data = response.json()
-                        if data.get("countryCode", "").lower() == "it":
-                            # Check if proxy country is pointed to "Italy"
-                            return True
-                        else:
-                            # Proxy country is not italy
-                            logger.error("Proxy is in the wrong country")
-                            return False
-                    else:
-                        logger.error(
-                            f"Proxy check failed: status code is not status.HTTP_200_OK"
-                        )
-                        return False
-                except (RequestException, Timeout, Exception) as e:
-                    logger.error(
-                        f"Proxy check failed {e} | Traceback: {traceback.format_exc()}"
-                    )
-                    return False
+        # only continue code, if proxy is et
+        try:
+            # Set up the proxy and timeout
+            proxies = {"http": self.proxy, "https": self.proxy}
+            if settings.USE_PROXY or not not self.proxy:
+                response = requests.get(
+                    "http://ip-api.com/json", proxies=proxies, timeout=5
+                )
             else:
-                # return True, if there is no proxy with request
-                return True
-        else:
-            return True
+                response = requests.get("http://ip-api.com/json", timeout=5)
+
+            # Check if proxy worked
+            if response.status_code == 200:
+                data = response.json()
+                if data.get("countryCode", "").lower() == "it":
+                    # Check if proxy country is pointed to "Italy"
+                    return {
+                        "status": True,
+                        "message": "Proxy is active",
+                        "proxy": self.proxy,
+                    }
+                else:
+                    # Proxy country is not italy
+                    logger.error("Proxy is in the wrong country")
+                    return {
+                        "status": False,
+                        "message": f"Current Proxy is in wrong country. Current [{data.get('countryCode', '')}] instead of [IT]",
+                    }
+            else:
+                logger.error(
+                    f"Proxy check failed: status code is not status.HTTP_200_OK"
+                )
+                return {
+                    "status": False,
+                    "message": "Proxy request failed. Please try again",
+                }
+        except (RequestException, Timeout, Exception) as e:
+            logger.error(
+                f"Proxy check failed {e} | Traceback: {traceback.format_exc()}"
+            )
+            return {
+                "status": False,
+                "message": "Proxy critical error. Cannot proceed",
+            }
 
     def insert_into_db(self, response):
         try:
@@ -519,6 +543,10 @@ class Scrapper:
             data = self.req.data
             new_quote_data = QuoteData(
                 request_data={
+                    "datiPreventivo": {
+                        "idAccordo": data.datiPreventivo.idAccordo,
+                        "idFascia": data.datiPreventivo.idFascia,
+                    },
                     "anag": {
                         "cf": data.anag.cf,
                         "nascitaGiorno": data.anag.nascitaGiorno,
@@ -558,8 +586,11 @@ class Scrapper:
     def start(self):
         logger.success("1.0 Process | Starting Driver")
         # check proxy validity
-        if self.check_proxy():
-            self.driver = webdriver.Chrome(options=self.chrome_options())
+        proxy_instance = self.check_proxy()
+        if proxy_instance.get("status", False):
+            self.driver = webdriver.Chrome(
+                options=self.chrome_options(proxy=proxy_instance.get("proxy", None))
+            )
             self.wait = WebDriverWait(self.driver, timeout=10)
             if not self._reload_page_with_retry():
                 logger.error("Page Activity | Unable to load page, closing driver.")
@@ -812,11 +843,15 @@ class Scrapper:
                             By.XPATH,
                             ".//div[contains(@class, 'title')][@role='heading']",
                         )
-                        title_text = title_element.text
-
+                        title_text = title_element.text.strip()
                         # Extract the latest price within each card
                         # 1. Check for a discounted price first using `fix-width-min` class for the final discounted price
                         try:
+                            guida_element = card.find_element(
+                                By.XPATH,
+                                ".//span[@class='ng-star-inserted'][contains(text(), 'Guida')]",
+                            )
+                            guida_text = guida_element.text.strip()
                             price_element = card.find_element(
                                 By.XPATH,
                                 ".//div[contains(@class, 'fix-width-min')]",
@@ -826,22 +861,43 @@ class Scrapper:
                             )  # Remove extra whitespace
                         except:
                             # 2. If no discounted price is found, fallback to the regular price using `price-container`
-                            # price_element = card.find_element(
-                            #     By.XPATH, ".//div[@class='price-container']"
-                            # )
                             price_element = card.find_element(
                                 By.XPATH,
                                 ".//div[contains(@class, 'price-container')]",
                             )
+                            guida_text = ""
                             price_text = price_element.text.strip()
 
-                        # Clean up the price text
+                        # Clean up the price & guida text
                         price_text = re.sub(
                             r"Prezzo Scontato\s*", "", price_text
                         )  # Remove "Prezzo Scontato" and any following spaces/newlines
-                        # price_text = price_text.replace(" €", "")
+                        if guida_text and len(guida_text) > 1:
+                            guida_text = re.sub(r"Guida\s*", "", guida_text)
+
+                        price_text = price_text.replace(" €", "")
                         # Append extracted data to the list as a dictionary
-                        quote_object.append({"title": title_text, "price": price_text})
+                        quote_object.append(
+                            {
+                                "IdAccordo": data.datiPreventivo.idAccordo,
+                                "IdFascia": data.datiPreventivo.idFascia,
+                                "Sito": "preventivass.it",
+                                "Compagnia": title_text,
+                                "Prodotto": "RCA",
+                                "Emissione": "",
+                                "Massimale": "",
+                                "Guida": guida_text,
+                                "Include": "",
+                                "Prezzo_Totale": price_text,
+                                "Prezzo_Iniziale": "",
+                                "Prezzo_RCA": price_text,
+                                "Dettagli": "",
+                                "StatoPreventivoAcquistabile": 1,
+                                "IdPreventivo": "",
+                                "NotePreventivo": "",
+                                "Satellitare": 0,
+                            }
+                        )
 
             db_quote_data = self.insert_into_db(response=quote_object)
             self.teardown()
@@ -865,7 +921,10 @@ class Scrapper:
             return error_response_model(
                 {
                     "code": status.HTTP_400_BAD_REQUEST,
-                    "message": "Proxy is invalid. Try another.",
+                    "message": proxy_instance.get(
+                        "message",
+                        "Error with proxy in processing request. Please try again later",
+                    ),
                 }
             )
 
