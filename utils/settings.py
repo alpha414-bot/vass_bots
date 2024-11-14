@@ -35,7 +35,7 @@ class AppSettings:
 
     # Telegram Bot Setup
     CHAT_ID: str = os.getenv("CHAT_ID", "1715608783")
-    USE_TG_BOT: bool = os.getenv("USE_TG_BOT", "True").lower() in ("true", "1", "yes")
+    USE_TG_BOT: bool = os.getenv("USE_TG_BOT", "False").lower() in ("true", "1", "yes")
     MAX_TELEGRAM_MESSAGE_LENGTH: int = int(
         os.getenv("MAX_TELEGRAM_MESSAGE_LENGTH", 1200)
     )
