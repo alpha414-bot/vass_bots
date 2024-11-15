@@ -41,7 +41,7 @@ class Scrapper:
     def chrome_options(self, proxy=None):
         options = Options()
         options.add_experimental_option("detach", True)
-        # options.add_argument("--headless")
+        options.add_argument("--headless")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument(f"--user-agent={UserAgent(os='windows').random}")
