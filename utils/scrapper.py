@@ -45,7 +45,7 @@ class Scrapper:
     def chrome_options(self, proxy=None):
         options = Options()
         options.add_experimental_option("detach", True)
-        # options.add_argument("--headless")
+        options.add_argument("--headless")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument(f"--user-agent={UserAgent(os='windows').random}")
@@ -56,7 +56,7 @@ class Scrapper:
 
     def teardown(self):
         """Teardown method to quit the WebDriver and show a message box."""
-        logger.success(f"Terminating Session")
+        logger.success(f"1.8 [LAST STEP] Terminating Session")
         if hasattr(self, "driver") and self.driver:
             self.driver.quit()
             logger.info("Driver quit successfully.")
@@ -84,18 +84,16 @@ class Scrapper:
         """Try to reload the page up to the retry limit if the proxy or page loading fails."""
         for attempt in range(1, self.retry_attempts + 1):
             try:
-                logger.success(f"1.1 Attempt {attempt} to load the page.")
+                logger.success(f"1.2 Attempt [{attempt}] to load the page.")
                 self.driver.get("https://www.preventivass.it/dati-principali")
 
                 if self._is_page_loaded():
-                    logger.success("1.2 Page loaded successfully.")
+                    logger.success("1.3 Page loaded successfully.")
                     return True
                 else:
                     raise TimeoutException("Page not loaded within timeout.")
             except (TimeoutException, WebDriverException, Exception) as e:
-                logger.warning(
-                    f"Load attempt {attempt} failed: {e} traceback: {traceback.format_exc()}"
-                )
+                logger.warning(f"Load attempt {attempt} failed: {e}")
                 if attempt < self.retry_attempts:
                     asyncio.sleep(2)  # Wait before retrying
                 else:
@@ -112,10 +110,10 @@ class Scrapper:
             return custom_wait.until(
                 EC.presence_of_element_located((By.XPATH, xlocator))
             )
-        except:
+        except Exception as e:
             if not no_error:
                 logger.error(
-                    f"Element Activity | Description: {descriptor} | Error: {traceback.format_exc()}"
+                    f"Element Activity | Description: {descriptor} | Error: {e}"
                 )
             return False
 
@@ -128,19 +126,25 @@ class Scrapper:
             self.driver.execute_script(
                 """
                 const button = arguments[0];
-                button.scrollIntoViewIfNeeded();
-                button.scrollIntoView(true);
-                button.disabled = false; 
-                button.click();
+                if (button){
+                    if (button.scrollIntoViewIfNeeded){
+                        button.scrollIntoViewIfNeeded();
+                    }
+                    if (button.scrollIntoView){
+                        button.scrollIntoView(true);
+                    }
+                    button.disabled = false; 
+                    if (button.click){
+                        button.click();
+                    }
+                }
                 """,
                 button,
             )
             self.driver.implicitly_wait(1)
             return True
-        except:
-            logger.error(
-                f"Button Activity | Description: {descriptor} | Error: {traceback.format_exc()}"
-            )
+        except Exception as e:
+            logger.error(f"Button Activity | Description: {descriptor} | Error: {e}")
             return False
 
     def _enter_input_text(self, descriptor, xlocator: str, value: str | int):
@@ -149,24 +153,30 @@ class Scrapper:
             self.driver.execute_script(
                 """
                 const element = arguments[0];
-                element.scrollIntoView(true);
-                element.focus()
-                element.value = ''
-                element.dispatchEvent(new Event('input'));  // Trigger 'input' event
-                element.value = arguments[1];  // Set the input value
-                element.dispatchEvent(new Event('input'));  // Trigger 'input' event
-                element.dispatchEvent(new Event('change'));  // Trigger 'change' event
-                element.blur()
+                if (element){
+                    if (element.scrollIntoView){
+                        element.scrollIntoView(true);
+                    }
+                    if (element.focus){
+                        element.focus()
+                    }
+                    element.value = ''
+                    element.dispatchEvent(new Event('input'));  // Trigger 'input' event
+                    element.value = arguments[1];  // Set the input value
+                    element.dispatchEvent(new Event('input'));  // Trigger 'input' event
+                    element.dispatchEvent(new Event('change'));  // Trigger 'change' event
+                    if (element.blur){
+                        element.blur()
+                    }
+                }
                 """,
                 element,
                 value,
             )
             time.sleep(1)
             return True
-        except:
-            logger.error(
-                f"Input Activity | Description: {descriptor} | Error: {traceback.format_exc()}"
-            )
+        except Exception as e:
+            logger.error(f"Input Activity | Description: {descriptor} | Error: {e}")
             return False
 
     def _select(
@@ -224,9 +234,9 @@ class Scrapper:
                         timeout=40,
                     )
             return False
-        except:
+        except Exception as e:
             logger.error(
-                f"Select Activity | Description: {parent_descriptor} and Option {option_descriptor} | Error: {traceback.format_exc()}"
+                f"Select Activity | Description: {parent_descriptor} and Option {option_descriptor} | Error: {e}"
             )
             return False
 
@@ -265,9 +275,9 @@ class Scrapper:
             if input_element:
                 # Simulate typing each character in value with JavaScript `dispatchEvent`
                 input_value = input_value.lower()
-                if "via" in input_value and len(input_value.split()) >= 2:
-                    input_value = " ".join(input_value.split()[:2])
-                input_value = input_value[:9]
+                # if "via" in input_value and len(input_value.split()) >= 2:
+                #     input_value = " ".join(input_value.split()[:2])
+                # input_value = input_value[:12]
                 for char in input_value:
                     self.driver.execute_script(
                         """
@@ -316,9 +326,9 @@ class Scrapper:
 
             self.driver.implicitly_wait(2)
             return False
-        except:
+        except Exception as e:
             logger.error(
-                f"Select & Input & Click Activity | Description: {parent_descriptor} and Value {input_value} | Error: {traceback.format_exc()}"
+                f"Select & Input & Click Activity | Description: {parent_descriptor} and Value {input_value} | Error: {e}"
             )
             return False
 
@@ -328,7 +338,7 @@ class Scrapper:
             self._click_button(
                 descriptor="Expert Guide/Guida Esperta [CLICK]",
                 xlocator=parent_xlocator,
-                timeout=15,
+                timeout=20,
             )
 
             self.driver.implicitly_wait(2)
@@ -350,18 +360,16 @@ class Scrapper:
                     xlocator=f"{parent_xlocator}/ancestor::div//ivass-switcher",
                 ),
             )
-        except:
-            logger.error(
-                f"Select & CheckBox | Description: Guide Expert | Error: {traceback.format_exc()}"
-            )
+        except Exception as e:
+            logger.error(f"Select & CheckBox | Description: Guide Expert | Error: {e}")
             return False
 
-    def continue_button(self):
+    def continue_button(self, parent_xlocator=""):
         self.driver.implicitly_wait(2)
         # Next Section
         self._click_button(
             descriptor="Continue/Prosegui [Button]",
-            xlocator="//button[.//span[text()=' Prosegui ' or text()='Prosegui']]",
+            xlocator=f"{parent_xlocator}//button[.//span[text()=' Prosegui ' or text()='Prosegui']]",
         )
         # Error
         self.check_if_any_error()
@@ -370,26 +378,44 @@ class Scrapper:
     def check_if_any_error(self):
         ## Check if there is any pop error or redirection to eot
         try:
+
+            def message_checker(message):
+                raise ValueError(
+                    json.dumps(
+                        jsonable_encoder(
+                            {
+                                "message": message,
+                            }
+                        )
+                    )
+                )
+
             if self._check_element(
                 descriptor="App dialog error",
                 xlocator="//app-dialog-error",
                 timeout=2,
                 no_error=True,
-            ) or self._check_element(
+            ):
+                return message_checker(
+                    "App dialog error due to preregistration already done, but not fatal."
+                )
+            if self._check_element(
+                descriptor="App dialog error",
+                xlocator="//app-dialog-check-address",
+                timeout=2,
+                no_error=True,
+            ):
+                return message_checker(
+                    "App dialog address error due to improper parsing of address, very fatal."
+                )
+            if self._check_element(
                 descriptor="Service Error Page",
                 xlocator="//app-service-error-page//div[contains(text(), 'Pagina di Errore')]",
                 timeout=2,
                 no_error=True,
             ):
-                raise ValueError(
-                    json.dumps(
-                        jsonable_encoder(
-                            {
-                                "status": 500,
-                                "message": "Get ready to save data",
-                            }
-                        )
-                    )
+                return message_checker(
+                    "Service error page due to invalid data submission, improper proxy configuration, very fatal"
                 )
             return True
         except Exception as e:
@@ -475,55 +501,34 @@ class Scrapper:
                     and len(recaptcha_data) > 0
                 ):
                     captcha_info = recaptcha_data[0]
-                    logger.info(f"reCAPTCHA info found: {captcha_info}")
-
-                    # Solve Captcha
-                    if self.captcha_token:
-                        # captcha is solved and sent with request
-                        logger.success(
-                            f"Captcha Token from request: {self.captcha_token}"
+                    logger.success(f"1.5 Solving Captcha ...")
+                    # Initialize 2Captcha solver and use sitekey
+                    solver = TwoCaptcha(settings.APIKEY_2CAPTCHA)
+                    result = solver.solve_captcha(
+                        site_key=captcha_info["sitekey"],
+                        page_url=captcha_info.get("pageurl", self.driver.current_url),
+                    )
+                    logger.success(f"1.6 Captcha Solved Successfully | Data: {result}")
+                    if not result:
+                        # result is None, and can't continue
+                        logger.error(
+                            "2Captcha | Unable to Solve Captcha | Please crosscheck"
                         )
-                        self.driver.execute_script(
-                            """
-                                const callback = window.retrieveCallback(window.___grecaptcha_cfg.clients[0]);
-                                if (typeof callback === 'function') {
-                                    callback(arguments[0]);
-                                } else {
-                                    throw new Error('Callback function not found.');
-                                }
-                            """,
-                            self.captcha_token,
-                        )
-                    else:
-                        # Initialize 2Captcha solver and use sitekey
-                        solver = TwoCaptcha(settings.APIKEY_2CAPTCHA)
-                        result = solver.solve_captcha(
-                            site_key=captcha_info["sitekey"],
-                            page_url=captcha_info.get(
-                                "pageurl", self.driver.current_url
-                            ),
-                        )
-                        if not result:
-                            # result is None, and can't continue
-                            logger.error(
-                                "2Captcha | Unable to Solve Captcha | Please crosscheck"
-                            )
-                            restart_captcha_frame(restart=False)
-                            return False
-                        logger.success(f"Solved captcha: {result}")
-                        # When you want to inject the CAPTCHA token
-                        self.driver.execute_script(
-                            """
-                                const callback = window.retrieveCallback(window.___grecaptcha_cfg.clients[0]);
-                                if (typeof callback === 'function') {
-                                    callback(arguments[0]);
-                                } else {
-                                    throw new Error('Callback function not found.');
-                                }
-                            """,
-                            result,
-                        )
-                        return result
+                        restart_captcha_frame(restart=False)
+                        return False
+                    # When you want to inject the CAPTCHA token
+                    self.driver.execute_script(
+                        """
+                            const callback = window.retrieveCallback(window.___grecaptcha_cfg.clients[0]);
+                            if (typeof callback === 'function') {
+                                callback(arguments[0]);
+                            } else {
+                                throw new Error('Callback function not found.');
+                            }
+                        """,
+                        result,
+                    )
+                    return result
                 else:
                     logger.warning("Failed to retrieve reCAPTCHA data. Retrying...")
                     restart_captcha_frame()
@@ -532,9 +537,7 @@ class Scrapper:
                 restart_captcha_frame()
 
         except Exception as e:
-            logger.error(
-                f"Captcha Activity | Description: {descriptor} | Error: {traceback.format_exc()}"
-            )
+            logger.error(f"Captcha Activity | Description: {descriptor} | Error: {e}")
             restart_captcha_frame()
 
     # Check proxy validity with requests
@@ -576,46 +579,87 @@ class Scrapper:
                     "message": "Proxy request failed. Please try again",
                 }
         except (RequestException, Timeout, Exception) as e:
-            logger.error(
-                f"Proxy check failed {e} | Traceback: {traceback.format_exc()}"
-            )
+            logger.error(f"Proxy check failed {e}")
             return {
                 "status": False,
                 "message": "Proxy usage failed, Please try another.",
             }
 
+    def parse_format_address(self):
+        try:
+            address = f"{self.anag.residenzaCivico}, {self.anag.residenzaIndirizzoVia} {self.anag.residenzaIndirizzo}, {self.anag.residenzaComune}, {self.anag.residenzaProvincia}"
+            url = f"https://geocode.search.hereapi.com/v1/geocode?q={address}&apiKey={settings.HERE_API_KEY}"
+            response = requests.get(url).json()
+
+            if "items" in response and response["items"]:
+                data = response["items"][0]["address"]
+                street = data["street"]
+                parts = street.split(maxsplit=1)
+                via = parts[0]  # First part is "via"
+                street_name = (
+                    parts[1] if len(parts) > 1 else ""
+                )  # The rest is the street name
+                # Dictionary of common typos and corrections
+                typo_corrections = {
+                    "domencio": "domenico",
+                    "pietrarsa": "pietrarse",
+                    # Add more common typos as needed
+                }
+
+                # Replace known typos in the street
+                for typo, correction in typo_corrections.items():
+                    street_name = street_name.lower().replace(typo, correction)
+                self.anag.residenzaProvincia = data["countyCode"]
+                self.anag.residenzaComune = data["city"]
+                self.anag.residenzaIndirizzoVia = via
+                self.anag.residenzaIndirizzo = street_name
+                self.anag.residenzaCivico = data["houseNumber"]
+                logger.success(
+                    f"1.1 Corrected Address Metainfo successfully",
+                    self.anag.residenzaIndirizzo,
+                )
+            return True
+        except Exception as e:
+            logger.error(f"Error | HERE Geocoder | {e}")
+            return True
+
     def insert_into_db(self, response):
         try:
             # Insertin into database
-            data = self.req.data
             new_quote_data = QuoteData(
                 request_data={
                     "datiPreventivo": {
-                        "idAccordo": data.datiPreventivo.idAccordo,
-                        "idFascia": data.datiPreventivo.idFascia,
+                        "idAccordo": self.datiPreventivo.idAccordo,
+                        "idFascia": self.datiPreventivo.idFascia,
+                        "idScelta": self.datiPreventivo.idScelta,
                     },
                     "anag": {
-                        "cf": data.anag.cf,
-                        "nascitaGiorno": data.anag.nascitaGiorno,
-                        "nascitaMese": data.anag.nascitaMese,
-                        "nascitaAnno": data.anag.nascitaAnno,
-                        "patenteAnno": data.anag.patenteAnno,
-                        "residenzaProvincia": data.anag.residenzaProvincia,
-                        "residenzaComune": data.anag.residenzaComune,
-                        "residenzaIndirizzoVia": data.anag.residenzaIndirizzoVia,
-                        "residenzaIndirizzo": data.anag.residenzaIndirizzo,
-                        "residenzaCivico": data.anag.residenzaCivico,
+                        "cf": self.anag.cf,
+                        "nascitaGiorno": self.anag.nascitaGiorno,
+                        "nascitaMese": self.anag.nascitaMese,
+                        "nascitaAnno": self.anag.nascitaAnno,
+                        "patenteAnno": self.anag.patenteAnno,
+                        "residenzaProvincia": self.anag.residenzaProvincia,
+                        "residenzaComune": self.anag.residenzaComune,
+                        "residenzaIndirizzoVia": self.anag.residenzaIndirizzoVia,
+                        "residenzaIndirizzo": self.anag.residenzaIndirizzo,
+                        "residenzaCivico": self.anag.residenzaCivico,
                     },
                     "veicolo": {
-                        "targa": data.veicolo.targa,
-                        "acquistoGiorno": data.veicolo.acquistoGiorno,
-                        "acquistoMese": data.veicolo.acquistoMese,
-                        "acquistoAnno": data.veicolo.acquistoAnno,
-                        "allestimento": data.veicolo.allestimento,
-                        "immatricolazioneGiorno": data.veicolo.immatricolazioneGiorno,
-                        "immatricolazioneMese": data.veicolo.immatricolazioneMese,
-                        "immatricolazioneAnno": data.veicolo.immatricolazioneAnno,
-                        "dataDecorrenza": data.veicolo.dataDecorrenza,
+                        "targa": self.veicolo.targa,
+                        "acquistoGiorno": self.veicolo.acquistoGiorno,
+                        "acquistoMese": self.veicolo.acquistoMese,
+                        "acquistoAnno": self.veicolo.acquistoAnno,
+                        "allestimento": self.veicolo.allestimento,
+                        "immatricolazioneGiorno": self.veicolo.immatricolazioneGiorno,
+                        "immatricolazioneMese": self.veicolo.immatricolazioneMese,
+                        "immatricolazioneAnno": self.veicolo.immatricolazioneAnno,
+                        "dataDecorrenza": self.veicolo.dataDecorrenza,
+                    },
+                    "portante": {
+                        "targa": self.portante.targa,
+                        "cf": self.portante.cf,
+                        "tipoVeicolo": self.portante.tipoVeicolo,
                     },
                 },
                 response_data=json.dumps(jsonable_encoder(response)),
@@ -636,7 +680,7 @@ class Scrapper:
             logger.success("1.0 Process | Starting Driver")
             # check proxy validity
             proxy_instance = self.check_proxy()
-            if proxy_instance.get("status", False):
+            if proxy_instance.get("status", False) and self.parse_format_address():
                 self.driver = webdriver.Chrome(
                     options=self.chrome_options(proxy=proxy_instance.get("proxy", None))
                 )
@@ -695,7 +739,7 @@ class Scrapper:
                 )
         except Exception as e:
             logger.error(
-                f"<<< An Error occurred: {e}; Traceback: {traceback.format_exc()}>>>"
+                f"<<< A WebDriver instace error occurred: {e}; Traceback: {traceback.format_exc()}>>>"
             )
             self.teardown()
             return error_response_model(
@@ -718,7 +762,7 @@ class Scrapper:
                             "DataImmatricolazione": "",
                         },
                     },
-                    **json.loads(str(e)),
+                    **(json.loads(str(e)) if e else None),
                 }
             )
 
@@ -748,7 +792,9 @@ class Scrapper:
         return True
 
     def use_case_bersani(self):
-        logger.success("Activating useCase Bersani")
+        logger.success(
+            f"1.4 Activating useCase 'Bersani' for {self.veicolo.tipoVeicolo.lower()}"
+        )
         if self.check_vehicle_cilindrata():
             vehicleType = self.veicolo.tipoVeicolo
             if (
@@ -768,7 +814,9 @@ class Scrapper:
         pass
 
     def use_case_classe_14(self):
-        logger.success("Activating useCase classe 14")
+        logger.success(
+            f"1.4 Activating useCase 'classe 14' for {self.veicolo.tipoVeicolo.lower()}"
+        )
         if self.check_vehicle_cilindrata():
             vehicleType = self.veicolo.tipoVeicolo
             if (
@@ -779,7 +827,7 @@ class Scrapper:
                 self.normale_step_1()
             else:
                 self.bersani_step_1()
-            self.bersani_step_2(familyBonusText="Prima assicurazione")
+            self.bersani_step_2(familyBonusText="Prima assicurazione", classe_14=True)
             self.bersani_step_3()
             self.bersani_step_4()
             self.bersani_step_5()
@@ -788,7 +836,9 @@ class Scrapper:
         pass
 
     def use_case_recupero_attestato(self):
-        logger.success("Activating useCase 'Recupero Attestato'")
+        logger.success(
+            f"1.4 Activating useCase 'Recupero Attestato' for {self.veicolo.tipoVeicolo.lower()}"
+        )
         if self.check_vehicle_cilindrata():
             vehicleType = self.veicolo.tipoVeicolo
             if (
@@ -810,7 +860,9 @@ class Scrapper:
         pass
 
     def use_case_normale(self):
-        logger.success("Activating useCase 'Normale'")
+        logger.success(
+            f"1.4 Activating useCase 'Normale' for {self.veicolo.tipoVeicolo.lower()}"
+        )
         if self.check_vehicle_cilindrata():
             self.normale_step_1()
             # self.bersani_step_2()
@@ -877,7 +929,7 @@ class Scrapper:
         self.continue_button()
         self.check_if_any_error()
 
-    def bersani_step_2(self, familyBonusText):
+    def bersani_step_2(self, familyBonusText, classe_14: bool = False):
         print("Bersani Step 2")
         # SELECT [Risk certificate] _constant_
         self._select(
@@ -886,18 +938,20 @@ class Scrapper:
             option_descriptor=f"{familyBonusText} [OPTION]",
             option_label=familyBonusText,
         )
-        # Enter Bonus Famiglia Tax ID Code
-        self._enter_input_text(
-            descriptor="Tax ID Code/Codice Fiscale [INPUT]",
-            xlocator="//mat-label[text()='Codice Fiscale']/ancestor::mat-form-field//input",
-            value=self.portante.cf,
-        )
-        # Enter Bonus Famiglia License Plate
-        self._enter_input_text(
-            descriptor="Reference plate/Targa di riferimento",
-            xlocator="//mat-label[text()='Targa di riferimento']/ancestor::mat-form-field//input",
-            value=self.portante.targa,
-        )
+        if not classe_14:
+            # ONly run in other classes but not classe 14
+            # Enter Bonus Famiglia Tax ID Code
+            self._enter_input_text(
+                descriptor="Tax ID Code/Codice Fiscale [INPUT]",
+                xlocator="//mat-label[text()='Codice Fiscale']/ancestor::mat-form-field//input",
+                value=self.portante.cf,
+            )
+            # Enter Bonus Famiglia License Plate
+            self._enter_input_text(
+                descriptor="Reference plate/Targa di riferimento",
+                xlocator="//mat-label[text()='Targa di riferimento']/ancestor::mat-form-field//input",
+                value=self.portante.targa,
+            )
 
     def recupero_attestato_step_2(self, familyBonusText):
         print("Recupero Attestato Step 2")
@@ -920,9 +974,6 @@ class Scrapper:
             xlocator="//mat-label[text()='Targa']/ancestor::mat-form-field//input",
             value=self.portante.targa,
         )
-        # Continue
-        self.continue_button()
-        self.check_if_any_error()
 
     def bersani_step_3(self):
         print("Bersani Step 3")
@@ -1097,139 +1148,174 @@ class Scrapper:
         )
         if age > 26:
             self._select_guide_expert_checkbox()
+        self.continue_button()
+        pass
 
     def final_step(self):
         print("Final Step & Preparing Quote Data")
         quote_object = []
-        # Insurance Quote: Summary of data entered [DIALOG]
-        if self._check_element(
-            descriptor="Dialog of Summary",
-            xlocator="//mat-dialog-container//h2",
-            timeout=15,
-        ):
-            # Close Dialog & Continue
-            self.continue_button()
-            self.check_if_any_error()
-
-            # Waiting for 30 seconds
-            # List of quotes that satisfy the user's choice
-            main_container = "//ivass-card-preventivo//ivass-card-simple//div[contains(@class, 'ivass-card-simple')]"
+        try:
+            # Insurance Quote: Summary of data entered [DIALOG]
             if self._check_element(
-                descriptor="List of quotes that satisfy the user's choice",
-                xlocator=main_container,
-                timeout=60,
+                descriptor="Dialog of Summary",
+                xlocator="//mat-dialog-container//h2",
+                timeout=15,
             ):
-                quote_cards = self.driver.find_elements(By.XPATH, main_container)
-                for card in quote_cards:
-                    title_element = card.find_element(
-                        By.XPATH,
-                        ".//div[contains(@class, 'title')][@role='heading']",
-                    )
-                    title_text = title_element.text.strip()
-                    # Extract the latest price within each card
-                    # 1. Check for a discounted price first using `fix-width-min` class for the final discounted price
-                    try:
-                        guida_element = card.find_element(
-                            By.XPATH,
-                            ".//span[@class='ng-star-inserted'][contains(text(), 'Guida')]",
-                        )
-                        guida_text = guida_element.text.strip()
-                        price_element = card.find_element(
-                            By.XPATH,
-                            ".//div[contains(@class, 'fix-width-min')]",
-                        )
-                        price_text = (
-                            price_element.text.strip()
-                        )  # Remove extra whitespace
-                    except:
-                        # 2. If no discounted price is found, fallback to the regular price using `price-container`
-                        price_element = card.find_element(
-                            By.XPATH,
-                            ".//div[contains(@class, 'price-container')]",
-                        )
-                        guida_text = ""
-                        price_text = price_element.text.strip()
+                # Close Dialog & Continue
+                self.continue_button(parent_xlocator="//mat-dialog-container")
+                self.check_if_any_error()
 
-                    # Clean up the price & guida text
-                    price_text = re.sub(
-                        r"Prezzo Scontato\s*", "", price_text
-                    )  # Remove "Prezzo Scontato" and any following spaces/newlines
-                    if guida_text and len(guida_text) > 1:
-                        guida_text = re.sub(r"Guida\s*", "", guida_text)
+                # Waiting for 30 seconds
+                logger.success("1.7 Gathering and Preparing Data...")
+                # List of quotes that satisfy the user's choice
+                main_container = "//ivass-card-preventivo//ivass-card-simple//div[contains(@class, 'ivass-card-simple')]"
+                if self._check_element(
+                    descriptor="List of quotes that satisfy the user's choice",
+                    xlocator=main_container,
+                    timeout=60,
+                ):
+                    quote_cards = self.driver.find_elements(By.XPATH, main_container)
+                    for card in quote_cards:
+                        title_element = card.find_element(
+                            By.XPATH,
+                            ".//div[contains(@class, 'title')][@role='heading']",
+                        )
+                        title_text = title_element.text.strip()
+                        # Extract the latest price within each card
+                        # 1. Check for a discounted price first using `fix-width-min` class for the final discounted price
+                        try:
+                            guida_element = card.find_element(
+                                By.XPATH,
+                                ".//span[@class='ng-star-inserted'][contains(text(), 'Guida')]",
+                            )
+                            guida_text = guida_element.text.strip()
+                            price_element = card.find_element(
+                                By.XPATH,
+                                ".//div[contains(@class, 'fix-width-min')]",
+                            )
+                            price_text = (
+                                price_element.text.strip()
+                            )  # Remove extra whitespace
+                        except:
+                            # 2. If no discounted price is found, fallback to the regular price using `price-container`
+                            price_element = card.find_element(
+                                By.XPATH,
+                                ".//div[contains(@class, 'price-container')]",
+                            )
+                            guida_text = ""
+                            price_text = price_element.text.strip()
 
-                    price_text = price_text.replace(" €", "")
-                    # Append extracted data to the list as a dictionary
-                    quote_object.append(
+                        # Clean up the price & guida text
+                        price_text = re.sub(
+                            r"Prezzo Scontato\s*", "", price_text
+                        )  # Remove "Prezzo Scontato" and any following spaces/newlines
+                        price_text = re.sub(
+                            r"Prezzo ufficiale\s*", "", price_text
+                        )  # Remove "Prezzo Scontato" and any following spaces/newlines
+                        if guida_text and len(guida_text) > 1:
+                            guida_text = re.sub(r"Guida\s*", "", guida_text)
+
+                        price_text = price_text.replace(" €", "")
+                        # Append extracted data to the list as a dictionary
+                        quote_object.append(
+                            {
+                                "IdAccordo": self.datiPreventivo.idAccordo,
+                                "IdFascia": self.datiPreventivo.idFascia,
+                                "Sito": "preventivass.it",
+                                "Compagnia": title_text,
+                                "Prodotto": "RCA",
+                                "Emissione": "",
+                                "Massimale": "",
+                                "Guida": guida_text,
+                                "Include": "",
+                                "Prezzo_Totale": price_text,
+                                "Prezzo_Iniziale": "",
+                                "Prezzo_RCA": price_text,
+                                "Dettagli": "",
+                                "StatoPreventivoAcquistabile": 1,
+                                "IdPreventivo": "",
+                                "NotePreventivo": "",
+                                "Satellitare": 0,
+                            }
+                        )
+
+            db_quote_data = self.insert_into_db(response=quote_object)
+            self.teardown()
+            if db_quote_data:
+                if len(quote_object) > 0:
+                    return success_response_model(
                         {
-                            "IdAccordo": self.datiPreventivo.idAccordo,
-                            "IdFascia": self.datiPreventivo.idFascia,
-                            "Sito": "preventivass.it",
-                            "Compagnia": title_text,
-                            "Prodotto": "RCA",
-                            "Emissione": "",
-                            "Massimale": "",
-                            "Guida": guida_text,
-                            "Include": "",
-                            "Prezzo_Totale": price_text,
-                            "Prezzo_Iniziale": "",
-                            "Prezzo_RCA": price_text,
-                            "Dettagli": "",
-                            "StatoPreventivoAcquistabile": 1,
-                            "IdPreventivo": "",
-                            "NotePreventivo": "",
-                            "Satellitare": 0,
+                            "code": status.HTTP_200_OK,
+                            "status": 1,
+                            "message": "Data fetched successfully",
+                            "DataInizio": "start date",
+                            "DataFine": "end date",
+                            "IdRicerca": "idRicerca from api get data",
+                            "Provenienza_IdValore": "constant  that i will pass you",
+                            "request_id": db_quote_data.id,
+                            "data": {
+                                "Quotes": jsonable_encoder(quote_object),
+                                "Assets": {
+                                    "Marca": "",
+                                    "Modello": "",
+                                    "Allestimento": "",
+                                    "Valore": "",
+                                    "Cilindrata": "",
+                                    "DataImmatricolazione": "",
+                                },
+                            },
                         }
                     )
-
-        db_quote_data = self.insert_into_db(response=quote_object)
-        self.teardown()
-        if db_quote_data:
-            if len(quote_object) > 0:
-                return success_response_model(
-                    {
-                        "code": status.HTTP_200_OK,
-                        "status": 1,
-                        "message": "lastErrorDesc",
-                        "DataInizio": "start date",
-                        "DataFine": "end date",
-                        "IdRicerca": "idRicerca from api get data",
-                        "Provenienza_IdValore": "constant  that i will pass you",
-                        "request_id": db_quote_data.id,
-                        "data": {
-                            "Quotes": jsonable_encoder(quote_object),
-                            "Assets": {
-                                "Marca": "",
-                                "Modello": "",
-                                "Allestimento": "",
-                                "Valore": "",
-                                "Cilindrata": "",
-                                "DataImmatricolazione": "",
-                            },
+            return error_response_model(
+                {
+                    "code": status.HTTP_400_BAD_REQUEST,
+                    "status": 5,
+                    "message": "Issue with processing request, there was empty data. Please try again.",
+                    "DataInizio": "start date",
+                    "DataFine": "end date",
+                    "IdRicerca": "idRicerca from api get data",
+                    "Provenienza_IdValore": "constant  that i will pass you",
+                    "data": {
+                        "Quotes": jsonable_encoder(quote_object),
+                        "Assets": {
+                            "Marca": "",
+                            "Modello": "",
+                            "Allestimento": "",
+                            "Valore": "",
+                            "Cilindrata": "",
+                            "DataImmatricolazione": "",
                         },
-                    }
-                )
-        return error_response_model(
-            {
-                "code": status.HTTP_400_BAD_REQUEST,
-                "status": 5,
-                "message": "Issue with processing request, there was empty data. Please try again.",
-                "DataInizio": "start date",
-                "DataFine": "end date",
-                "IdRicerca": "idRicerca from api get data",
-                "Provenienza_IdValore": "constant  that i will pass you",
-                "data": {
-                    "Quotes": jsonable_encoder(quote_object),
-                    "Assets": {
-                        "Marca": "",
-                        "Modello": "",
-                        "Allestimento": "",
-                        "Valore": "",
-                        "Cilindrata": "",
-                        "DataImmatricolazione": "",
                     },
-                },
-            }
-        )
+                }
+            )
+        except Exception as e:
+            logger.error(
+                f"<<< A WebDriver instace error occurred: {e}; Traceback: {traceback.format_exc()}>>>"
+            )
+            self.teardown()
+            return error_response_model(
+                {
+                    "code": status.HTTP_400_BAD_REQUEST,
+                    "status": 5,
+                    "message": e,
+                    "DataInizio": "start date",
+                    "DataFine": "end date",
+                    "IdRicerca": "idRicerca from api get data",
+                    "Provenienza_IdValore": "constant  that i will pass you",
+                    "data": {
+                        "Quotes": jsonable_encoder(quote_object),
+                        "Assets": {
+                            "Marca": "",
+                            "Modello": "",
+                            "Allestimento": "",
+                            "Valore": "",
+                            "Cilindrata": "",
+                            "DataImmatricolazione": "",
+                        },
+                    },
+                    **(json.loads(str(e)) if e else None),
+                }
+            )
 
 
 BotScrapper = Scrapper

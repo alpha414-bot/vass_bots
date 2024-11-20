@@ -13,7 +13,7 @@ def send_log_to_telegram(message):
             response = requests.post(
                 TELEGRAM_API_URL,
                 data={"chat_id": settings.CHAT_ID, "text": f"{message}"},
-                timeout=15,
+                timeout=20,
             )
             if response.status_code != 200:
                 logger.warning(f"Failed to send log to Telegram: {response.text}")

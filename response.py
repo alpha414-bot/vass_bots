@@ -18,6 +18,7 @@ def error_response_model(data):
         content={
             "error": True,
             **{k: v for k, v in data.items() if k not in {"code", "headers"}},
+            "status": 5,
         },
         headers=data.get("headers", {}),
     )

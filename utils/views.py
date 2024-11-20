@@ -12,7 +12,7 @@ from .scrapper import BotScrapper
 def start_prep_data(data: RawRequestData, db: Session):
     try:
         logger.success(
-            f"0.1 Task | Cleaning & Processing & Preping Request Data | Proxy: {data.proxy}"
+            f"0.0 Task | Cleaning & Processing & Preping Request Data | Proxy: {data.proxy}"
         )
         if data.request_id and not data.request_refresh:
             # accessing already store data and data.refresh is none
@@ -53,5 +53,20 @@ def start_prep_data(data: RawRequestData, db: Session):
             {
                 "code": status.HTTP_400_BAD_REQUEST,
                 "message": "Internal Server Error.",
+                "DataInizio": "start date",
+                "DataFine": "end date",
+                "IdRicerca": "idRicerca from api get data",
+                "Provenienza_IdValore": "constant  that i will pass you",
+                "data": {
+                    "Quotes": [],
+                    "Assets": {
+                        "Marca": "",
+                        "Modello": "",
+                        "Allestimento": "",
+                        "Valore": "",
+                        "Cilindrata": "",
+                        "DataImmatricolazione": "",
+                    },
+                },
             }
         )

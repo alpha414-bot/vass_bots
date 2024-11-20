@@ -13,8 +13,8 @@ class AppSettings:
     # Database Configuration
     DB_HOST: str = os.getenv("DB_HOST", "localhost")
     DB_PORT: str | int = os.getenv("DB_PORT", 3306)
-    DB_DATABASE: str = os.getenv("DB_DATABASE", "database_name")
-    DB_USERNAME: str = os.getenv("DB_USERNAME", "root")
+    DB_DATABASE: str = os.getenv("DB_DATABASE", "")
+    DB_USERNAME: str = os.getenv("DB_USERNAME", "")
     DB_PASSWORD: str = os.getenv("DB_PASSWORD", "")
 
     # Allowed Hosts
@@ -33,9 +33,11 @@ class AppSettings:
         # Strip whitespace from each item
         ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS]
 
+    # HERE API (for Geocoding)
+    HERE_API_KEY: str = os.getenv("HERE_API_KEY", "")
     # Telegram Bot Setup
-    CHAT_ID: str = os.getenv("CHAT_ID", "1715608783")
     USE_TG_BOT: bool = os.getenv("USE_TG_BOT", "False").lower() in ("true", "1", "yes")
+    CHAT_ID: str = os.getenv("CHAT_ID", "")
     MAX_TELEGRAM_MESSAGE_LENGTH: int = int(
         os.getenv("MAX_TELEGRAM_MESSAGE_LENGTH", 1200)
     )

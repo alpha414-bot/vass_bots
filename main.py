@@ -74,7 +74,7 @@ def get_quote_price(
                 {
                     "code": status.HTTP_400_BAD_REQUEST,
                     "payload": requestData.dict(),
-                    **json.loads(str(e)),
+                    **(json.loads(str(e)) if e else None),
                 }
             )
         except Exception as e:
@@ -84,7 +84,24 @@ def get_quote_price(
             return error_response_model(
                 {
                     "code": status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    "error": "Fatal Server Error",
+                    "message": "Fatal Server Error",
+                    "message": e,
+                    "DataInizio": "start date",
+                    "DataFine": "end date",
+                    "IdRicerca": "idRicerca from api get data",
+                    "Provenienza_IdValore": "constant  that i will pass you",
+                    "data": {
+                        "Quotes": jsonable_encoder([]),
+                        "Assets": {
+                            "Marca": "",
+                            "Modello": "",
+                            "Allestimento": "",
+                            "Valore": "",
+                            "Cilindrata": "",
+                            "DataImmatricolazione": "",
+                        },
+                    },
+                    **(json.loads(str(e)) if e else None),
                 }
             )
 
