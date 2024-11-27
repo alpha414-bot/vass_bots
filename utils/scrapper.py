@@ -9,11 +9,9 @@ from fastapi.encoders import jsonable_encoder
 from logger import logger
 from fake_useragent import UserAgent
 from response import error_response_model, success_response_model
-from utils.models import QuoteData
 from utils.schemas import RawRequestData
-from utils.settings import settings
+from settings import settings
 from .captcha import TwoCaptcha
-from sqlalchemy.orm import Session
 import requests
 from requests.exceptions import RequestException, Timeout
 from selenium import webdriver
@@ -25,10 +23,13 @@ from selenium.common.exceptions import TimeoutException, WebDriverException
 
 
 class Scrapper:
-    def __init__(self, data: RawRequestData, db: Session):
-        logger.success("0.0 Process | Initiating Scrapper Class On Selenium")
-        self.db = db
+    def __init__(self, data: RawRequestData, start_time: datetime, task_id):
+        logger.success(
+            f"TID: {task_id} | 4.0.0 Process | Initiating Scrapper Class On Selenium"
+        )
+        self.task_id = task_id
         self.driver = None
+        self.start_time = start_time
         proxy = data.proxy
         self.anag = data.data.anag
         self.veicolo = data.data.veicolo
@@ -45,29 +46,36 @@ class Scrapper:
     def chrome_options(self, proxy=None):
         options = Options()
         options.add_experimental_option("detach", True)
-        options.add_argument("--headless")
+        # options.add_argument("--headless")
+        # options.add_argument("--disable-gpu")  # Applicable on Windows
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument(f"--user-agent={UserAgent(os='windows').random}")
-        # options.add_argument("--disable-gpu")  # Applicable on Windows
+        # Remote Hub
+        options.add_argument("--ignore-ssl-errors=yes")
+        options.add_argument("--ignore-certificate-errors")
         if proxy:
             options.add_argument(f"--proxy-server={proxy}")
         return options
 
     def teardown(self):
         """Teardown method to quit the WebDriver and show a message box."""
-        logger.success(f"1.8 [LAST STEP] Terminating Session")
+        logger.success(f"TID: {self.task_id} | 4.8 [LAST STEP] Terminating Session")
         if hasattr(self, "driver") and self.driver:
+            self.driver.close()
             self.driver.quit()
-            logger.info("Driver quit successfully.")
+            logger.info(f"TID: {self.task_id} | Driver quit successfully.")
         else:
-            logger.warning("Driver does not exist or is already None.")
+            logger.warning(
+                f"TID: {self.task_id} | Driver does not exist or is already None."
+            )
         return error_response_model(
             {
                 "code": status.HTTP_400_BAD_REQUEST,
                 "status": 5,
                 "message": "Issue with processing request. Please try again.",
-            }
+            },
+            False,
         )
 
     def _is_page_loaded(self):
@@ -84,20 +92,28 @@ class Scrapper:
         """Try to reload the page up to the retry limit if the proxy or page loading fails."""
         for attempt in range(1, self.retry_attempts + 1):
             try:
-                logger.success(f"1.2 Attempt [{attempt}] to load the page.")
+                logger.success(
+                    f"TID: {self.task_id} | 4.2 Attempt [{attempt}] to load the page."
+                )
                 self.driver.get("https://www.preventivass.it/dati-principali")
 
                 if self._is_page_loaded():
-                    logger.success("1.3 Page loaded successfully.")
+                    logger.success(
+                        f"TID: {self.task_id} | 4.3 Page loaded successfully."
+                    )
                     return True
                 else:
                     raise TimeoutException("Page not loaded within timeout.")
             except (TimeoutException, WebDriverException, Exception) as e:
-                logger.warning(f"Load attempt {attempt} failed: {e}")
+                logger.warning(
+                    f"TID: {self.task_id} | Load attempt {attempt} failed: {e}"
+                )
                 if attempt < self.retry_attempts:
                     asyncio.sleep(2)  # Wait before retrying
                 else:
-                    logger.warning("Failed to load the page after multiple attempts.")
+                    logger.warning(
+                        f"TID: {self.task_id} | Failed to load the page after multiple attempts."
+                    )
                     return False
         return False
 
@@ -113,7 +129,7 @@ class Scrapper:
         except Exception as e:
             if not no_error:
                 logger.error(
-                    f"Element Activity | Description: {descriptor} | Error: {e}"
+                    f"TID: {self.task_id} | Element Activity | Description: {descriptor} | Error: {e}"
                 )
             return False
 
@@ -144,7 +160,9 @@ class Scrapper:
             self.driver.implicitly_wait(1)
             return True
         except Exception as e:
-            logger.error(f"Button Activity | Description: {descriptor} | Error: {e}")
+            logger.error(
+                f"TID: {self.task_id} | Button Activity | Description: {descriptor} | Error: {e}"
+            )
             return False
 
     def _enter_input_text(self, descriptor, xlocator: str, value: str | int):
@@ -176,7 +194,9 @@ class Scrapper:
             time.sleep(1)
             return True
         except Exception as e:
-            logger.error(f"Input Activity | Description: {descriptor} | Error: {e}")
+            logger.error(
+                f"TID: {self.task_id} | Input Activity | Description: {descriptor} | Error: {e}"
+            )
             return False
 
     def _select(
@@ -236,8 +256,9 @@ class Scrapper:
             return False
         except Exception as e:
             logger.error(
-                f"Select Activity | Description: {parent_descriptor} and Option {option_descriptor} | Error: {e}"
+                f"TID: {self.task_id} | Select Activity | Description: {parent_descriptor} and Option {option_descriptor} | Error: {e}"
             )
+            self.teardown()
             return False
 
     def _select_input(self, parent_descriptor, parent_label: str, input_value: str):
@@ -328,8 +349,9 @@ class Scrapper:
             return False
         except Exception as e:
             logger.error(
-                f"Select & Input & Click Activity | Description: {parent_descriptor} and Value {input_value} | Error: {e}"
+                f"TID: {self.task_id} | Select & Input & Click Activity | Description: {parent_descriptor} and Value {input_value} | Error: {e}"
             )
+            self.teardown()
             return False
 
     def _select_guide_expert_checkbox(self):
@@ -361,7 +383,10 @@ class Scrapper:
                 ),
             )
         except Exception as e:
-            logger.error(f"Select & CheckBox | Description: Guide Expert | Error: {e}")
+            logger.error(
+                f"TID: {self.task_id} | Select & CheckBox | Description: Guide Expert | Error: {e}"
+            )
+            self.teardown()
             return False
 
     def continue_button(self, parent_xlocator=""):
@@ -432,7 +457,7 @@ class Scrapper:
             nonlocal restart_count
             restart_count += 1
             logger.info(
-                f"Reloading captcha frame... (Attempt {restart_count}/{max_retries})"
+                f"TID: {self.task_id} | Reloading captcha frame... (Attempt {restart_count}/{max_retries})"
             )
 
             # Only reload if the retry count has not exceeded max retries
@@ -450,7 +475,7 @@ class Scrapper:
                 asyncio.sleep(2)
             else:
                 logger.warning(
-                    f"Maximum retries reached ({max_retries}). Moving to the next step."
+                    f"TID: {self.task_id} | Maximum retries reached ({max_retries}). Moving to the next step."
                 )
 
         # Inject `retrieveCallback` function globally at the beginning of the session
@@ -501,18 +526,20 @@ class Scrapper:
                     and len(recaptcha_data) > 0
                 ):
                     captcha_info = recaptcha_data[0]
-                    logger.success(f"1.5 Solving Captcha ...")
+                    logger.success(f"TID: {self.task_id} | 4.5 Solving Captcha ...")
                     # Initialize 2Captcha solver and use sitekey
                     solver = TwoCaptcha(settings.APIKEY_2CAPTCHA)
                     result = solver.solve_captcha(
                         site_key=captcha_info["sitekey"],
                         page_url=captcha_info.get("pageurl", self.driver.current_url),
                     )
-                    logger.success(f"1.6 Captcha Solved Successfully | Data: {result}")
+                    logger.success(
+                        f"TID: {self.task_id} | 4.6 Captcha Solved Successfully | Data: {result}"
+                    )
                     if not result:
                         # result is None, and can't continue
                         logger.error(
-                            "2Captcha | Unable to Solve Captcha | Please crosscheck"
+                            f"TID: {self.task_id} | 2Captcha | Unable to Solve Captcha | Please crosscheck"
                         )
                         restart_captcha_frame(restart=False)
                         return False
@@ -530,14 +557,20 @@ class Scrapper:
                     )
                     return result
                 else:
-                    logger.warning("Failed to retrieve reCAPTCHA data. Retrying...")
+                    logger.warning(
+                        f"TID: {self.task_id} | Failed to retrieve reCAPTCHA data. Retrying..."
+                    )
                     restart_captcha_frame()
             else:
-                logger.warning("reCAPTCHA checkbox not found. Retrying...")
+                logger.warning(
+                    f"TID: {self.task_id} | reCAPTCHA checkbox not found. Retrying..."
+                )
                 restart_captcha_frame()
 
         except Exception as e:
-            logger.error(f"Captcha Activity | Description: {descriptor} | Error: {e}")
+            logger.error(
+                f"TID: {self.task_id} | Captcha Activity | Description: {descriptor} | Error: {e}"
+            )
             restart_captcha_frame()
 
     # Check proxy validity with requests
@@ -565,21 +598,21 @@ class Scrapper:
                     }
                 else:
                     # Proxy country is not italy
-                    logger.error("Proxy is in the wrong country")
+                    logger.error(f"TID: {self.task_id} | Proxy is in the wrong country")
                     return {
                         "status": False,
                         "message": f"Current Proxy is in wrong country. Current [{data.get('countryCode', '')}] instead of [IT]",
                     }
             else:
                 logger.error(
-                    f"Proxy check failed: status code is not status.HTTP_200_OK"
+                    f"TID: {self.task_id} | Proxy check failed: status code is not status.HTTP_200_OK"
                 )
                 return {
                     "status": False,
                     "message": "Proxy request failed. Please try again",
                 }
         except (RequestException, Timeout, Exception) as e:
-            logger.error(f"Proxy check failed {e}")
+            logger.error(f"TID: {self.task_id} | Proxy check failed {e}")
             return {
                 "status": False,
                 "message": "Proxy usage failed, Please try another.",
@@ -615,78 +648,33 @@ class Scrapper:
                 self.anag.residenzaIndirizzo = street_name
                 self.anag.residenzaCivico = data["houseNumber"]
                 logger.success(
-                    f"1.1 Corrected Address Metainfo successfully",
-                    self.anag.residenzaIndirizzo,
+                    f"TID: {self.task_id} | 4.1 Corrected Address Metainfo successfully",
                 )
             return True
         except Exception as e:
-            logger.error(f"Error | HERE Geocoder | {e}")
+            logger.error(f"TID: {self.task_id} | Error | HERE Geocoder | {e}")
             return True
-
-    def insert_into_db(self, response):
-        try:
-            # Insertin into database
-            new_quote_data = QuoteData(
-                request_data={
-                    "datiPreventivo": {
-                        "idAccordo": self.datiPreventivo.idAccordo,
-                        "idFascia": self.datiPreventivo.idFascia,
-                        "idScelta": self.datiPreventivo.idScelta,
-                    },
-                    "anag": {
-                        "cf": self.anag.cf,
-                        "nascitaGiorno": self.anag.nascitaGiorno,
-                        "nascitaMese": self.anag.nascitaMese,
-                        "nascitaAnno": self.anag.nascitaAnno,
-                        "patenteAnno": self.anag.patenteAnno,
-                        "residenzaProvincia": self.anag.residenzaProvincia,
-                        "residenzaComune": self.anag.residenzaComune,
-                        "residenzaIndirizzoVia": self.anag.residenzaIndirizzoVia,
-                        "residenzaIndirizzo": self.anag.residenzaIndirizzo,
-                        "residenzaCivico": self.anag.residenzaCivico,
-                    },
-                    "veicolo": {
-                        "targa": self.veicolo.targa,
-                        "acquistoGiorno": self.veicolo.acquistoGiorno,
-                        "acquistoMese": self.veicolo.acquistoMese,
-                        "acquistoAnno": self.veicolo.acquistoAnno,
-                        "allestimento": self.veicolo.allestimento,
-                        "immatricolazioneGiorno": self.veicolo.immatricolazioneGiorno,
-                        "immatricolazioneMese": self.veicolo.immatricolazioneMese,
-                        "immatricolazioneAnno": self.veicolo.immatricolazioneAnno,
-                        "dataDecorrenza": self.veicolo.dataDecorrenza,
-                    },
-                    "portante": {
-                        "targa": self.portante.targa,
-                        "cf": self.portante.cf,
-                        "tipoVeicolo": self.portante.tipoVeicolo,
-                    },
-                },
-                response_data=json.dumps(jsonable_encoder(response)),
-            )
-            self.db.add(new_quote_data)
-            self.db.commit()
-            self.db.refresh(new_quote_data)
-            return new_quote_data
-        except Exception as e:
-            self.db.rollback()
-            logger.error(
-                f"There was a problem inserting {response} to database | Error is {e}"
-            )
-            raise e
 
     def start(self):
         try:
-            logger.success("1.0 Process | Starting Driver")
+            logger.success(f"TID: {self.task_id} | 4.0 Process | Starting Driver")
             # check proxy validity
             proxy_instance = self.check_proxy()
             if proxy_instance.get("status", False) and self.parse_format_address():
-                self.driver = webdriver.Chrome(
-                    options=self.chrome_options(proxy=proxy_instance.get("proxy", None))
+                self.driver = webdriver.Remote(
+                    command_executor="http://localhost:4444/wd/hub",
+                    options=self.chrome_options(
+                        proxy=proxy_instance.get("proxy", None)
+                    ),
                 )
+                # self.driver = webdriver.Chrome(
+                #     options=self.chrome_options(proxy=proxy_instance.get("proxy", None))
+                # )
                 self.wait = WebDriverWait(self.driver, timeout=10)
                 if not self._reload_page_with_retry():
-                    logger.error("Page Activity | Unable to load page, closing driver.")
+                    logger.error(
+                        f"TID: {self.task_id} | Page Activity | Unable to load page, closing driver."
+                    )
                     return self.teardown()
                 idChoice = self.datiPreventivo.idScelta
                 # CLICK [Consent]
@@ -720,10 +708,10 @@ class Scrapper:
                             "message",
                             "Error with proxy in processing request. Please try again later",
                         ),
-                        "DataInizio": "start date",
-                        "DataFine": "end date",
-                        "IdRicerca": "idRicerca from api get data",
-                        "Provenienza_IdValore": "constant  that i will pass you",
+                        "DataInizio": self.start_time.strftime("%d/%m/%Y %H:%M:%S"),
+                        "DataFine": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+                        "IdRicerca": self.datiPreventivo.idRicerca,
+                        "Provenienza_IdValore": 999969,
                         "data": {
                             "Quotes": jsonable_encoder([]),
                             "Assets": {
@@ -739,7 +727,7 @@ class Scrapper:
                 )
         except Exception as e:
             logger.error(
-                f"<<< A WebDriver instace error occurred: {e}; Traceback: {traceback.format_exc()}>>>"
+                f"TID: {self.task_id} | <<< A WebDriver instace error occurred: {e}; Traceback: {traceback.format_exc()}>>>"
             )
             self.teardown()
             return error_response_model(
@@ -747,10 +735,10 @@ class Scrapper:
                     "code": status.HTTP_400_BAD_REQUEST,
                     "status": 5,
                     "message": e,
-                    "DataInizio": "start date",
-                    "DataFine": "end date",
-                    "IdRicerca": "idRicerca from api get data",
-                    "Provenienza_IdValore": "constant  that i will pass you",
+                    "DataInizio": self.start_time.strftime("%d/%m/%Y %H:%M:%S"),
+                    "DataFine": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+                    "IdRicerca": self.datiPreventivo.idRicerca,
+                    "Provenienza_IdValore": 999969,
                     "data": {
                         "Quotes": jsonable_encoder([]),
                         "Assets": {
@@ -769,7 +757,7 @@ class Scrapper:
     def check_vehicle_cilindrata(self):
         typeOfVehicle = self.veicolo.tipoVeicolo.lower()
         logger.info(
-            f"Checking Vehicle Cilindrata | Type of Vehicle: {typeOfVehicle} | Cilindrata: {self.veicolo.cilindrata} "
+            f"TID: {self.task_id} | Checking Vehicle Cilindrata | Type of Vehicle: {typeOfVehicle} | Cilindrata: {self.veicolo.cilindrata} "
         )
         if (typeOfVehicle == "motociclo" and int(self.veicolo.cilindrata) <= 50) or (
             typeOfVehicle == "ciclomotore" and int(self.veicolo.cilindrata) > 50
@@ -793,7 +781,7 @@ class Scrapper:
 
     def use_case_bersani(self):
         logger.success(
-            f"1.4 Activating useCase 'Bersani' for {self.veicolo.tipoVeicolo.lower()}"
+            f"TID: {self.task_id} | 4.4 Activating useCase 'Bersani' for {self.veicolo.tipoVeicolo.lower()}"
         )
         if self.check_vehicle_cilindrata():
             vehicleType = self.veicolo.tipoVeicolo
@@ -815,7 +803,7 @@ class Scrapper:
 
     def use_case_classe_14(self):
         logger.success(
-            f"1.4 Activating useCase 'classe 14' for {self.veicolo.tipoVeicolo.lower()}"
+            f"TID: {self.task_id} | 4.4 Activating useCase 'classe 14' for {self.veicolo.tipoVeicolo.lower()}"
         )
         if self.check_vehicle_cilindrata():
             vehicleType = self.veicolo.tipoVeicolo
@@ -837,7 +825,7 @@ class Scrapper:
 
     def use_case_recupero_attestato(self):
         logger.success(
-            f"1.4 Activating useCase 'Recupero Attestato' for {self.veicolo.tipoVeicolo.lower()}"
+            f"TID: {self.task_id} | 4.4 Activating useCase 'Recupero Attestato' for {self.veicolo.tipoVeicolo.lower()}"
         )
         if self.check_vehicle_cilindrata():
             vehicleType = self.veicolo.tipoVeicolo
@@ -861,7 +849,7 @@ class Scrapper:
 
     def use_case_normale(self):
         logger.success(
-            f"1.4 Activating useCase 'Normale' for {self.veicolo.tipoVeicolo.lower()}"
+            f"TID: {self.task_id} | 4.4 Activating useCase 'Normale' for {self.veicolo.tipoVeicolo.lower()}"
         )
         if self.check_vehicle_cilindrata():
             self.normale_step_1()
@@ -1166,7 +1154,9 @@ class Scrapper:
                 self.check_if_any_error()
 
                 # Waiting for 30 seconds
-                logger.success("1.7 Gathering and Preparing Data...")
+                logger.success(
+                    f"TID: {self.task_id} | 4.7 Gathering and Preparing Data..."
+                )
                 # List of quotes that satisfy the user's choice
                 main_container = "//ivass-card-preventivo//ivass-card-simple//div[contains(@class, 'ivass-card-simple')]"
                 if self._check_element(
@@ -1238,21 +1228,18 @@ class Scrapper:
                                 "Satellitare": 0,
                             }
                         )
-
-            db_quote_data = self.insert_into_db(response=quote_object)
             self.teardown()
-            if db_quote_data:
+            if quote_object:
                 if len(quote_object) > 0:
                     return success_response_model(
                         {
                             "code": status.HTTP_200_OK,
                             "status": 1,
                             "message": "Data fetched successfully",
-                            "DataInizio": "start date",
-                            "DataFine": "end date",
-                            "IdRicerca": "idRicerca from api get data",
-                            "Provenienza_IdValore": "constant  that i will pass you",
-                            "request_id": db_quote_data.id,
+                            "DataInizio": self.start_time.strftime("%d/%m/%Y %H:%M:%S"),
+                            "DataFine": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+                            "IdRicerca": self.datiPreventivo.idRicerca,
+                            "Provenienza_IdValore": 999969,
                             "data": {
                                 "Quotes": jsonable_encoder(quote_object),
                                 "Assets": {
@@ -1271,10 +1258,10 @@ class Scrapper:
                     "code": status.HTTP_400_BAD_REQUEST,
                     "status": 5,
                     "message": "Issue with processing request, there was empty data. Please try again.",
-                    "DataInizio": "start date",
-                    "DataFine": "end date",
-                    "IdRicerca": "idRicerca from api get data",
-                    "Provenienza_IdValore": "constant  that i will pass you",
+                    "DataInizio": self.start_time.strftime("%d/%m/%Y %H:%M:%S"),
+                    "DataFine": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+                    "IdRicerca": self.datiPreventivo.idRicerca,
+                    "Provenienza_IdValore": 999969,
                     "data": {
                         "Quotes": jsonable_encoder(quote_object),
                         "Assets": {
@@ -1290,7 +1277,7 @@ class Scrapper:
             )
         except Exception as e:
             logger.error(
-                f"<<< A WebDriver instace error occurred: {e}; Traceback: {traceback.format_exc()}>>>"
+                f"TID: {self.task_id} | <<< A WebDriver instace error occurred: {e}; Traceback: {traceback.format_exc()}>>>"
             )
             self.teardown()
             return error_response_model(
@@ -1298,10 +1285,10 @@ class Scrapper:
                     "code": status.HTTP_400_BAD_REQUEST,
                     "status": 5,
                     "message": e,
-                    "DataInizio": "start date",
-                    "DataFine": "end date",
-                    "IdRicerca": "idRicerca from api get data",
-                    "Provenienza_IdValore": "constant  that i will pass you",
+                    "DataInizio": self.start_time.strftime("%d/%m/%Y %H:%M:%S"),
+                    "DataFine": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+                    "IdRicerca": self.datiPreventivo.idRicerca,
+                    "Provenienza_IdValore": 999969,
                     "data": {
                         "Quotes": jsonable_encoder(quote_object),
                         "Assets": {
@@ -1316,6 +1303,3 @@ class Scrapper:
                     **(json.loads(str(e)) if e else None),
                 }
             )
-
-
-BotScrapper = Scrapper

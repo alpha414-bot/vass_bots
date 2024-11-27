@@ -7,8 +7,14 @@ load_dotenv()
 
 
 class AppSettings:
-    USE_PROXY: bool = os.getenv("USE_PROXY", "False").lower() in ("true", "1", "yes")
+    USE_PROXY: bool = os.getenv("USE_PROXY", "False").lower() in (
+        "true",
+        "1",
+        "yes",
+        "True",
+    )
     PROXY_TYPE: str = str(os.getenv("PROXY_TYPE", "socks4"))
+    PROXY: str = os.getenv("PROXY", "")
 
     # Database Configuration
     DB_HOST: str = os.getenv("DB_HOST", "localhost")
@@ -36,7 +42,12 @@ class AppSettings:
     # HERE API (for Geocoding)
     HERE_API_KEY: str = os.getenv("HERE_API_KEY", "")
     # Telegram Bot Setup
-    USE_TG_BOT: bool = os.getenv("USE_TG_BOT", "False").lower() in ("true", "1", "yes")
+    USE_TG_BOT: bool = os.getenv("USE_TG_BOT", "False").lower() in (
+        "true",
+        "1",
+        "yes",
+        "True",
+    )
     CHAT_ID: str = os.getenv("CHAT_ID", "")
     MAX_TELEGRAM_MESSAGE_LENGTH: int = int(
         os.getenv("MAX_TELEGRAM_MESSAGE_LENGTH", 1200)
@@ -109,4 +120,14 @@ emblem = """
 
   EMAIL   ADDRESS:        [alphasoft2021@gmail.com]
   GITHUB  REPO:           [https://github.com/alpha414-bot]
+"""
+
+buy = """
+ 
+    |
+    |
+    |
+    |
+    |
+    |      
 """

@@ -36,6 +36,7 @@ class Veicolo(BaseModel):
 
 
 class DatiPreventivo(BaseModel):
+    idRicerca: int = 776164
     idAccordo: int = 72  # Agreement ID
     idFascia: int = 1  # Rate Class ID
     idScelta: int = 0  # Choice ID (Optional)
@@ -67,6 +68,6 @@ class RequestData(BaseModel):
     request_id: Optional[str | int] = None
     request_refresh: Optional[bool] = None
     proxy: Optional[str] = None
-    botId: int
-    remoteHost: str
-    idPrev: int
+    botId: int = None
+    remoteHost: str = None
+    idPrev: int = None

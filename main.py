@@ -1,121 +1,66 @@
-import json
-import traceback
-from fastapi.encoders import jsonable_encoder
+import queue
+import threading
+from settings import emblem, settings
+from utils.views import PrepData
+import time
 from logger import logger
-import requests
-from database import get_db
-from response import error_response_model
-from utils.schemas import RawRequestData, RequestData
-from utils.settings import settings, emblem
-from fastapi import FastAPI, status
-from fastapi.middleware.trustedhost import TrustedHostMiddleware
-from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy.orm import Session
-from fastapi import Depends
-from utils.views import start_prep_data
+
+# Thread-safe queue
+task_queue = queue.Queue()
 
 
-app = FastAPI()
-
-# Add CORS middleware
-app.add_middleware(TrustedHostMiddleware, allowed_hosts=settings.ALLOWED_HOSTS)
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=settings.ALLOWED_HOSTS,  # Allows all origins
-    allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
-)
+# Task Worker Function
+def bot_task(task_id):
+    logger.success(f"0.0 Task with TID: {task_id} started.")
+    # Simulate the bot's work (replace with your automation logic)
+    PrepData(task_id=task_id).get_botid()
+    time.sleep(5)  # Task duration
+    logger.success(f"0.1 Task with TID: {task_id} completed.")
 
 
-@app.post("/quote/price")
-def get_quote_price(
-    requestData: RequestData,
-    db: Session = Depends(get_db),
-):
-    data = {}
-
-    try:
-        payload = json.dumps(requestData.dict())
-        headers = {"Content-Type": "application/json"}
-        response = requests.request(
-            "POST",
-            "https://mobilityexpress.it/api/getplatetest",
-            headers=headers,
-            data=payload,
-            timeout=2,
+# Worker Thread Function
+def worker():
+    while True:
+        task_id = task_queue.get()
+        if task_id is None:  # Stop signal
+            break
+        logger.success(
+            f"Worker service with TID: {task_id} initialize | Telegram Usage: {settings.USE_TG_BOT} | Proxy: {settings.PROXY}"
         )
-        if response.status_code == 200:
-            data = json.loads(response.text)
-            if data.get("status", None) != "1":
-                raise ValueError(response.text)
-            else:
-                data = RawRequestData(
-                    proxy=requestData.proxy,
-                    request_id=requestData.request_id,
-                    request_refresh=requestData.request_refresh,
-                    **json.loads(response.text),
-                )
-                return start_prep_data(data=data, db=db)
-        else:
-            raise ValueError(
-                json.dumps(
-                    jsonable_encoder(
-                        {
-                            "status": 500,
-                            "message": "Bad request. Please try with another data or try again later",
-                        }
-                    )
-                )
-            )
-    except Exception as e:
         try:
-            return error_response_model(
-                {
-                    "code": status.HTTP_400_BAD_REQUEST,
-                    "payload": requestData.dict(),
-                    **(json.loads(str(e)) if e else None),
-                }
-            )
-        except Exception as e:
-            logger.error(
-                f"Fatal Error | Error: {e} | Traceback: {traceback.format_exc()}"
-            )
-            return error_response_model(
-                {
-                    "code": status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    "message": "Fatal Server Error",
-                    "message": e,
-                    "DataInizio": "start date",
-                    "DataFine": "end date",
-                    "IdRicerca": "idRicerca from api get data",
-                    "Provenienza_IdValore": "constant  that i will pass you",
-                    "data": {
-                        "Quotes": jsonable_encoder([]),
-                        "Assets": {
-                            "Marca": "",
-                            "Modello": "",
-                            "Allestimento": "",
-                            "Valore": "",
-                            "Cilindrata": "",
-                            "DataImmatricolazione": "",
-                        },
-                    },
-                    **(json.loads(str(e)) if e else None),
-                }
-            )
+            bot_task(task_id)
+        except:
+            task_queue.task_done()
+
+
+# Main function running bot
+def main():
+    max_concurrent_tasks = 7
+    task_count = 0
+    workers = []
+
+    # Start Worer Threads
+    for _ in range(max_concurrent_tasks):
+        t = threading.Thread(target=worker)
+        t.daemon = True  # Daemon thread stops when the main program exists
+        t.start()
+        workers.append(t)
+    try:
+        # Schedule Tasks
+        while True:
+            task_count += 1
+            task_queue.put(task_count)
+            time.sleep(10)  # wait 1 second before adding a new task
+    except KeyboardInterrupt:
+        print("Shutting bot down")
+    finally:
+        # Signal works to exit
+        for _ in workers:
+            task_queue.put(None)
+        for t in workers:
+            t.join()
 
 
 if __name__ == "__main__":
-    import uvicorn
-
     print(emblem)
-    uvicorn.run(
-        "main:app",
-        host="0.0.0.0",
-        port=8085,
-        reload=True,
-        access_log=True,
-        reload_includes=["*.py", ".env"],
-        reload_excludes=["call.py"],
-    )
+    main()

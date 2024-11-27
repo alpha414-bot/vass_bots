@@ -1,72 +1,155 @@
-import json
 import traceback
-from sqlalchemy.orm import Session
 from logger import logger
-from response import error_response_model, success_response_model
+from response import error_response_model
+from fastapi.encoders import jsonable_encoder
 from fastapi import status
-from utils.models import QuoteData
 from .schemas import RawRequestData
-from .scrapper import BotScrapper
+from .scrapper import Scrapper
+from datetime import datetime
+import json
+import time
+import requests
+from settings import settings
 
 
-def start_prep_data(data: RawRequestData, db: Session):
-    try:
+class PrepData:
+    def __init__(self, task_id):
+        self.bot_id = None
+        self.task_id = task_id
+
+    def get_botid(self):
+        #
         logger.success(
-            f"0.0 Task | Cleaning & Processing & Preping Request Data | Proxy: {data.proxy}"
+            f"TID: {self.task_id} | 1.0 Running loop to get botid | Telegram Usage {settings.USE_TG_BOT}"
         )
-        if data.request_id and not data.request_refresh:
-            # accessing already store data and data.refresh is none
-            quote = (
-                db.query(QuoteData)
-                .filter(
-                    (QuoteData.id == data.request_id)
-                    & (QuoteData.response_data.isnot(None))
-                    & (QuoteData.response_data != "")
+        try:
+            while not self.bot_id:
+                botrequests = requests.request(
+                    "POST",
+                    "https://mobilityexpress.it/api/getidbot",
+                    data=json.dumps({"idProvBot": 999969, "remoteHost": ""}),
+                    headers={"Content-Type": "application/json"},
+                    timeout=20,
                 )
-                .first()
+                data = json.loads(botrequests.text)
+                if int(data.get("Status", 0)) == 1 and data.get("data", None):
+                    start_time = datetime.now()  # Exact time bot is up and running
+                    self.bot_id = data.get("data", {}).get("ID", False)
+                    if self.bot_id:
+                        # BotId is not null and is passed
+                        return self.run_plate_and_metadata(start_time=start_time)
+                time.sleep(2)  # 2 seconds sleep
+        except Exception as e:
+            logger.error(f"TID: {self.task_id} | 1.1 Error when running bot loop {e}")
+
+    def run_plate_and_metadata(self, start_time=datetime):
+        logger.success(
+            f"TID: {self.task_id} | 2.0 Running production plate endpoint | BotID: {self.bot_id}"
+        )
+        data = {}
+        try:
+            # botrequest n
+            payload = json.dumps({"botId": int(self.bot_id), "remoteHost": ""})
+            headers = {"Content-Type": "application/json"}
+            response = requests.request(
+                "POST",
+                "https://mobilityexpress.it/api/getplate",
+                headers=headers,
+                data=payload,
+                timeout=10,
             )
-            if quote:
-                # Try parsing the response_data string into a dictionary
-                # Check if the response data is a list
-                return success_response_model(
-                    {
-                        "code": status.HTTP_200_OK,
-                        "request_id": quote.id,
-                        "data": json.loads(quote.response_data),
-                    }
-                )
+            if response.status_code == 200:
+                data = json.loads(response.text)
+                if data.get("status", None) != "1":
+                    raise ValueError(response.text)
+                else:
+                    data = RawRequestData(
+                        proxy=settings.PROXY,
+                        **json.loads(response.text),
+                    )
+                    return self.start_prep_data(data=data, start_time=start_time)
             else:
+                raise ValueError(
+                    json.dumps(
+                        jsonable_encoder(
+                            {
+                                "status": 500,
+                                "message": "Bad request. Please try with another data or try again later",
+                            }
+                        )
+                    )
+                )
+        except Exception as e:
+            try:
                 return error_response_model(
                     {
-                        "code": status.HTTP_404_NOT_FOUND,
-                        "message": "Quote request not found",
-                    }
+                        "code": status.HTTP_400_BAD_REQUEST,
+                        "message": "",
+                        **(json.loads(str(e)) if not not e else {}),
+                    },
+                    False,
                 )
-        else:
+            except Exception as e:
+                logger.error(
+                    f"TID: {self.task_id} | Fatal Error: {e} | Traceback: {traceback.format_exc()}"
+                )
+                return error_response_model(
+                    {
+                        "code": status.HTTP_500_INTERNAL_SERVER_ERROR,
+                        "message": "Fatal Server Error",
+                        "message": e,
+                        "DataInizio": start_time.strftime("%d/%m/%Y %H:%M:%S"),
+                        "DataFine": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+                        "IdRicerca": "empty",
+                        "Provenienza_IdValore": 999969,
+                        "data": {
+                            "Quotes": jsonable_encoder([]),
+                            "Assets": {
+                                "Marca": "",
+                                "Modello": "",
+                                "Allestimento": "",
+                                "Valore": "",
+                                "Cilindrata": "",
+                                "DataImmatricolazione": "",
+                            },
+                        },
+                        **(json.loads(str(e)) if e else None),
+                    },
+                    False,
+                )
+
+    def start_prep_data(self, data: RawRequestData, start_time: datetime):
+        try:
+            logger.success(
+                f"TID: {self.task_id} | 3.0 Task | Cleaning & Processing & Preping Request Data | Proxy: {data.proxy}"
+            )
             # create a new processing quote data
-            return BotScrapper(data, db).start()
-    except Exception as e:
-        logger.error(
-            f"Error occurred >>> {e} ::::-> __TRACEBACK__ {traceback.format_exc()} <<<"
-        )
-        return error_response_model(
-            {
-                "code": status.HTTP_400_BAD_REQUEST,
-                "message": "Internal Server Error.",
-                "DataInizio": "start date",
-                "DataFine": "end date",
-                "IdRicerca": "idRicerca from api get data",
-                "Provenienza_IdValore": "constant  that i will pass you",
-                "data": {
-                    "Quotes": [],
-                    "Assets": {
-                        "Marca": "",
-                        "Modello": "",
-                        "Allestimento": "",
-                        "Valore": "",
-                        "Cilindrata": "",
-                        "DataImmatricolazione": "",
+            return Scrapper(
+                data=data, start_time=start_time, task_id=self.task_id
+            ).start()
+        except Exception as e:
+            logger.error(
+                f"TID: {self.task_id} | 3.1 Error occurred >>> {e} ::::-> __TRACEBACK__ {traceback.format_exc()} <<<"
+            )
+            return error_response_model(
+                {
+                    "code": status.HTTP_400_BAD_REQUEST,
+                    "message": "Internal Server Error.",
+                    "DataInizio": start_time.strftime("%d/%m/%Y %H:%M:%S"),
+                    "DataFine": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+                    "IdRicerca": data.data.datiPreventivo.idRicerca,
+                    "Provenienza_IdValore": 999969,
+                    "data": {
+                        "Quotes": [],
+                        "Assets": {
+                            "Marca": "",
+                            "Modello": "",
+                            "Allestimento": "",
+                            "Valore": "",
+                            "Cilindrata": "",
+                            "DataImmatricolazione": "",
+                        },
                     },
                 },
-            }
-        )
+                False,
+            )
