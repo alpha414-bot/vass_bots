@@ -37,6 +37,7 @@ class Scrapper:
         self.portante = data.data.portante
         self.proxy = None
         self.captcha_token = None
+        self.age = 25
         if proxy:
             self.proxy = f"socks4://{proxy}"
         self.running = True
@@ -636,6 +637,7 @@ class Scrapper:
                 typo_corrections = {
                     "domencio": "domenico",
                     "pietrarsa": "pietrarse",
+                    "fosso grande": "fossogrande",
                     # Add more common typos as needed
                 }
 
@@ -661,15 +663,15 @@ class Scrapper:
             # check proxy validity
             proxy_instance = self.check_proxy()
             if proxy_instance.get("status", False) and self.parse_format_address():
-                self.driver = webdriver.Remote(
-                    command_executor="http://localhost:4444/wd/hub",
-                    options=self.chrome_options(
-                        proxy=proxy_instance.get("proxy", None)
-                    ),
-                )
-                # self.driver = webdriver.Chrome(
-                #     options=self.chrome_options(proxy=proxy_instance.get("proxy", None))
+                # self.driver = webdriver.Remote(
+                #     command_executor="http://localhost:4444/wd/hub",
+                #     options=self.chrome_options(
+                #         proxy=proxy_instance.get("proxy", None)
+                #     ),
                 # )
+                self.driver = webdriver.Chrome(
+                    options=self.chrome_options(proxy=proxy_instance.get("proxy", None))
+                )
                 self.wait = WebDriverWait(self.driver, timeout=10)
                 if not self._reload_page_with_retry():
                     logger.error(
@@ -1079,7 +1081,7 @@ class Scrapper:
             xlocator="//mat-label[text()='Inserisci anno di conseguimento della patente']/ancestor::mat-form-field//input",
             value=f"{self.anag.patenteAnno}",
         )
-        # SELECT& INPUT& CLICK [Provinces]
+        # SELECT& INPUT& CLICK [Provinces] <correction>
         self._select_input(
             parent_descriptor="Provinces/Provincia [SELECT&INPUT&CLICK]",
             parent_label="Provincia",
@@ -1129,12 +1131,12 @@ class Scrapper:
             int(self.anag.nascitaMese),
             int(self.anag.nascitaGiorno),
         )
-        age = (
+        self.age = (
             today.year
             - nascita_date.year
             - ((today.month, today.day) < (nascita_date.month, nascita_date.day))
         )
-        if age > 26:
+        if self.age > 26:
             self._select_guide_expert_checkbox()
         self.continue_button()
         pass
@@ -1174,11 +1176,6 @@ class Scrapper:
                         # Extract the latest price within each card
                         # 1. Check for a discounted price first using `fix-width-min` class for the final discounted price
                         try:
-                            guida_element = card.find_element(
-                                By.XPATH,
-                                ".//span[@class='ng-star-inserted'][contains(text(), 'Guida')]",
-                            )
-                            guida_text = guida_element.text.strip()
                             price_element = card.find_element(
                                 By.XPATH,
                                 ".//div[contains(@class, 'fix-width-min')]",
@@ -1192,7 +1189,6 @@ class Scrapper:
                                 By.XPATH,
                                 ".//div[contains(@class, 'price-container')]",
                             )
-                            guida_text = ""
                             price_text = price_element.text.strip()
 
                         # Clean up the price & guida text
@@ -1202,9 +1198,11 @@ class Scrapper:
                         price_text = re.sub(
                             r"Prezzo ufficiale\s*", "", price_text
                         )  # Remove "Prezzo Scontato" and any following spaces/newlines
-                        if guida_text and len(guida_text) > 1:
-                            guida_text = re.sub(r"Guida\s*", "", guida_text)
-
+                        price_text = price_text.replace(".", "").replace(",", ".")
+                        if self.age > 26:
+                            guida_text = "Esperta"
+                        else:
+                            guida_text = "Libera"
                         price_text = price_text.replace(" €", "")
                         # Append extracted data to the list as a dictionary
                         quote_object.append(

@@ -15,6 +15,7 @@ from settings import settings
 class PrepData:
     def __init__(self, task_id):
         self.bot_id = None
+        self.data = None
         self.task_id = task_id
 
     def get_botid(self):
@@ -48,37 +49,28 @@ class PrepData:
         )
         data = {}
         try:
-            # botrequest n
+            # botrequest
             payload = json.dumps({"botId": int(self.bot_id), "remoteHost": ""})
             headers = {"Content-Type": "application/json"}
-            response = requests.request(
-                "POST",
-                "https://mobilityexpress.it/api/getplate",
-                headers=headers,
-                data=payload,
-                timeout=10,
-            )
-            if response.status_code == 200:
-                data = json.loads(response.text)
-                if data.get("status", None) != "1":
-                    raise ValueError(response.text)
-                else:
-                    data = RawRequestData(
-                        proxy=settings.PROXY,
-                        **json.loads(response.text),
-                    )
-                    return self.start_prep_data(data=data, start_time=start_time)
-            else:
-                raise ValueError(
-                    json.dumps(
-                        jsonable_encoder(
-                            {
-                                "status": 500,
-                                "message": "Bad request. Please try with another data or try again later",
-                            }
-                        )
-                    )
+            while not self.data:
+                response = requests.request(
+                    "POST",
+                    "https://mobilityexpress.it/api/getplate",
+                    headers=headers,
+                    data=payload,
+                    timeout=10,
                 )
+                if response.status_code == 200:
+                    data = json.loads(response.text)
+                    if not data.get("status", None) != "1":
+                        data = RawRequestData(
+                            proxy=settings.PROXY,
+                            **json.loads(response.text),
+                        )
+                        self.data = data
+                        pass
+            if self.data:
+                return self.start_prep_data(data=self.data, start_time=start_time)
         except Exception as e:
             try:
                 return error_response_model(

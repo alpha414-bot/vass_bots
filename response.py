@@ -6,8 +6,13 @@ from logger import logger
 
 
 def success_response_model(data, record=True):
+    data = {
+        **{k: v for k, v in data.items() if k not in {"code", "headers"}},
+        "status": 1,
+    }
     print("Success Response", data)
     response = {}
+
     if record:
         # Send Data To Mobility
         response = requests.request(
@@ -17,14 +22,12 @@ def success_response_model(data, record=True):
             data=json.dumps(data),
             timeout=50,
         )
+        print("partial response", response.text)
 
         if response.status_code == 200:
             return JSONResponse(
                 status_code=data.get("code", 401),
-                content={
-                    "success": True,
-                    **{k: v for k, v in data.items() if k not in {"code", "headers"}},
-                },
+                content=data,
                 headers=data.get("headers", {}),
             )
     logger.error(
@@ -32,15 +35,16 @@ def success_response_model(data, record=True):
     )
     return JSONResponse(
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-        content={
-            "success": True,
-            **{k: v for k, v in data.items() if k not in {"code", "headers"}},
-        },
+        content=data,
     )
 
 
 def error_response_model(data, record=True):
     # Send Data To Mobility
+    data = {
+        **{k: v for k, v in data.items() if k not in {"code", "headers"}},
+        "status": 4,
+    }
     print("Error Response", data)
     response = {}
     if record:
@@ -51,15 +55,12 @@ def error_response_model(data, record=True):
             data=json.dumps(data),
             timeout=50,
         )
+        print("partial response", response.text)
 
         if response.status_code == 200:
             return JSONResponse(
                 status_code=data.get("code", 401),
-                content={
-                    "error": True,
-                    **{k: v for k, v in data.items() if k not in {"code", "headers"}},
-                    "status": 5,
-                },
+                content=data,
                 headers=data.get("headers", {}),
             )
     logger.error(
@@ -67,9 +68,5 @@ def error_response_model(data, record=True):
     )
     return JSONResponse(
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-        content={
-            "error": True,
-            **{k: v for k, v in data.items() if k not in {"code", "headers"}},
-            "status": 5,
-        },
+        content=data,
     )
