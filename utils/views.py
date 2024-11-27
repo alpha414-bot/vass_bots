@@ -1,7 +1,6 @@
 import traceback
 from logger import logger
 from response import error_response_model
-from fastapi.encoders import jsonable_encoder
 from fastapi import status
 from .schemas import RawRequestData
 from .scrapper import Scrapper
@@ -13,9 +12,10 @@ from settings import settings
 
 
 class PrepData:
-    def __init__(self, task_id):
+    def __init__(self, driver, task_id):
         self.bot_id = None
         self.data = None
+        self.driver = driver
         self.task_id = task_id
 
     def get_botid(self):
@@ -88,24 +88,8 @@ class PrepData:
                 return error_response_model(
                     {
                         "code": status.HTTP_500_INTERNAL_SERVER_ERROR,
-                        "message": "Fatal Server Error",
                         "message": e,
-                        "DataInizio": start_time.strftime("%d/%m/%Y %H:%M:%S"),
-                        "DataFine": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
-                        "IdRicerca": "empty",
-                        "Provenienza_IdValore": 999969,
-                        "data": {
-                            "Quotes": jsonable_encoder([]),
-                            "Assets": {
-                                "Marca": "",
-                                "Modello": "",
-                                "Allestimento": "",
-                                "Valore": "",
-                                "Cilindrata": "",
-                                "DataImmatricolazione": "",
-                            },
-                        },
-                        **(json.loads(str(e)) if e else None),
+                        **(json.loads(str(e)) if not not e else {}),
                     },
                     False,
                 )
@@ -117,7 +101,10 @@ class PrepData:
             )
             # create a new processing quote data
             return Scrapper(
-                data=data, start_time=start_time, task_id=self.task_id
+                data=data,
+                driver=self.driver,
+                start_time=start_time,
+                task_id=self.task_id,
             ).start()
         except Exception as e:
             logger.error(
@@ -127,21 +114,7 @@ class PrepData:
                 {
                     "code": status.HTTP_400_BAD_REQUEST,
                     "message": "Internal Server Error.",
-                    "DataInizio": start_time.strftime("%d/%m/%Y %H:%M:%S"),
-                    "DataFine": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
-                    "IdRicerca": data.data.datiPreventivo.idRicerca,
-                    "Provenienza_IdValore": 999969,
-                    "data": {
-                        "Quotes": [],
-                        "Assets": {
-                            "Marca": "",
-                            "Modello": "",
-                            "Allestimento": "",
-                            "Valore": "",
-                            "Cilindrata": "",
-                            "DataImmatricolazione": "",
-                        },
-                    },
+                    **(json.loads(str(e)) if not not e else {}),
                 },
                 False,
             )

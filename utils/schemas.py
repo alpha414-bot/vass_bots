@@ -13,6 +13,7 @@ class Anagrafica(BaseModel):
     nascitaAnno: int | str = 1975  # Birth Year (Optional)
     patenteAnno: int | str = "1993"  # Driving License Year (Optional)
     residenzaProvincia: str = "NA"  # Residence Province (Optional)
+    residenzaProvinciaEstesa: str = "Napoli"  # Residence Province (Optional)
     residenzaComune: str = "SANT'ANASTASIA"  # Residence City (Optional)
     residenzaIndirizzoVia: str = "VIA"  # Residence Street Name (Optional)
     residenzaIndirizzo: str = "SOMMA"  # Residence Street (Optional)

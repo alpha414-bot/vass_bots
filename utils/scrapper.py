@@ -1,4 +1,3 @@
-import asyncio
 import json
 import re
 import time
@@ -7,65 +6,64 @@ from datetime import datetime
 from fastapi import status
 from fastapi.encoders import jsonable_encoder
 from logger import logger
-from fake_useragent import UserAgent
 from response import error_response_model, success_response_model
 from utils.schemas import RawRequestData
 from settings import settings
 from .captcha import TwoCaptcha
 import requests
-from requests.exceptions import RequestException, Timeout
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import TimeoutException, WebDriverException
 
 
 class Scrapper:
-    def __init__(self, data: RawRequestData, start_time: datetime, task_id):
+    def __init__(
+        self, data: RawRequestData, driver: WebDriver, start_time: datetime, task_id
+    ):
         logger.success(
             f"TID: {task_id} | 4.0.0 Process | Initiating Scrapper Class On Selenium"
         )
         self.task_id = task_id
-        self.driver = None
+        self.driver = driver
+        self.wait = WebDriverWait(self.driver, timeout=10)
         self.start_time = start_time
-        proxy = data.proxy
-        self.anag = data.data.anag
+        anag = data.data.anag
+        self.anag = anag
         self.veicolo = data.data.veicolo
         self.datiPreventivo = data.data.datiPreventivo
         self.portante = data.data.portante
-        self.proxy = None
-        self.captcha_token = None
-        self.age = 25
-        if proxy:
-            self.proxy = f"socks4://{proxy}"
-        self.running = True
+        self.veicolo.tipoVeicolo = (
+            "AUTOVETTURA"
+            if self.veicolo.tipoVeicolo.lower().startswith("auto")
+            else self.veicolo.tipoVeicolo
+        )
+        # Calculate User Age
+
+        today = datetime.today()
+        nascita_date = datetime(
+            int(anag.nascitaAnno),
+            int(anag.nascitaMese),
+            int(anag.nascitaGiorno),
+        )
+        self.age = int(
+            today.year
+            - nascita_date.year
+            - ((today.month, today.day) < (nascita_date.month, nascita_date.day))
+        )
         self.captcha_retry_attempts = 3
         self.retry_attempts = 3  # Max retry Attempts
-
-    def chrome_options(self, proxy=None):
-        options = Options()
-        options.add_experimental_option("detach", True)
-        # options.add_argument("--headless")
-        # options.add_argument("--disable-gpu")  # Applicable on Windows
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
-        options.add_argument(f"--user-agent={UserAgent(os='windows').random}")
-        # Remote Hub
-        options.add_argument("--ignore-ssl-errors=yes")
-        options.add_argument("--ignore-certificate-errors")
-        if proxy:
-            options.add_argument(f"--proxy-server={proxy}")
-        return options
+        logger.success(f"REQUEST DATA: {data.data} | Age: {self.age}")
 
     def teardown(self):
         """Teardown method to quit the WebDriver and show a message box."""
         logger.success(f"TID: {self.task_id} | 4.8 [LAST STEP] Terminating Session")
         if hasattr(self, "driver") and self.driver:
-            self.driver.close()
-            self.driver.quit()
-            logger.info(f"TID: {self.task_id} | Driver quit successfully.")
+            self.driver.get("https://preventivass.it/home")
+            # self.driver.close()
+            # self.driver.quit()
+            logger.success(f"TID: {self.task_id} | Driver quit successfully.")
         else:
             logger.warning(
                 f"TID: {self.task_id} | Driver does not exist or is already None."
@@ -75,8 +73,22 @@ class Scrapper:
                 "code": status.HTTP_400_BAD_REQUEST,
                 "status": 5,
                 "message": "Issue with processing request. Please try again.",
+                "DataInizio": self.start_time.strftime("%d/%m/%Y %H:%M:%S"),
+                "DataFine": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+                "IdRicerca": self.datiPreventivo.idRicerca,
+                "Provenienza_IdValore": 999969,
+                "data": {
+                    "Quotes": jsonable_encoder([]),
+                    "Assets": {
+                        "Marca": "",
+                        "Modello": "",
+                        "Allestimento": "",
+                        "Valore": "",
+                        "Cilindrata": "",
+                        "DataImmatricolazione": "",
+                    },
+                },
             },
-            False,
         )
 
     def _is_page_loaded(self):
@@ -110,7 +122,7 @@ class Scrapper:
                     f"TID: {self.task_id} | Load attempt {attempt} failed: {e}"
                 )
                 if attempt < self.retry_attempts:
-                    asyncio.sleep(2)  # Wait before retrying
+                    time.sleep(2)  # Wait before retrying
                 else:
                     logger.warning(
                         f"TID: {self.task_id} | Failed to load the page after multiple attempts."
@@ -357,6 +369,7 @@ class Scrapper:
 
     def _select_guide_expert_checkbox(self):
         try:
+            logger.success(f"Guida Esperta Activated | Individual Age: {self.age}")
             parent_xlocator = f"//div[contains(@class, 'header')][.//div[text()=' Guida Esperta ' or text()='Guida Esperta']]"
             self._click_button(
                 descriptor="Expert Guide/Guida Esperta [CLICK]",
@@ -457,7 +470,7 @@ class Scrapper:
         def restart_captcha_frame():
             nonlocal restart_count
             restart_count += 1
-            logger.info(
+            logger.success(
                 f"TID: {self.task_id} | Reloading captcha frame... (Attempt {restart_count}/{max_retries})"
             )
 
@@ -473,7 +486,7 @@ class Scrapper:
                 self.driver.implicitly_wait(3)
                 # Retry solving the captcha
                 self.solve_captcha()
-                asyncio.sleep(2)
+                time.sleep(2)
             else:
                 logger.warning(
                     f"TID: {self.task_id} | Maximum retries reached ({max_retries}). Moving to the next step."
@@ -574,51 +587,6 @@ class Scrapper:
             )
             restart_captcha_frame()
 
-    # Check proxy validity with requests
-    def check_proxy(self):
-        # only continue code, if proxy is et
-        try:
-            # Set up the proxy and timeout
-            proxies = {"http": self.proxy, "https": self.proxy}
-            if settings.USE_PROXY or not not self.proxy:
-                response = requests.get(
-                    "http://ip-api.com/json", proxies=proxies, timeout=5
-                )
-            else:
-                response = requests.get("http://ip-api.com/json", timeout=5)
-
-            # Check if proxy worked
-            if response.status_code == 200:
-                data = response.json()
-                if data.get("countryCode", "").lower() == "it":
-                    # Check if proxy country is pointed to "Italy"
-                    return {
-                        "status": True,
-                        "message": "Proxy is active",
-                        "proxy": self.proxy,
-                    }
-                else:
-                    # Proxy country is not italy
-                    logger.error(f"TID: {self.task_id} | Proxy is in the wrong country")
-                    return {
-                        "status": False,
-                        "message": f"Current Proxy is in wrong country. Current [{data.get('countryCode', '')}] instead of [IT]",
-                    }
-            else:
-                logger.error(
-                    f"TID: {self.task_id} | Proxy check failed: status code is not status.HTTP_200_OK"
-                )
-                return {
-                    "status": False,
-                    "message": "Proxy request failed. Please try again",
-                }
-        except (RequestException, Timeout, Exception) as e:
-            logger.error(f"TID: {self.task_id} | Proxy check failed {e}")
-            return {
-                "status": False,
-                "message": "Proxy usage failed, Please try another.",
-            }
-
     def parse_format_address(self):
         try:
             address = f"{self.anag.residenzaCivico}, {self.anag.residenzaIndirizzoVia} {self.anag.residenzaIndirizzo}, {self.anag.residenzaComune}, {self.anag.residenzaProvincia}"
@@ -660,19 +628,8 @@ class Scrapper:
     def start(self):
         try:
             logger.success(f"TID: {self.task_id} | 4.0 Process | Starting Driver")
-            # check proxy validity
-            proxy_instance = self.check_proxy()
-            if proxy_instance.get("status", False) and self.parse_format_address():
-                # self.driver = webdriver.Remote(
-                #     command_executor="http://localhost:4444/wd/hub",
-                #     options=self.chrome_options(
-                #         proxy=proxy_instance.get("proxy", None)
-                #     ),
-                # )
-                self.driver = webdriver.Chrome(
-                    options=self.chrome_options(proxy=proxy_instance.get("proxy", None))
-                )
-                self.wait = WebDriverWait(self.driver, timeout=10)
+            # Reformat address
+            if self.parse_format_address():
                 if not self._reload_page_with_retry():
                     logger.error(
                         f"TID: {self.task_id} | Page Activity | Unable to load page, closing driver."
@@ -706,10 +663,7 @@ class Scrapper:
                     {
                         "code": status.HTTP_400_BAD_REQUEST,
                         "status": 5,
-                        "message": proxy_instance.get(
-                            "message",
-                            "Error with proxy in processing request. Please try again later",
-                        ),
+                        "message": "Issue with reformatting address",
                         "DataInizio": self.start_time.strftime("%d/%m/%Y %H:%M:%S"),
                         "DataFine": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
                         "IdRicerca": self.datiPreventivo.idRicerca,
@@ -758,7 +712,7 @@ class Scrapper:
 
     def check_vehicle_cilindrata(self):
         typeOfVehicle = self.veicolo.tipoVeicolo.lower()
-        logger.info(
+        logger.success(
             f"TID: {self.task_id} | Checking Vehicle Cilindrata | Type of Vehicle: {typeOfVehicle} | Cilindrata: {self.veicolo.cilindrata} "
         )
         if (typeOfVehicle == "motociclo" and int(self.veicolo.cilindrata) <= 50) or (
@@ -864,7 +818,7 @@ class Scrapper:
         pass
 
     def bersani_step_1(self):
-        print("Bersani Step 1...")
+        logger.success(f"TID: {self.task_id} | Bersani |  Step 1...")
         # CLICK [New Policy]
         self._click_button(
             descriptor="New Policy/Nuova Polizza [BUTTON] ",
@@ -920,7 +874,7 @@ class Scrapper:
         self.check_if_any_error()
 
     def bersani_step_2(self, familyBonusText, classe_14: bool = False):
-        print("Bersani Step 2")
+        logger.success(f"TID: {self.task_id} | Bersani | Step 2")
         # SELECT [Risk certificate] _constant_
         self._select(
             parent_descriptor="Risk certificate/Attestato di rischio [SELECT]",
@@ -944,7 +898,7 @@ class Scrapper:
             )
 
     def recupero_attestato_step_2(self, familyBonusText):
-        print("Recupero Attestato Step 2")
+        logger.success(f"TID: {self.task_id} | Recupero Attestato | Step 2")
         # SELECT [Risk certificate] _constant_
         self._select(
             parent_descriptor="Risk certificate/Attestato di rischio [SELECT]",
@@ -966,7 +920,7 @@ class Scrapper:
         )
 
     def bersani_step_3(self):
-        print("Bersani Step 3")
+        logger.success(f"TID: {self.task_id} | Bersani | Step 3")
         # SELECT [Power Supply] _constant_
         self._select(
             parent_descriptor="Additional Power Supply/Alimentazione aggiuntiva [SELECT]",
@@ -1017,7 +971,7 @@ class Scrapper:
         )
 
     def bersani_step_4(self):
-        print("Next to Step 4")
+        logger.success(f"TID: {self.task_id} | Bersani | Step 4")
         # SELECT [Marital Status] _constant_
         self._select(
             parent_descriptor="Marital Status/Stato civile [SELECT]",
@@ -1085,7 +1039,7 @@ class Scrapper:
         self._select_input(
             parent_descriptor="Provinces/Provincia [SELECT&INPUT&CLICK]",
             parent_label="Provincia",
-            input_value=f"{self.anag.residenzaProvincia}",
+            input_value=f"{self.anag.residenzaProvinciaEstesa.lower()}",
         )
         # SELECT & INPUT & CLICK [Common]
         self._select_input(
@@ -1107,7 +1061,7 @@ class Scrapper:
         )
 
     def bersani_step_5(self):
-        print("Bersani step 5")
+        logger.success(f"TID: {self.task_id} | Bersani | step 5")
         # INPUT [New policy effective date]
         # self._enter_input_text(
         #     descriptor="New policy effective date/Data decorrenza nuova polizza [INPUT]",
@@ -1121,28 +1075,17 @@ class Scrapper:
         self.check_if_any_error()
 
     def bersani_step_6(self):
-        print("Bersani Step 6")
+        logger.success(f"TID: {self.task_id} | Bersani | Step 6")
         # Grant Clause
         # CLICK [EXPERT GUIDE]
         # Click only if data individual is older than 26 years old
-        today = datetime.today()
-        nascita_date = datetime(
-            int(self.anag.nascitaAnno),
-            int(self.anag.nascitaMese),
-            int(self.anag.nascitaGiorno),
-        )
-        self.age = (
-            today.year
-            - nascita_date.year
-            - ((today.month, today.day) < (nascita_date.month, nascita_date.day))
-        )
         if self.age > 26:
             self._select_guide_expert_checkbox()
         self.continue_button()
         pass
 
     def final_step(self):
-        print("Final Step & Preparing Quote Data")
+        logger.success(f"TID: {self.task_id} | Final Step & Preparing Quote Data")
         quote_object = []
         try:
             # Insurance Quote: Summary of data entered [DIALOG]

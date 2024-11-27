@@ -2,3 +2,5 @@
 /venv
 .env
 path_locator.txt
+Profile/*
+profile/*

@@ -7,14 +7,18 @@ load_dotenv()
 
 
 class AppSettings:
-    USE_PROXY: bool = os.getenv("USE_PROXY", "False").lower() in (
+    def __init__(self):
+        load_dotenv(verbose=True)
+        pass
+
+    USE_PROXY: bool = str(os.getenv("USE_PROXY", "False").lower()) in (
         "true",
         "1",
         "yes",
         "True",
     )
     PROXY_TYPE: str = str(os.getenv("PROXY_TYPE", "socks4"))
-    PROXY: str = os.getenv("PROXY", "")
+    PROXY: str = os.getenv("PROXY", None)
 
     # Database Configuration
     DB_HOST: str = os.getenv("DB_HOST", "localhost")
@@ -42,7 +46,7 @@ class AppSettings:
     # HERE API (for Geocoding)
     HERE_API_KEY: str = os.getenv("HERE_API_KEY", "")
     # Telegram Bot Setup
-    USE_TG_BOT: bool = os.getenv("USE_TG_BOT", "False").lower() in (
+    USE_TG_BOT: bool = str(os.getenv("USE_TG_BOT", "False").lower()) in (
         "true",
         "1",
         "yes",
