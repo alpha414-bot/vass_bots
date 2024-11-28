@@ -30,8 +30,7 @@ def start_chrome() -> WebDriver:
             # Set up the proxy and timeout
             proxy = f"socks4://{settings.PROXY}"
             proxies = {"http": proxy, "https": proxy}
-            print(settings.USE_PROXY, settings.PROXY)
-            if settings.USE_PROXY and not not settings.PROXY:
+            if not not settings.PROXY:
                 response = requests.get(
                     "http://ip-api.com/json", proxies=proxies, timeout=20
                 )
@@ -134,6 +133,7 @@ def worker():
                     futures.remove(future)
 
             task_id += 1  # Increment task ID for the next submission
+            time.sleep(5)  # Wait for 5 seconds before continuing
 
 
 if __name__ == "__main__":

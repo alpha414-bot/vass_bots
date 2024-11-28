@@ -3356,3 +3356,45 @@ Stacktrace:
 12:02:14.55 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
 12:02:14.55 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
 12:02:14.56 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:05:52.79 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:06:55.84 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:07:13.29 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:07:13.65 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:08:07.22 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:09:42.15 | SUCCESS | TID: 1 | Worker service initialized
+12:09:42.15 | SUCCESS | 0.0 Task with TID: 1 started.
+12:09:42.16 | SUCCESS | TID: 1 | 1.0 Running loop to get botid | Telegram Usage False
+12:09:42.82 | SUCCESS | TID: 1 | 2.0 Running production plate endpoint | BotID: 72
+12:09:43.47 | SUCCESS | TID: 1 | 3.0 Task | Cleaning & Processing & Preping Request Data | Proxy: 51.83.116.5:59117
+12:09:43.47 | SUCCESS | TID: 1 | 4.0.0 Process | Initiating Scrapper Class On Selenium
+12:09:43.47 | SUCCESS | REQUEST DATA: anag=Anagrafica(cf='SNTGPP61C06D390P', nascitaGiorno='06', nascitaMese='03', nascitaAnno=1961, patenteAnno='1979', residenzaProvincia='SA', residenzaProvinciaEstesa='Salerno', residenzaComune='CAMPAGNA', residenzaIndirizzoVia='VIA', residenzaIndirizzo='ROMA', residenzaCivico='1') veicolo=Veicolo(targa='CV664WP', acquistoGiorno='05', acquistoMese='01', acquistoAnno=2010, allestimento='FOCUS C-MAX 1.6 TDCI (110CV) (DAL 2003/03)', immatricolazioneGiorno='27', immatricolazioneMese='04', immatricolazioneAnno=2005, dataDecorrenza='05/12/2024', tipoVeicolo='AUTOVETTURA', cilindrata='1560') datiPreventivo=DatiPreventivo(idRicerca=778407, idAccordo=112, idFascia=2, idScelta=0) portante=Portante(targa='FG634HZ', cf='SCLGPP60T41A064N', tipoVeicolo='AUTOVETTURA') | Age: 63
+12:09:43.47 | SUCCESS | TID: 1 | 4.0 Process | Starting Driver
+12:09:45.97 | SUCCESS | TID: 1 | 4.1 Corrected Address Metainfo successfully
+12:09:45.97 | SUCCESS | TID: 1 | 4.2 Attempt [1] to load the page.
+12:09:45.98 | WARNING | TID: 1 | Load attempt 1 failed: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF64C0F38A5+3004357]
+	(No symbol) [0x00007FF64BD89970]
+	(No symbol) [0x00007FF64BC3582A]
+	(No symbol) [0x00007FF64BC0FA75]
+	(No symbol) [0x00007FF64BCB2C77]
+	(No symbol) [0x00007FF64BCCB351]
+	(No symbol) [0x00007FF64BCAB983]
+	(No symbol) [0x00007FF64BC77628]
+	(No symbol) [0x00007FF64BC78791]
+	GetHandleVerifier [0x00007FF64C11A00D+3161901]
+	GetHandleVerifier [0x00007FF64C16E060+3506048]
+	GetHandleVerifier [0x00007FF64C16400D+3465005]
+	GetHandleVerifier [0x00007FF64BEE0EEB+830987]
+	(No symbol) [0x00007FF64BD9467F]
+	(No symbol) [0x00007FF64BD909D4]
+	(No symbol) [0x00007FF64BD90B6D]
+	(No symbol) [0x00007FF64BD80149]
+	BaseThreadInitThunk [0x00007FFBA3A2259D+29]
+	RtlUserThreadStart [0x00007FFBA44EAF38+40]
+
+12:10:17.25 | SUCCESS | TID: 1 | Worker service initialized
+12:10:17.25 | SUCCESS | 0.0 Task with TID: 1 started.
+12:10:17.25 | SUCCESS | TID: 1 | 1.0 Running loop to get botid | Telegram Usage False
