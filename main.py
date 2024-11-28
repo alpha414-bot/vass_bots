@@ -30,12 +30,13 @@ def start_chrome() -> WebDriver:
             # Set up the proxy and timeout
             proxy = f"socks4://{settings.PROXY}"
             proxies = {"http": proxy, "https": proxy}
-            if settings.USE_PROXY or not not proxy:
+            print(settings.USE_PROXY, settings.PROXY)
+            if settings.USE_PROXY and not not settings.PROXY:
                 response = requests.get(
                     "http://ip-api.com/json", proxies=proxies, timeout=20
                 )
             else:
-                response = requests.get("http://ip-api.com/json", timeout=5)
+                response = requests.get("http://ip-api.com/json", timeout=20)
 
             # Check if proxy worked
             if response.status_code == 200:
