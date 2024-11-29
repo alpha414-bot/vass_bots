@@ -58,7 +58,7 @@ class AppSettings:
     )
 
     # Captcha
-    APIKEY_2CAPTCHA = os.getenv("APIKEY_2CAPTCHA", "1f900baf6f486e66db38ba2a8efe5f0d")
+    APIKEY_2CAPTCHA = os.getenv("APIKEY_2CAPTCHA", "1d5c9d79cbe4e96d47d52932bfe6ba48")
     # APIKEY_2CAPTCHA = os.getenv("APIKEY_2CAPTCHA", "d8521da8e2461799140efb0f94013233")
     FIND_RECAPTCHA_SCRIPT = """
         function findRecaptchaClients() {
@@ -122,16 +122,4 @@ emblem = """
    /  /      \  \|  |_____|  |      |  |     |  |/  /      \  \ 
   /__/        \__\________|__|      |__|     |__|__/        \__\ 
 
-  EMAIL   ADDRESS:        [alphasoft2021@gmail.com]
-  GITHUB  REPO:           [https://github.com/alpha414-bot]
-"""
-
-buy = """
- 
-    |
-    |
-    |
-    |
-    |
-    |      
 """

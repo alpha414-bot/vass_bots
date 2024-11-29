@@ -3398,3 +3398,629 @@ Stacktrace:
 12:10:17.25 | SUCCESS | TID: 1 | Worker service initialized
 12:10:17.25 | SUCCESS | 0.0 Task with TID: 1 started.
 12:10:17.25 | SUCCESS | TID: 1 | 1.0 Running loop to get botid | Telegram Usage False
+12:11:39.17 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:12:02.61 | SUCCESS | TID: 1 | Worker service initialized
+12:12:02.61 | SUCCESS | 0.0 Task with TID: 1 started.
+12:12:02.62 | SUCCESS | TID: 1 | 1.0 Running loop to get botid | Telegram Usage False
+12:12:44.20 | SUCCESS | TID: 1 | 2.0 Running production plate endpoint | BotID: 72
+12:12:45.92 | SUCCESS | TID: 1 | 3.0 Task | Cleaning & Processing & Preping Request Data | Proxy: 
+12:12:45.92 | SUCCESS | TID: 1 | 4.0.0 Process | Initiating Scrapper Class On Selenium
+12:12:45.92 | SUCCESS | REQUEST DATA: anag=Anagrafica(cf='SNTGPP61C06D390P', nascitaGiorno='06', nascitaMese='03', nascitaAnno=1961, patenteAnno='1979', residenzaProvincia='SA', residenzaProvinciaEstesa='Salerno', residenzaComune='CAMPAGNA', residenzaIndirizzoVia='VIA', residenzaIndirizzo='ROMA', residenzaCivico='1') veicolo=Veicolo(targa='CV664WP', acquistoGiorno='05', acquistoMese='01', acquistoAnno=2010, allestimento='FOCUS C-MAX 1.6 TDCI (110CV) (DAL 2003/03)', immatricolazioneGiorno='27', immatricolazioneMese='04', immatricolazioneAnno=2005, dataDecorrenza='05/12/2024', tipoVeicolo='AUTOVETTURA', cilindrata='1560') datiPreventivo=DatiPreventivo(idRicerca=778407, idAccordo=112, idFascia=2, idScelta=0) portante=Portante(targa='FG634HZ', cf='SCLGPP60T41A064N', tipoVeicolo='AUTOVETTURA') | Age: 63
+12:12:45.93 | SUCCESS | TID: 1 | 4.0 Process | Starting Driver
+12:12:48.40 | SUCCESS | TID: 1 | 4.1 Corrected Address Metainfo successfully
+12:12:48.40 | SUCCESS | TID: 1 | 4.2 Attempt [1] to load the page.
+12:12:50.60 | SUCCESS | TID: 1 | 4.3 Page loaded successfully.
+12:12:50.67 | SUCCESS | TID: 1 | 4.4 Activating useCase 'Normale' for autovettura
+12:12:50.67 | SUCCESS | TID: 1 | Checking Vehicle Cilindrata | Type of Vehicle: autovettura | Cilindrata: 1560 
+12:12:52.96 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:12:54.33 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:12:54.33 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:12:54.34 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:12:54.34 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:12:55.13 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:12:55.73 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:12:55.73 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:12:55.74 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:12:55.74 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:12:56.39 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:12:58.02 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:12:58.03 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:12:58.03 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:12:58.03 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:12:58.85 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:12:59.56 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:12:59.56 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:12:59.56 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:12:59.57 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:00.41 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:01.50 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:01.50 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:01.50 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:01.51 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:02.11 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:03.62 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:03.63 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:03.63 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:03.63 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:04.41 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:05.18 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:05.19 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:05.19 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:05.20 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:05.84 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:06.50 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:06.50 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:06.50 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:06.50 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:07.00 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:07.54 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:07.54 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:07.54 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:07.54 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:07.97 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:08.48 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:08.48 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:08.49 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:08.49 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:09.15 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:09.90 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:09.90 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:09.90 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:09.91 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:10.36 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:10.98 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:10.98 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:10.99 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:10.99 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:11.71 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:12.45 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:12.45 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:12.46 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:12.46 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:13.22 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:14.16 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:14.16 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:14.16 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:14.16 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:14.97 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:16.14 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:16.14 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:16.14 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:16.14 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:17.06 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:17.56 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:17.57 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:17.57 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:17.58 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:18.06 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:18.87 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:18.88 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:18.88 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:18.88 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:19.34 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:20.04 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:20.04 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:20.04 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:20.04 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:20.68 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:21.57 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:21.57 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:21.57 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:21.57 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:22.35 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:23.27 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:23.27 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:23.27 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:23.27 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:23.95 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:25.36 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:25.36 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:25.36 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:25.37 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:26.11 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:28.11 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:28.13 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:28.13 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:28.13 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:28.98 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:29.76 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:29.76 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:29.77 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:29.77 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:30.55 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:31.81 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:31.81 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:31.82 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:31.82 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:32.72 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:33.81 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:33.81 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:33.82 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:33.82 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:34.54 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:35.50 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:35.50 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:35.50 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:35.50 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:36.69 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:37.74 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:37.74 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:37.74 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:37.74 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:38.30 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:39.19 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:39.19 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:39.20 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:39.20 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:39.89 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:41.44 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:41.44 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:41.44 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:41.45 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:42.48 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:43.38 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:43.38 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:43.38 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:43.38 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:44.20 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:45.23 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:45.23 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:45.24 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:45.24 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:45.76 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:46.66 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:46.67 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:46.67 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:46.68 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:47.39 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:48.50 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:48.50 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:48.50 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:48.50 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:49.42 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:50.55 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:50.55 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:50.55 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:50.55 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:51.28 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:52.40 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:52.40 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:52.40 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:52.40 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:53.19 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:53.77 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:53.77 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:53.78 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:53.78 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:54.31 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:54.89 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:54.90 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:54.90 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:54.90 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:55.33 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:55.72 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:55.72 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:55.72 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:55.72 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:56.26 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:56.70 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:56.70 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:56.70 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:56.70 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:57.10 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:57.55 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:57.55 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:57.55 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:57.55 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:57.91 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:58.43 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:58.43 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:58.45 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:58.45 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:58.95 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:13:59.29 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:13:59.30 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:13:59.30 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:13:59.30 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:13:59.78 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:14:00.15 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:14:00.15 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:14:00.16 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:14:00.16 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:14:00.92 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:14:01.29 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:14:01.29 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:14:01.29 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:14:01.30 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:14:01.65 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:14:02.14 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:14:02.14 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:14:02.14 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:14:02.14 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+12:14:02.50 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+12:14:02.85 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: None
+12:14:02.85 | ERROR | TID: 1 | 2Captcha | Unable to Solve Captcha | Please crosscheck
+12:14:02.85 | ERROR | TID: 1 | Captcha Activity | Description: Solving Recaptcha [iFRAME] | Error: Scrapper.solve_captcha.<locals>.restart_captcha_frame() got an unexpected keyword argument 'restart'
+12:14:02.85 | SUCCESS | TID: 1 | Reloading captcha frame... (Attempt 1/5)
+11:33:52.09 | SUCCESS | TID: 1 | Worker service initialized
+11:33:52.09 | SUCCESS | 0.0 Task with TID: 1 started.
+11:33:52.10 | SUCCESS | TID: 1 | 1.0 Running loop to get botid | Telegram Usage False
+11:33:53.46 | SUCCESS | TID: 1 | 2.0 Running production plate endpoint | BotID: 72
+11:33:54.68 | SUCCESS | TID: 1 | 3.0 Task | Cleaning & Processing & Preping Request Data | Proxy: 
+11:33:54.69 | SUCCESS | TID: 1 | 4.0.0 Process | Initiating Scrapper Class On Selenium
+11:33:54.69 | SUCCESS | REQUEST DATA: anag=Anagrafica(cf='FLCGPP61L29F839O', nascitaGiorno='29', nascitaMese='07', nascitaAnno=1961, patenteAnno='1979', residenzaProvincia='NA', residenzaProvinciaEstesa='Napoli', residenzaComune='CAIVANO', residenzaIndirizzoVia='VIA', residenzaIndirizzo='FRATELLI BANDIERA', residenzaCivico='5') veicolo=Veicolo(targa='EN176FC', acquistoGiorno='01', acquistoMese='12', acquistoAnno=2022, allestimento='CORSA 1.2 85CV 5 PORTE GPL-TECH CLUB (DAL 2011/01)', immatricolazioneGiorno='01', immatricolazioneMese='01', immatricolazioneAnno=2012, dataDecorrenza='02/12/2024', tipoVeicolo='AUTOVETTURA', cilindrata='1229') datiPreventivo=DatiPreventivo(idRicerca=779753, idAccordo=112, idFascia=1, idScelta=0) portante=Portante(targa='FG634HZ', cf='SCLGPP60T41A064N', tipoVeicolo='AUTOVETTURA') | Age: 63
+11:33:54.69 | SUCCESS | TID: 1 | 4.0 Process | Starting Driver
+11:33:57.78 | SUCCESS | TID: 1 | 4.1 Corrected Address Metainfo successfully
+11:33:57.79 | SUCCESS | TID: 1 | 4.2 Attempt [1] to load the page.
+11:34:39.13 | SUCCESS | TID: 1 | 4.3 Page loaded successfully.
+11:34:39.25 | SUCCESS | TID: 1 | 4.4 Activating useCase 'Normale' for autovettura
+11:34:39.25 | SUCCESS | TID: 1 | Checking Vehicle Cilindrata | Type of Vehicle: autovettura | Cilindrata: 1229 
+11:34:41.56 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+11:35:27.69 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: 03AFcWeA5bSkTIfCO9pnw-UJaWwO5wXO8xNbzMq9jQ5EN-G62VVJLkTKb2HSmM7CjawfB02XVa8RmxX9X6e8Bv_Uinh54FyPy6i3Cooc2mSridhioX5Hq2vMB3iyurs03I2ER8g1AWksYt1h5AN72QmGt_9bYQtAFQUe8NgoAXUcwmXwbhCBq58IfumWuAjZgQtyPXNeBN5KfqY3BAlRtSfjV2vdUSmSZdavAu8CEVhTMKKmFJL-msIeN-nhCSbYSfvq4vN0idMKf6PnLKAgcHda-QmRLBBTGhJobxsdgvWAFxp1dmC9A2rNexwKkPinYO0MneMPvtr1y7FJp_o7xsHpEUecTNvwnzNmvioBT7Q37Hez0iPDjPUX_Cb34l2YXxCiRJMOxn2ub2PpiduvXbR-L06jHyAId4M-bOO9A2VR5AhvKvGhWZpJK47IhDhTLm6-GFjYawrcyFGlIqqAY7ALQPKmLbP_P7YmLjEtPvKGfvVIhkfnxHN4WxAWxuHTQ0J6neI16R2NnOoqEDFxNpA3MFejRBa3PCNSVN3RTxlb_L0h1BhOqq-wW1k3XJwGt_9QxYELHQ7uRVmWPj0z8I6VIc_k6fOzz6VyMZmX2itjRCgcVTchl3jW0Fg04Wxoj-C5O5yBdEs29WdTwmDQ1mvtIrFYF3XbzIJMeoshPitdNoj17C4P4nBY5X5uon9WYtsntT0mCvYe5_Zwnu0eriWXLGHU3UKMv7j_-w_CqNsZ16eqUfHyn_38NTWqWnDqlHb0FyepsuiU6ReZvpa-yxVaQ3OcRR1pA4JCOEWC638xylwXjHZZKIfC3DJ5vX5tXqVi-deuKDM-KJVXDpo6kPTaFsLl2__rJ6nEuGo8g0XKs1i638OLi1NkGtOSulDXeW3vOVOhuNM7DD
+11:35:43.30 | SUCCESS | TID: 1 | Bersani | Step 3
+11:38:09.07 | SUCCESS | TID: 1 | Worker service initialized
+11:38:09.08 | SUCCESS | 0.0 Task with TID: 1 started.
+11:38:09.09 | SUCCESS | TID: 1 | 1.0 Running loop to get botid | Telegram Usage False
+11:40:52.86 | SUCCESS | TID: 1 | Worker service initialized
+11:40:52.87 | SUCCESS | 0.0 Task with TID: 1 started.
+11:40:52.91 | SUCCESS | TID: 1 | 1.0 Running loop to get botid | Telegram Usage False
+11:43:00.70 | SUCCESS | TID: 1 | 2.0 Running production plate endpoint | BotID: 72
+11:43:03.07 | SUCCESS | TID: 1 | 3.0 Task | Cleaning & Processing & Preping Request Data | Proxy: 
+11:43:03.07 | SUCCESS | TID: 1 | 4.0.0 Process | Initiating Scrapper Class On Selenium
+11:43:03.08 | SUCCESS | REQUEST DATA: anag=Anagrafica(cf='MRRMRA93P50F799S', nascitaGiorno='10', nascitaMese='09', nascitaAnno=1993, patenteAnno='2011', residenzaProvincia='NA', residenzaProvinciaEstesa='Napoli', residenzaComune='VILLARICCA', residenzaIndirizzoVia='VIA', residenzaIndirizzo='CAMPANA', residenzaCivico='319') veicolo=Veicolo(targa='GM725CD', acquistoGiorno='28', acquistoMese='11', acquistoAnno=2022, allestimento='fortwo EQ Youngster', immatricolazioneGiorno='21', immatricolazioneMese='02', immatricolazioneAnno=2019, dataDecorrenza='29/11/2024', tipoVeicolo='AUTOVETTURA', cilindrata='0') datiPreventivo=DatiPreventivo(idRicerca=779755, idAccordo=112, idFascia=1, idScelta=0) portante=Portante(targa='FG634HZ', cf='SCLGPP60T41A064N', tipoVeicolo='AUTOVETTURA') | Age: 31
+11:43:03.08 | SUCCESS | TID: 1 | 4.0 Process | Starting Driver
+11:43:06.55 | SUCCESS | TID: 1 | 4.1 Corrected Address Metainfo successfully
+11:43:06.55 | SUCCESS | TID: 1 | 4.2 Attempt [1] to load the page.
+11:43:09.20 | SUCCESS | TID: 1 | 4.3 Page loaded successfully.
+11:43:09.34 | SUCCESS | TID: 1 | 4.4 Activating useCase 'Normale' for autovettura
+11:43:09.34 | SUCCESS | TID: 1 | Checking Vehicle Cilindrata | Type of Vehicle: autovettura | Cilindrata: 0 
+11:43:11.79 | SUCCESS | TID: 1 | 4.5 Solving Captcha ...
+11:44:21.95 | SUCCESS | TID: 1 | 4.6 Captcha Solved Successfully | Data: 03AFcWeA7RYEZ6BdFujzoADgb7f4XjsiegrKqoicmyyd6l5hpQ38FS4ujZwVXeJMR8zsCqYEdvulveOT-b_DdopMLaMfJuPrCwbnXoADXBlmIPd3BtQDBKgVdJLSHXtmckMb71N-ipScd5Dsc5wq6fMGPncW9RCKnYlcZ10R0ZEg7vBYVMatjtrutoOtqOKWarvw28Q50zt8k4RzfuScqHRpI9XyYt6rmwEcABRcYFxrEawV8EC9zwI9LhzEI1LHiTfmC7av1hpmzXvKWkbnsV0vc57guputSUjzgreQcBdWiuEoxttMrC_gwevjnCIPoUC4bwmEdOY4hx7hm6RInzHhHQm3ZCnGPAyNedllCp0Ws1rSPcmnYTjTSQWMOD0QeyoPNhTClMAYMEe04CWwwL-57jjN4UR0ZhWrr0lOyGwusHrIRB80NKsevLePLmaM_MnfRh0x__MyD0sCqUUl8SWtqj01XcTtqmxXFzdWW13i5ZuPP66pk8cQ42_LPE_J2MseALXhdMM_5bS_L20TPATJRwyl1orTPaRnEntC9GbAXBmjgK8a4-lgdWky_mJraUyyVY5kaTvck1hosdKIQ4ekaHBFegwr7e-PbMN67LlfZe6aaAP9gSWi-XniHHdbBEUrwlQT4b-YoxbaHEgsMlZaVkaIBdZVPkrTyvfgT7hD7CFBWlN2r2vMlcpnyB8aahvSWShrWBcbGXMKeCzd9aymkReuRJ41lLhmaSJwUyj2va9P3VFYfXJvMsElJ2CZpRi5gUxRnyipxjGrMOmqzfYAtuAHV7D-90o8sdvkOhfPxvZiyJaIAlS-b241XoL4CGrHfSAqf1lnNW0wXIUe4Xj1YWhqqJm4wXpBBz5YHVflTN2x3ci7C9cEXCLE-UvOBrpMm628qzOSmvHAQq2cvpSQKHDu2xrCT8Mmg5glXA9iN1oC2ULGDKV5CKe1D1FFtryhJSptIZpSlzGrcs54SbDV_1ITwHOfP85w
+11:44:37.54 | SUCCESS | TID: 1 | Bersani | Step 3
+11:44:42.18 | SUCCESS | TID: 1 | Bersani | Step 4
+11:45:04.23 | SUCCESS | TID: 1 | Bersani | step 5
+11:45:19.82 | SUCCESS | TID: 1 | Bersani | Step 6
+11:45:19.82 | SUCCESS | Guida Esperta Activated | Individual Age: 31
+11:45:27.89 | SUCCESS | TID: 1 | Final Step & Preparing Quote Data
+11:45:43.45 | SUCCESS | TID: 1 | 4.7 Gathering and Preparing Data...
+11:46:46.95 | SUCCESS | TID: 1 | 4.8 [LAST STEP] Terminating Session
+11:46:50.93 | SUCCESS | TID: 1 | Driver quit successfully.
+11:46:59.34 | SUCCESS | 0.1 Task with TID: 1 completed.
+11:47:04.34 | SUCCESS | TID: 2 | Worker service initialized
+11:47:04.34 | SUCCESS | 0.0 Task with TID: 2 started.
+11:47:04.34 | SUCCESS | TID: 2 | 1.0 Running loop to get botid | Telegram Usage False
+11:47:05.96 | SUCCESS | TID: 2 | 2.0 Running production plate endpoint | BotID: 72
+11:47:07.71 | SUCCESS | TID: 2 | 3.0 Task | Cleaning & Processing & Preping Request Data | Proxy: 
+11:47:07.71 | SUCCESS | TID: 2 | 4.0.0 Process | Initiating Scrapper Class On Selenium
+11:47:07.71 | SUCCESS | REQUEST DATA: anag=Anagrafica(cf='MMSMSL84D19Z100Z', nascitaGiorno='19', nascitaMese='04', nascitaAnno=1984, patenteAnno='2002', residenzaProvincia='CE', residenzaProvinciaEstesa='Caserta', residenzaComune='VILLA DI BRIANO', residenzaIndirizzoVia='VIA', residenzaIndirizzo='APULEIO', residenzaCivico='10') veicolo=Veicolo(targa='EF821PP', acquistoGiorno='18', acquistoMese='11', acquistoAnno=2024, allestimento='Tiguan 2.0 TDI DPF 4MOTION DSG Sport & S', immatricolazioneGiorno='01', immatricolazioneMese='01', immatricolazioneAnno=2010, dataDecorrenza='02/12/2024', tipoVeicolo='AUTOVETTURA', cilindrata='1968') datiPreventivo=DatiPreventivo(idRicerca=779762, idAccordo=112, idFascia=4, idScelta=0) portante=Portante(targa='FG634HZ', cf='SCLGPP60T41A064N', tipoVeicolo='AUTOVETTURA') | Age: 40
+11:47:07.72 | SUCCESS | TID: 2 | 4.0 Process | Starting Driver
+11:47:10.25 | SUCCESS | TID: 2 | 4.1 Corrected Address Metainfo successfully
+11:47:10.26 | SUCCESS | TID: 2 | 4.2 Attempt [1] to load the page.
+11:47:11.05 | SUCCESS | TID: 2 | 4.3 Page loaded successfully.
+11:47:11.20 | SUCCESS | TID: 2 | 4.4 Activating useCase 'Normale' for autovettura
+11:47:11.21 | SUCCESS | TID: 2 | Checking Vehicle Cilindrata | Type of Vehicle: autovettura | Cilindrata: 1968 
+11:47:13.64 | SUCCESS | TID: 2 | 4.5 Solving Captcha ...
+11:48:32.09 | SUCCESS | TID: 2 | 4.6 Captcha Solved Successfully | Data: 03AFcWeA79SpaycCyvLH4idUmKsnvmupNxIX-UE_GQfFB2sF_XP-vaoWqqdFbEsI50LWnCzxgfgZrdrASAZD0oTDyyBdMya7EL0OkQ-ETEwmo8D-qRh6jzTw1_6ikagGGwNhBr-1OM_L0SKVQmwFgMoAwEv_9ObN0qpvSSgkMnHEwvzJmTmKQ4WSYWHx7Au1QELP-IulJHh3fffkJb1tZt0TQKhtWEMqWBSeO1Wp8qtchJq_6LNjNinsjuvXIyWQRlKd7KnCpckwbr00HLOOsSbCmyystUCkm-r2KMQ3GtmqN8vLnZg4JgDbIW6SrCm6aAX4dEiR9QcRmrHlPYKZCvTpcaarDPTOG7GUqxaqrC7ooKZlPQ3Tx-J0XChiwr04fIuaxgfWOYtvyVCN4_4PN6rAjjZ7YffjdSKmBhV6UUCoXEMXH0S5Zyv56uUQnApq8Cs-ShKbGNW5wEYzWzBsukVt-FVI1ASQq1jVd8LGyxt7-wKAGMUeH56d9FJA-pJraeX4oc2p3avqBmKPsZzUo0gX4fO25QwZD-lBo0P1XMVDJstTzPj0XO229cMxEvNLCFWqpm7fBBKyhwbVTuo8QngKpQN0nIGPGXN8LDOIa-Nl1zNMdc7P6jAK1Ho5LOb267_YLygI-273YBtUPVUJB_MJZsfKsJwxPhokYlxgntyxDKzH_pLdOaeCe0sRM9-TETyypVrGaxE38H1kxIs_gaMs5UeRHJje9ln_eRPEYuGHtqYpIrWqO7lQeBHSvT4pHwWhYappKGOF2I4YX16otl3BX_OGmHPZLwDZCfW8fB9mB1Z2pBt0c8cz4D133LQLd6PcGbxl8xfEKcxPhKdcSdf1uMQCSLsNx42HdFobEKjcsdeULM5WtTTBlZK8LQcBj33g7ra5SiOEHQXOypra2YAYVP0_Ed2Ihp8TbYrl544LnJbrtyTLvl8GoMznix_Bz1xsItVd8v_1vr
+11:48:47.73 | SUCCESS | TID: 2 | Bersani | Step 3
+11:49:52.10 | ERROR | TID: 2 | Element Activity | Description: Setup/Allestimento [SELECT] Dropdown Panel | Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6571638A5+3004357]
+	(No symbol) [0x00007FF656DF9970]
+	(No symbol) [0x00007FF656CA582A]
+	(No symbol) [0x00007FF656CF5B8E]
+	(No symbol) [0x00007FF656CF5E7C]
+	(No symbol) [0x00007FF656D3EC27]
+	(No symbol) [0x00007FF656D1BC1F]
+	(No symbol) [0x00007FF656D3BA4C]
+	(No symbol) [0x00007FF656D1B983]
+	(No symbol) [0x00007FF656CE7628]
+	(No symbol) [0x00007FF656CE8791]
+	GetHandleVerifier [0x00007FF65718A00D+3161901]
+	GetHandleVerifier [0x00007FF6571DE060+3506048]
+	GetHandleVerifier [0x00007FF6571D400D+3465005]
+	GetHandleVerifier [0x00007FF656F50EEB+830987]
+	(No symbol) [0x00007FF656E0467F]
+	(No symbol) [0x00007FF656E009D4]
+	(No symbol) [0x00007FF656E00B6D]
+	(No symbol) [0x00007FF656DF0149]
+	BaseThreadInitThunk [0x00007FFBA3A2259D+29]
+	RtlUserThreadStart [0x00007FFBA44EAF38+40]
+
+11:49:54.06 | SUCCESS | TID: 2 | Bersani | Step 4
+11:51:14.46 | ERROR | TID: 2 | Element Activity | Description: Common/Comune [SELECT&INPUT&CLICK] Dropdown Panel | Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6571638A5+3004357]
+	(No symbol) [0x00007FF656DF9970]
+	(No symbol) [0x00007FF656CA582A]
+	(No symbol) [0x00007FF656CF5B8E]
+	(No symbol) [0x00007FF656CF5E7C]
+	(No symbol) [0x00007FF656D3EC27]
+	(No symbol) [0x00007FF656D1BC1F]
+	(No symbol) [0x00007FF656D3BA4C]
+	(No symbol) [0x00007FF656D1B983]
+	(No symbol) [0x00007FF656CE7628]
+	(No symbol) [0x00007FF656CE8791]
+	GetHandleVerifier [0x00007FF65718A00D+3161901]
+	GetHandleVerifier [0x00007FF6571DE060+3506048]
+	GetHandleVerifier [0x00007FF6571D400D+3465005]
+	GetHandleVerifier [0x00007FF656F50EEB+830987]
+	(No symbol) [0x00007FF656E0467F]
+	(No symbol) [0x00007FF656E009D4]
+	(No symbol) [0x00007FF656E00B6D]
+	(No symbol) [0x00007FF656DF0149]
+	BaseThreadInitThunk [0x00007FFBA3A2259D+29]
+	RtlUserThreadStart [0x00007FFBA44EAF38+40]
+
+11:51:24.09 | ERROR | TID: 2 | Element Activity | Description: Street/Square/Avenue/etc-Via/Piazza/Viale/etc [SELECT&INPUT&CLICK] | Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6571638A5+3004357]
+	(No symbol) [0x00007FF656DF9970]
+	(No symbol) [0x00007FF656CA582A]
+	(No symbol) [0x00007FF656CF5B8E]
+	(No symbol) [0x00007FF656CF5E7C]
+	(No symbol) [0x00007FF656D3EC27]
+	(No symbol) [0x00007FF656D1BC1F]
+	(No symbol) [0x00007FF656D3BA4C]
+	(No symbol) [0x00007FF656D1B983]
+	(No symbol) [0x00007FF656CE7628]
+	(No symbol) [0x00007FF656CE8791]
+	GetHandleVerifier [0x00007FF65718A00D+3161901]
+	GetHandleVerifier [0x00007FF6571DE060+3506048]
+	GetHandleVerifier [0x00007FF6571D400D+3465005]
+	GetHandleVerifier [0x00007FF656F50EEB+830987]
+	(No symbol) [0x00007FF656E0467F]
+	(No symbol) [0x00007FF656E009D4]
+	(No symbol) [0x00007FF656E00B6D]
+	(No symbol) [0x00007FF656DF0149]
+	BaseThreadInitThunk [0x00007FFBA3A2259D+29]
+	RtlUserThreadStart [0x00007FFBA44EAF38+40]
+
+11:51:36.29 | ERROR | TID: 2 | Element Activity | Description: Street/Square/Avenue/etc-Via/Piazza/Viale/etc [SELECT&INPUT&CLICK] Input Element | Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6571638A5+3004357]
+	(No symbol) [0x00007FF656DF9970]
+	(No symbol) [0x00007FF656CA582A]
+	(No symbol) [0x00007FF656CF5B8E]
+	(No symbol) [0x00007FF656CF5E7C]
+	(No symbol) [0x00007FF656D3EC27]
+	(No symbol) [0x00007FF656D1BC1F]
+	(No symbol) [0x00007FF656D3BA4C]
+	(No symbol) [0x00007FF656D1B983]
+	(No symbol) [0x00007FF656CE7628]
+	(No symbol) [0x00007FF656CE8791]
+	GetHandleVerifier [0x00007FF65718A00D+3161901]
+	GetHandleVerifier [0x00007FF6571DE060+3506048]
+	GetHandleVerifier [0x00007FF6571D400D+3465005]
+	GetHandleVerifier [0x00007FF656F50EEB+830987]
+	(No symbol) [0x00007FF656E0467F]
+	(No symbol) [0x00007FF656E009D4]
+	(No symbol) [0x00007FF656E00B6D]
+	(No symbol) [0x00007FF656DF0149]
+	BaseThreadInitThunk [0x00007FFBA3A2259D+29]
+	RtlUserThreadStart [0x00007FFBA44EAF38+40]
+
+11:51:38.34 | ERROR | TID: 2 | Element Activity | Description: Civico-Civic [SELECT&INPUT&CLICK] | Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6571638A5+3004357]
+	(No symbol) [0x00007FF656DF9970]
+	(No symbol) [0x00007FF656CA582A]
+	(No symbol) [0x00007FF656CF5B8E]
+	(No symbol) [0x00007FF656CF5E7C]
+	(No symbol) [0x00007FF656D3EC27]
+	(No symbol) [0x00007FF656D1BC1F]
+	(No symbol) [0x00007FF656D3BA4C]
+	(No symbol) [0x00007FF656D1B983]
+	(No symbol) [0x00007FF656CE7628]
+	(No symbol) [0x00007FF656CE8791]
+	GetHandleVerifier [0x00007FF65718A00D+3161901]
+	GetHandleVerifier [0x00007FF6571DE060+3506048]
+	GetHandleVerifier [0x00007FF6571D400D+3465005]
+	GetHandleVerifier [0x00007FF656F50EEB+830987]
+	(No symbol) [0x00007FF656E0467F]
+	(No symbol) [0x00007FF656E009D4]
+	(No symbol) [0x00007FF656E00B6D]
+	(No symbol) [0x00007FF656DF0149]
+	BaseThreadInitThunk [0x00007FFBA3A2259D+29]
+	RtlUserThreadStart [0x00007FFBA44EAF38+40]
+
+11:51:39.37 | SUCCESS | TID: 2 | Bersani | step 5
+11:51:41.42 | ERROR | TID: 2 | Element Activity | Description: Continue/Prosegui [Button] | Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6571638A5+3004357]
+	(No symbol) [0x00007FF656DF9970]
+	(No symbol) [0x00007FF656CA582A]
+	(No symbol) [0x00007FF656CF5B8E]
+	(No symbol) [0x00007FF656CF5E7C]
+	(No symbol) [0x00007FF656D3EC27]
+	(No symbol) [0x00007FF656D1BC1F]
+	(No symbol) [0x00007FF656D3BA4C]
+	(No symbol) [0x00007FF656D1B983]
+	(No symbol) [0x00007FF656CE7628]
+	(No symbol) [0x00007FF656CE8791]
+	GetHandleVerifier [0x00007FF65718A00D+3161901]
+	GetHandleVerifier [0x00007FF6571DE060+3506048]
+	GetHandleVerifier [0x00007FF6571D400D+3465005]
+	GetHandleVerifier [0x00007FF656F50EEB+830987]
+	(No symbol) [0x00007FF656E0467F]
+	(No symbol) [0x00007FF656E009D4]
+	(No symbol) [0x00007FF656E00B6D]
+	(No symbol) [0x00007FF656DF0149]
+	BaseThreadInitThunk [0x00007FFBA3A2259D+29]
+	RtlUserThreadStart [0x00007FFBA44EAF38+40]
+
+11:51:46.57 | ERROR | TID: 2 | <<< A WebDriver instace error occurred: {"message": "Service error page due to invalid data submission, improper proxy configuration, very fatal"}; Traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 659, in start
+    return self.use_case_normale()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 815, in use_case_normale
+    self.bersani_step_5()
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 1074, in bersani_step_5
+    self.continue_button()
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 414, in continue_button
+    self.check_if_any_error()
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 461, in check_if_any_error
+    raise e
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 456, in check_if_any_error
+    return message_checker(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 422, in message_checker
+    raise ValueError(
+ValueError: {"message": "Service error page due to invalid data submission, improper proxy configuration, very fatal"}
+>>>
+11:51:46.57 | SUCCESS | TID: 2 | 4.8 [LAST STEP] Terminating Session
+11:52:12.05 | SUCCESS | TID: 2 | Driver quit successfully.
+11:52:24.14 | ERROR | TID: 2 | 3.1 Error occurred >>> HTTPSConnectionPool(host='mobilityexpress.it', port=443): Max retries exceeded with url: /api/sendData (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D3727C18D0>: Failed to resolve 'mobilityexpress.it' ([Errno 11001] getaddrinfo failed)")) ::::-> __TRACEBACK__ Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 659, in start
+    return self.use_case_normale()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 815, in use_case_normale
+    self.bersani_step_5()
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 1074, in bersani_step_5
+    self.continue_button()
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 414, in continue_button
+    self.check_if_any_error()
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 461, in check_if_any_error
+    raise e
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 456, in check_if_any_error
+    return message_checker(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 422, in message_checker
+    raise ValueError(
+ValueError: {"message": "Service error page due to invalid data submission, improper proxy configuration, very fatal"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 693, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connection.py", line 206, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000001D3727C18D0>: Failed to resolve 'mobilityexpress.it' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='mobilityexpress.it', port=443): Max retries exceeded with url: /api/sendData (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D3727C18D0>: Failed to resolve 'mobilityexpress.it' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 108, in start_prep_data
+    ).start()
+      ^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 688, in start
+    self.teardown()
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\scrapper.py", line 71, in teardown
+    return error_response_model(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\response.py", line 46, in error_response_model
+    response = requests.request(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\owner\Desktop\projects\bots\vass\venv\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='mobilityexpress.it', port=443): Max retries exceeded with url: /api/sendData (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D3727C18D0>: Failed to resolve 'mobilityexpress.it' ([Errno 11001] getaddrinfo failed)"))
+ <<<
+11:52:24.20 | ERROR | TID: 2 | Fatal Error: Expecting value: line 1 column 1 (char 0) | Traceback: Traceback (most recent call last):
+  File "C:\Users\owner\Desktop\projects\bots\vass\utils\views.py", line 80, in run_plate_and_metadata
+    **(json.loads(str(e)) if not not e else {}),
+       ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+11:52:24.21 | ERROR | TID: 2 | 1.1 Error when running bot loop Expecting value: line 1 column 1 (char 0)
+11:52:29.21 | SUCCESS | 0.1 Task with TID: 2 completed.
+11:52:34.21 | SUCCESS | TID: 3 | Worker service initialized
+11:52:34.21 | SUCCESS | 0.0 Task with TID: 3 started.
+11:52:34.21 | SUCCESS | TID: 3 | 1.0 Running loop to get botid | Telegram Usage False
+11:52:42.88 | SUCCESS | TID: 3 | 2.0 Running production plate endpoint | BotID: 72
+11:52:43.52 | SUCCESS | TID: 3 | 3.0 Task | Cleaning & Processing & Preping Request Data | Proxy: 
+11:52:43.52 | SUCCESS | TID: 3 | 4.0.0 Process | Initiating Scrapper Class On Selenium
+11:52:43.52 | SUCCESS | REQUEST DATA: anag=Anagrafica(cf='MMSMSL84D19Z100Z', nascitaGiorno='19', nascitaMese='04', nascitaAnno=1984, patenteAnno='2002', residenzaProvincia='CE', residenzaProvinciaEstesa='Caserta', residenzaComune='VILLA DI BRIANO', residenzaIndirizzoVia='VIA', residenzaIndirizzo='APULEIO', residenzaCivico='10') veicolo=Veicolo(targa='EF821PP', acquistoGiorno='18', acquistoMese='11', acquistoAnno=2024, allestimento='Tiguan 2.0 TDI DPF 4MOTION DSG Sport & S', immatricolazioneGiorno='01', immatricolazioneMese='01', immatricolazioneAnno=2010, dataDecorrenza='02/12/2024', tipoVeicolo='AUTOVETTURA', cilindrata='1968') datiPreventivo=DatiPreventivo(idRicerca=779762, idAccordo=112, idFascia=4, idScelta=0) portante=Portante(targa='FG634HZ', cf='SCLGPP60T41A064N', tipoVeicolo='AUTOVETTURA') | Age: 40
+11:52:43.53 | SUCCESS | TID: 3 | 4.0 Process | Starting Driver
+11:52:45.80 | SUCCESS | TID: 3 | 4.1 Corrected Address Metainfo successfully
+11:52:45.80 | SUCCESS | TID: 3 | 4.2 Attempt [1] to load the page.
+11:52:46.52 | SUCCESS | TID: 3 | 4.3 Page loaded successfully.
+11:52:46.69 | SUCCESS | TID: 3 | 4.4 Activating useCase 'Normale' for autovettura
+11:52:46.69 | SUCCESS | TID: 3 | Checking Vehicle Cilindrata | Type of Vehicle: autovettura | Cilindrata: 1968 
+11:52:48.85 | ERROR | TID: 3 | Element Activity | Description: Plate/Targa [INPUT] | Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6571638A5+3004357]
+	(No symbol) [0x00007FF656DF9970]
+	(No symbol) [0x00007FF656CA582A]
+	(No symbol) [0x00007FF656CF5B8E]
+	(No symbol) [0x00007FF656CF5E7C]
+	(No symbol) [0x00007FF656D3EC27]
+	(No symbol) [0x00007FF656D1BC1F]
+	(No symbol) [0x00007FF656D3BA4C]
+	(No symbol) [0x00007FF656D1B983]
+	(No symbol) [0x00007FF656CE7628]
+	(No symbol) [0x00007FF656CE8791]
+	GetHandleVerifier [0x00007FF65718A00D+3161901]
+	GetHandleVerifier [0x00007FF6571DE060+3506048]
+	GetHandleVerifier [0x00007FF6571D400D+3465005]
+	GetHandleVerifier [0x00007FF656F50EEB+830987]
+	(No symbol) [0x00007FF656E0467F]
+	(No symbol) [0x00007FF656E009D4]
+	(No symbol) [0x00007FF656E00B6D]
+	(No symbol) [0x00007FF656DF0149]
+	BaseThreadInitThunk [0x00007FFBA3A2259D+29]
+	RtlUserThreadStart [0x00007FFBA44EAF38+40]
+
+12:05:01.22 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:05:09.29 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:05:16.68 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:05:16.95 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:05:24.59 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:05:24.88 | ERROR | PreTask | Proxy is in the wrong country. Current [NG] instead of [IT]
+12:07:38.02 | SUCCESS | TID: 1 | Worker service initialized
+12:07:38.02 | SUCCESS | 0.0 Task with TID: 1 started.
+12:07:38.02 | SUCCESS | TID: 1 | 1.0 Running loop to get botid | Telegram Usage False
